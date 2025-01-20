@@ -1,0 +1,2842 @@
+<?xml version="1.0"?>
+<svg width="1812" height="1311" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <desc>{&quot;leftTopX&quot;: 4739, &quot;leftTopY&quot;: 6017, &quot;rightBottomX&quot;: 6551, &quot;rightBottomY&quot;: 7288}</desc>
+
+ <g class="layer">
+  <title>Layer 1</title>
+  <g class="area" id="svg_6">
+   <g id="svg_7" transform="translate(783, 40)">
+    <rect fill="#D9EAD3" height="332" id="svg_8" stroke="#000000" width="878" x="0.5" y="0.5"/>
+   </g>
+   <g id="svg_9" transform="translate(1515, 337)">
+    <text fill="#000000" font-family="arial, sans-serif" font-size="15" font-weight="700" id="svg_10" x="1.5" y="14.49">University People</text>
+   </g>
+  </g>
+  <g class="area" id="svg_11">
+   <g id="svg_12" transform="translate(798, 437)">
+    <rect fill="#EAD1DC" height="432" id="svg_13" stroke="#000000" width="315" x="0.5" y="0.5"/>
+   </g>
+   <g id="svg_14" transform="translate(1029, 834)">
+    <text fill="#000000" font-family="arial, sans-serif" font-size="15" font-weight="700" id="svg_15" x="1.5" y="14.49">Students</text>
+   </g>
+  </g>
+  <g class="area" id="svg_16">
+   <g id="svg_17" transform="translate(77, 881)">
+    <rect fill="#E6B8AF" height="321" id="svg_18" stroke="#000000" width="249" x="0.5" y="0.5"/>
+   </g>
+   <g id="svg_19" transform="translate(240, 1167)">
+    <text fill="#000000" font-family="arial, sans-serif" font-size="15" font-weight="700" id="svg_20" x="1.5" y="14.49">Webinars</text>
+   </g>
+  </g>
+  <g class="area" id="svg_21">
+   <g id="svg_22" transform="translate(84, 434)">
+    <rect fill="#CFE2F3" height="427" id="svg_23" stroke="#000000" width="645" x="0.5" y="0.5"/>
+   </g>
+   <g id="svg_24" transform="translate(649, 826)">
+    <text fill="#000000" font-family="arial, sans-serif" font-size="15" font-weight="700" id="svg_25" x="1.5" y="14.49">Courses</text>
+   </g>
+  </g>
+  <g class="area" id="svg_26">
+   <g id="svg_27" transform="translate(309, 39)">
+    <rect fill="#999999" height="296" id="svg_28" stroke="#000000" width="399" x="0.5" y="0.5"/>
+   </g>
+   <g id="svg_29" transform="translate(618, 300)">
+    <text fill="#000000" font-family="arial, sans-serif" font-size="15" font-weight="700" id="svg_30" x="1.5" y="14.49">Timetable</text>
+   </g>
+  </g>
+  <g class="area" id="svg_31">
+   <g id="svg_32" transform="translate(431, 913)">
+    <rect fill="#FFF2CC" height="322" id="svg_33" stroke="#000000" width="471" x="0.5" y="0.5"/>
+   </g>
+   <g id="svg_34" transform="translate(831.093, 1200)">
+    <text fill="#000000" font-family="arial, sans-serif" font-size="15" font-weight="700" id="svg_35" x="1.5" y="14.49">Orders</text>
+   </g>
+  </g>
+  <g class="area" id="svg_36">
+   <g id="svg_37" transform="translate(1185, 427)">
+    <rect fill="#FCE5CD" height="689" id="svg_38" stroke="#000000" width="597" x="0.5" y="0.5"/>
+   </g>
+   <g id="svg_39" transform="translate(1708, 1081)">
+    <text fill="#000000" font-family="arial, sans-serif" font-size="15" font-weight="700" id="svg_40" x="1.5" y="14.49">Studies</text>
+   </g>
+  </g>
+  <g class="reference" id="svg_41">
+   <polyline fill="none" id="svg_42" points="818.5,609.5 1013.5,609.5 1013.5,512.5 1027.5,512.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_43">
+    <line id="svg_44" stroke="#000000" stroke-width="1" x1="1013.5" x2="1007.5" y1="606.5" y2="591.5"/>
+    <line id="svg_45" stroke="#000000" stroke-width="1" x1="1013.5" x2="1019.5" y1="606.5" y2="591.5"/>
+    <g id="svg_46" transform="translate(1013, 606)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_47" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_48">
+    <line id="svg_49" stroke="#000000" stroke-width="1" x1="1013.5" x2="1013.5" y1="603.5" y2="615.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_50">
+   <polyline fill="none" id="svg_51" points="963.5,719.5 963.5,656.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_52">
+    <line id="svg_53" stroke="#000000" stroke-width="1" x1="963.5" x2="957.5" y1="686.5" y2="671.5"/>
+    <line id="svg_54" stroke="#000000" stroke-width="1" x1="963.5" x2="969.5" y1="686.5" y2="671.5"/>
+    <g id="svg_55" transform="translate(963, 686)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_56" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_57">
+    <line id="svg_58" stroke="#000000" stroke-width="1" x1="957.5" x2="969.5" y1="676.5" y2="676.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_59">
+   <polyline fill="none" id="svg_60" points="890.5,90.5 890.5,217.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_61">
+    <line id="svg_62" stroke="#000000" stroke-width="1" x1="890.5" x2="884.5" y1="187.5" y2="202.5"/>
+    <line id="svg_63" stroke="#000000" stroke-width="1" x1="890.5" x2="896.5" y1="187.5" y2="202.5"/>
+    <line id="svg_64" stroke="#000000" stroke-width="1" x1="884.5" x2="896.5" y1="187.5" y2="187.5"/>
+   </g>
+   <g class="mandatory" id="svg_65">
+    <line id="svg_66" stroke="#000000" stroke-width="1" x1="884.5" x2="896.5" y1="194.5" y2="194.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_67">
+   <polyline fill="none" id="svg_68" points="1268.5,104.5 1268.5,262.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_69">
+    <line id="svg_70" stroke="#000000" stroke-width="1" x1="1268.5" x2="1262.5" y1="203.5" y2="218.5"/>
+    <line id="svg_71" stroke="#000000" stroke-width="1" x1="1268.5" x2="1274.5" y1="203.5" y2="218.5"/>
+    <line id="svg_72" stroke="#000000" stroke-width="1" x1="1262.5" x2="1274.5" y1="203.5" y2="203.5"/>
+   </g>
+   <g class="mandatory" id="svg_73">
+    <line id="svg_74" stroke="#000000" stroke-width="1" x1="1262.5" x2="1274.5" y1="177.5" y2="177.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_75">
+   <polyline fill="none" id="svg_76" points="913.5,320.5 862.5,320.5 862.5,249.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_77">
+    <line id="svg_78" stroke="#000000" stroke-width="1" x1="862.5" x2="856.5" y1="274.5" y2="259.5"/>
+    <line id="svg_79" stroke="#000000" stroke-width="1" x1="862.5" x2="868.5" y1="274.5" y2="259.5"/>
+    <line id="svg_80" stroke="#000000" stroke-width="1" x1="856.5" x2="868.5" y1="274.5" y2="274.5"/>
+   </g>
+   <g class="mandatory" id="svg_81">
+    <line id="svg_82" stroke="#000000" stroke-width="1" x1="888.5" x2="888.5" y1="314.5" y2="326.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_83">
+   <polyline fill="none" id="svg_84" points="1097.5,321.5 1326.5,321.5 1326.5,262.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_85">
+    <line id="svg_86" stroke="#000000" stroke-width="1" x1="1326.5" x2="1320.5" y1="291.5" y2="276.5"/>
+    <line id="svg_87" stroke="#000000" stroke-width="1" x1="1326.5" x2="1332.5" y1="291.5" y2="276.5"/>
+    <line id="svg_88" stroke="#000000" stroke-width="1" x1="1320.5" x2="1332.5" y1="291.5" y2="291.5"/>
+   </g>
+   <g class="mandatory" id="svg_89">
+    <line id="svg_90" stroke="#000000" stroke-width="1" x1="1136.5" x2="1136.5" y1="315.5" y2="327.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_91">
+   <polyline fill="none" id="svg_92" points="1522.5,239.5 1522.5,134.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_93">
+    <line id="svg_94" stroke="#000000" stroke-width="1" x1="1522.5" x2="1516.5" y1="198.5" y2="183.5"/>
+    <line id="svg_95" stroke="#000000" stroke-width="1" x1="1522.5" x2="1528.5" y1="198.5" y2="183.5"/>
+    <line id="svg_96" stroke="#000000" stroke-width="1" x1="1516.5" x2="1528.5" y1="198.5" y2="198.5"/>
+   </g>
+   <g class="mandatory" id="svg_97">
+    <line id="svg_98" stroke="#000000" stroke-width="1" x1="1516.5" x2="1528.5" y1="214.5" y2="214.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_99">
+   <polyline fill="none" id="svg_100" points="131.5,637.5 178.5,637.5 178.5,736.5 189.5,736.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_101">
+    <line id="svg_102" stroke="#000000" stroke-width="1" x1="178.5" x2="172.5" y1="678.5" y2="693.5"/>
+    <line id="svg_103" stroke="#000000" stroke-width="1" x1="178.5" x2="184.5" y1="678.5" y2="693.5"/>
+    <g id="svg_104" transform="translate(178, 678)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_105" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_106">
+    <line id="svg_107" stroke="#000000" stroke-width="1" x1="172.5" x2="184.5" y1="666.5" y2="666.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_108">
+   <polyline fill="none" id="svg_109" points="261.5,768.5 261.5,668.5 390.5,668.5 390.5,488.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_110">
+    <line id="svg_111" stroke="#000000" stroke-width="1" x1="390.5" x2="384.5" y1="529.5" y2="514.5"/>
+    <line id="svg_112" stroke="#000000" stroke-width="1" x1="390.5" x2="396.5" y1="529.5" y2="514.5"/>
+    <line id="svg_113" stroke="#000000" stroke-width="1" x1="384.5" x2="396.5" y1="529.5" y2="529.5"/>
+   </g>
+   <g class="mandatory" id="svg_114">
+    <line id="svg_115" stroke="#000000" stroke-width="1" x1="255.5" x2="267.5" y1="678.5" y2="678.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_116">
+   <polyline fill="none" id="svg_117" points="219.5,562.5 219.5,584.5 139.5,584.5 139.5,475.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_118">
+    <line id="svg_119" stroke="#000000" stroke-width="1" x1="139.5" x2="133.5" y1="517.5" y2="502.5"/>
+    <line id="svg_120" stroke="#000000" stroke-width="1" x1="139.5" x2="145.5" y1="517.5" y2="502.5"/>
+    <line id="svg_121" stroke="#000000" stroke-width="1" x1="133.5" x2="145.5" y1="517.5" y2="517.5"/>
+   </g>
+   <g class="mandatory" id="svg_122">
+    <line id="svg_123" stroke="#000000" stroke-width="1" x1="133.5" x2="145.5" y1="520.5" y2="520.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_124">
+   <polyline fill="none" id="svg_125" points="337.5,753.5 453.5,753.5 453.5,493.5 553.5,493.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_126">
+    <line id="svg_127" stroke="#000000" stroke-width="1" x1="460.5" x2="460.5" y1="487.5" y2="499.5"/>
+   </g>
+   <g class="mandatory" id="svg_128">
+    <line id="svg_129" stroke="#000000" stroke-width="1" x1="445.5" x2="445.5" y1="747.5" y2="759.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_130">
+   <polyline fill="none" id="svg_131" points="320.5,775.5 475.5,775.5 475.5,589.5 541.5,589.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_132">
+    <line id="svg_133" stroke="#000000" stroke-width="1" x1="500.5" x2="500.5" y1="583.5" y2="595.5"/>
+   </g>
+   <g class="mandatory" id="svg_134">
+    <line id="svg_135" stroke="#000000" stroke-width="1" x1="445.5" x2="445.5" y1="769.5" y2="781.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_136">
+   <polyline fill="none" id="svg_137" points="420.5,790.5 524.5,790.5 524.5,670.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_138">
+    <line id="svg_139" stroke="#000000" stroke-width="1" x1="518.5" x2="530.5" y1="695.5" y2="695.5"/>
+   </g>
+   <g class="mandatory" id="svg_140">
+    <line id="svg_141" stroke="#000000" stroke-width="1" x1="445.5" x2="445.5" y1="784.5" y2="796.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_142">
+   <polyline fill="none" id="svg_143" points="485.5,285.5 485.5,489.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_144">
+    <line id="svg_145" stroke="#000000" stroke-width="1" x1="479.5" x2="491.5" y1="421.5" y2="421.5"/>
+   </g>
+   <g class="mandatory" id="svg_146">
+    <line id="svg_147" stroke="#000000" stroke-width="1" x1="479.5" x2="491.5" y1="342.5" y2="342.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_148">
+   <polyline fill="none" id="svg_149" points="240.5,959.5 193.5,959.5 193.5,1137.5 141.5,1137.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_150">
+    <line id="svg_151" stroke="#000000" stroke-width="1" x1="193.5" x2="187.5" y1="1090.5" y2="1105.5"/>
+    <line id="svg_152" stroke="#000000" stroke-width="1" x1="193.5" x2="199.5" y1="1090.5" y2="1105.5"/>
+    <line id="svg_153" stroke="#000000" stroke-width="1" x1="187.5" x2="199.5" y1="1090.5" y2="1090.5"/>
+   </g>
+   <g class="mandatory" id="svg_154">
+    <line id="svg_155" stroke="#000000" stroke-width="1" x1="187.5" x2="199.5" y1="1079.5" y2="1079.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_156">
+   <polyline fill="none" id="svg_157" points="376.5,307.5 376.5,99.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_158">
+    <line id="svg_159" stroke="#000000" stroke-width="1" x1="376.5" x2="370.5" y1="237.5" y2="222.5"/>
+    <line id="svg_160" stroke="#000000" stroke-width="1" x1="376.5" x2="382.5" y1="237.5" y2="222.5"/>
+    <line id="svg_161" stroke="#000000" stroke-width="1" x1="370.5" x2="382.5" y1="237.5" y2="237.5"/>
+   </g>
+   <g class="mandatory" id="svg_162">
+    <line id="svg_163" stroke="#000000" stroke-width="1" x1="370.5" x2="382.5" y1="235.5" y2="235.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_164">
+   <polyline fill="none" id="svg_165" points="734.5,966.5 562.5,966.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_166">
+    <line id="svg_167" stroke="#000000" stroke-width="1" x1="653.5" x2="653.5" y1="960.5" y2="972.5"/>
+   </g>
+   <g class="mandatory" id="svg_168">
+    <line id="svg_169" stroke="#000000" stroke-width="1" x1="658.5" x2="658.5" y1="960.5" y2="972.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_170">
+   <polyline fill="none" id="svg_171" points="548.5,1082.5 788.5,1082.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_172">
+    <line id="svg_173" stroke="#000000" stroke-width="1" x1="714.5" x2="729.5" y1="1082.5" y2="1076.5"/>
+    <line id="svg_174" stroke="#000000" stroke-width="1" x1="714.5" x2="729.5" y1="1082.5" y2="1088.5"/>
+    <line id="svg_175" stroke="#000000" stroke-width="1" x1="714.5" x2="714.5" y1="1076.5" y2="1088.5"/>
+   </g>
+   <g class="mandatory" id="svg_176">
+    <line id="svg_177" stroke="#000000" stroke-width="1" x1="685.5" x2="685.5" y1="1076.5" y2="1088.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_178">
+   <polyline fill="none" id="svg_179" points="551.5,1105.5 551.5,1210.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_180">
+    <line id="svg_181" stroke="#000000" stroke-width="1" x1="551.5" x2="545.5" y1="1153.5" y2="1168.5"/>
+    <line id="svg_182" stroke="#000000" stroke-width="1" x1="551.5" x2="557.5" y1="1153.5" y2="1168.5"/>
+    <line id="svg_183" stroke="#000000" stroke-width="1" x1="545.5" x2="557.5" y1="1153.5" y2="1153.5"/>
+   </g>
+   <g class="mandatory" id="svg_184">
+    <line id="svg_185" stroke="#000000" stroke-width="1" x1="545.5" x2="557.5" y1="1136.5" y2="1136.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_186">
+   <polyline fill="none" id="svg_187" points="617.5,1002.5 739.5,1002.5 739.5,1037.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_188">
+    <line id="svg_189" stroke="#000000" stroke-width="1" x1="739.5" x2="733.5" y1="1012.5" y2="1027.5"/>
+    <line id="svg_190" stroke="#000000" stroke-width="1" x1="739.5" x2="745.5" y1="1012.5" y2="1027.5"/>
+    <g id="svg_191" transform="translate(739, 1012)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_192" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_193">
+    <line id="svg_194" stroke="#000000" stroke-width="1" x1="653.5" x2="653.5" y1="996.5" y2="1008.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_195">
+   <polyline fill="none" id="svg_196" points="1403.5,754.5 1403.5,612.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_197">
+    <line id="svg_198" stroke="#000000" stroke-width="1" x1="1403.5" x2="1397.5" y1="685.5" y2="670.5"/>
+    <line id="svg_199" stroke="#000000" stroke-width="1" x1="1403.5" x2="1409.5" y1="685.5" y2="670.5"/>
+    <line id="svg_200" stroke="#000000" stroke-width="1" x1="1397.5" x2="1409.5" y1="685.5" y2="685.5"/>
+   </g>
+   <g class="mandatory" id="svg_201">
+    <line id="svg_202" stroke="#000000" stroke-width="1" x1="1397.5" x2="1409.5" y1="712.5" y2="712.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_203">
+   <polyline fill="none" id="svg_204" points="1305.5,576.5 1305.5,485.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_205">
+    <line id="svg_206" stroke="#000000" stroke-width="1" x1="1305.5" x2="1299.5" y1="526.5" y2="511.5"/>
+    <line id="svg_207" stroke="#000000" stroke-width="1" x1="1305.5" x2="1311.5" y1="526.5" y2="511.5"/>
+    <g id="svg_208" transform="translate(1305, 526)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_209" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_210">
+    <line id="svg_211" stroke="#000000" stroke-width="1" x1="1299.5" x2="1311.5" y1="551.5" y2="551.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_212">
+   <polyline fill="none" id="svg_213" points="1551.5,584.5 1551.5,472.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_214">
+    <line id="svg_215" stroke="#000000" stroke-width="1" x1="1551.5" x2="1545.5" y1="525.5" y2="510.5"/>
+    <line id="svg_216" stroke="#000000" stroke-width="1" x1="1551.5" x2="1557.5" y1="525.5" y2="510.5"/>
+    <g id="svg_217" transform="translate(1551, 525)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_218" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_219">
+    <line id="svg_220" stroke="#000000" stroke-width="1" x1="1545.5" x2="1557.5" y1="540.5" y2="540.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_221">
+   <polyline fill="none" id="svg_222" points="1433.5,647.5 1617.5,647.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_223">
+    <line id="svg_224" stroke="#000000" stroke-width="1" x1="1514.5" x2="1529.5" y1="647.5" y2="641.5"/>
+    <line id="svg_225" stroke="#000000" stroke-width="1" x1="1514.5" x2="1529.5" y1="647.5" y2="653.5"/>
+    <line id="svg_226" stroke="#000000" stroke-width="1" x1="1514.5" x2="1514.5" y1="641.5" y2="653.5"/>
+   </g>
+   <g class="mandatory" id="svg_227">
+    <line id="svg_228" stroke="#000000" stroke-width="1" x1="1480.5" x2="1480.5" y1="641.5" y2="653.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_229">
+   <polyline fill="none" id="svg_230" points="1669.5,635.5 1669.5,825.5 1588.5,825.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_231">
+    <line id="svg_232" stroke="#000000" stroke-width="1" x1="1663.5" x2="1675.5" y1="766.5" y2="766.5"/>
+   </g>
+   <g class="mandatory" id="svg_233">
+    <line id="svg_234" stroke="#000000" stroke-width="1" x1="1663.5" x2="1675.5" y1="758.5" y2="758.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_235">
+   <polyline fill="none" id="svg_236" points="1669.5,703.5 1509.5,703.5 1509.5,923.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_237">
+    <line id="svg_238" stroke="#000000" stroke-width="1" x1="1503.5" x2="1515.5" y1="869.5" y2="869.5"/>
+   </g>
+   <g class="mandatory" id="svg_239">
+    <line id="svg_240" stroke="#000000" stroke-width="1" x1="1514.5" x2="1514.5" y1="697.5" y2="709.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_241">
+   <polyline fill="none" id="svg_242" points="1669.5,682.5 1493.5,682.5 1493.5,982.5 1471.5,982.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_243">
+    <line id="svg_244" stroke="#000000" stroke-width="1" x1="1487.5" x2="1499.5" y1="957.5" y2="957.5"/>
+   </g>
+   <g class="mandatory" id="svg_245">
+    <line id="svg_246" stroke="#000000" stroke-width="1" x1="1514.5" x2="1514.5" y1="676.5" y2="688.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_247">
+   <polyline fill="none" id="svg_248" points="1470.5,831.5 1363.5,831.5 1363.5,962.5 1248.5,962.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_249">
+    <line id="svg_250" stroke="#000000" stroke-width="1" x1="1363.5" x2="1357.5" y1="906.5" y2="921.5"/>
+    <line id="svg_251" stroke="#000000" stroke-width="1" x1="1363.5" x2="1369.5" y1="906.5" y2="921.5"/>
+    <line id="svg_252" stroke="#000000" stroke-width="1" x1="1357.5" x2="1369.5" y1="906.5" y2="906.5"/>
+   </g>
+   <g class="mandatory" id="svg_253">
+    <line id="svg_254" stroke="#000000" stroke-width="1" x1="1357.5" x2="1369.5" y1="887.5" y2="887.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_255">
+   <polyline fill="none" id="svg_256" points="1370.5,966.5 1327.5,966.5 1327.5,1087.5 1283.5,1087.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_257">
+    <line id="svg_258" stroke="#000000" stroke-width="1" x1="1327.5" x2="1321.5" y1="1024.5" y2="1039.5"/>
+    <line id="svg_259" stroke="#000000" stroke-width="1" x1="1327.5" x2="1333.5" y1="1024.5" y2="1039.5"/>
+    <g id="svg_260" transform="translate(1327, 1024)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_261" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_262">
+    <line id="svg_263" stroke="#000000" stroke-width="1" x1="1321.5" x2="1333.5" y1="1012.5" y2="1012.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_264">
+   <polyline fill="none" id="svg_265" points="1033.5,579.5 1153.5,579.5 1153.5,1057.5 1212.5,1057.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_266">
+    <line id="svg_267" stroke="#000000" stroke-width="1" x1="1187.5" x2="1202.5" y1="1057.5" y2="1051.5"/>
+    <line id="svg_268" stroke="#000000" stroke-width="1" x1="1187.5" x2="1202.5" y1="1057.5" y2="1063.5"/>
+    <g id="svg_269" transform="translate(1187, 1057)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_270" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_271">
+    <line id="svg_272" stroke="#000000" stroke-width="1" x1="1061.5" x2="1061.5" y1="573.5" y2="585.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_273">
+   <polyline fill="none" id="svg_274" points="556.5,260.5 556.5,402.5 1745.5,402.5 1745.5,825.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_275">
+    <line id="svg_276" stroke="#000000" stroke-width="1" x1="1745.5" x2="1739.5" y1="766.5" y2="781.5"/>
+    <line id="svg_277" stroke="#000000" stroke-width="1" x1="1745.5" x2="1751.5" y1="766.5" y2="781.5"/>
+    <line id="svg_278" stroke="#000000" stroke-width="1" x1="1739.5" x2="1751.5" y1="766.5" y2="766.5"/>
+   </g>
+   <g class="mandatory" id="svg_279">
+    <line id="svg_280" stroke="#000000" stroke-width="1" x1="550.5" x2="562.5" y1="342.5" y2="342.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_281">
+   <polyline fill="none" id="svg_282" points="1413.5,576.5 1413.5,390.5 585.5,390.5 585.5,155.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_283">
+    <line id="svg_284" stroke="#000000" stroke-width="1" x1="585.5" x2="579.5" y1="237.5" y2="222.5"/>
+    <line id="svg_285" stroke="#000000" stroke-width="1" x1="585.5" x2="591.5" y1="237.5" y2="222.5"/>
+    <line id="svg_286" stroke="#000000" stroke-width="1" x1="579.5" x2="591.5" y1="237.5" y2="237.5"/>
+   </g>
+   <g class="mandatory" id="svg_287">
+    <g id="svg_288" transform="translate(1413, 551)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_289" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+  </g>
+  <g class="reference" id="svg_290">
+   <polyline fill="none" id="svg_291" points="1306.5,100.5 1306.5,202.5 1378.5,202.5 1378.5,641.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_292">
+    <line id="svg_293" stroke="#000000" stroke-width="1" x1="1378.5" x2="1372.5" y1="551.5" y2="566.5"/>
+    <line id="svg_294" stroke="#000000" stroke-width="1" x1="1378.5" x2="1384.5" y1="551.5" y2="566.5"/>
+    <line id="svg_295" stroke="#000000" stroke-width="1" x1="1372.5" x2="1384.5" y1="551.5" y2="551.5"/>
+   </g>
+   <g class="mandatory" id="svg_296">
+    <line id="svg_297" stroke="#000000" stroke-width="1" x1="1300.5" x2="1312.5" y1="177.5" y2="177.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_298">
+   <polyline fill="none" id="svg_299" points="1023.5,458.5 1023.5,552.5 1494.5,552.5 1494.5,469.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_300">
+    <line id="svg_301" stroke="#000000" stroke-width="1" x1="1494.5" x2="1488.5" y1="525.5" y2="510.5"/>
+    <line id="svg_302" stroke="#000000" stroke-width="1" x1="1494.5" x2="1500.5" y1="525.5" y2="510.5"/>
+    <line id="svg_303" stroke="#000000" stroke-width="1" x1="1488.5" x2="1500.5" y1="525.5" y2="525.5"/>
+   </g>
+   <g class="mandatory" id="svg_304">
+    <line id="svg_305" stroke="#000000" stroke-width="1" x1="1061.5" x2="1061.5" y1="546.5" y2="558.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_306">
+   <polyline fill="none" id="svg_307" points="1033.5,501.5 1296.5,501.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_308">
+    <line id="svg_309" stroke="#000000" stroke-width="1" x1="1186.5" x2="1201.5" y1="501.5" y2="495.5"/>
+    <line id="svg_310" stroke="#000000" stroke-width="1" x1="1186.5" x2="1201.5" y1="501.5" y2="507.5"/>
+    <line id="svg_311" stroke="#000000" stroke-width="1" x1="1186.5" x2="1186.5" y1="495.5" y2="507.5"/>
+   </g>
+   <g class="mandatory" id="svg_312">
+    <line id="svg_313" stroke="#000000" stroke-width="1" x1="1061.5" x2="1061.5" y1="495.5" y2="507.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_314">
+   <polyline fill="none" id="svg_315" points="648.5,1111.5 1792.5,1111.5 1792.5,682.5 1669.5,682.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_316">
+    <line id="svg_317" stroke="#000000" stroke-width="1" x1="1749.5" x2="1749.5" y1="676.5" y2="688.5"/>
+   </g>
+   <g class="mandatory" id="svg_318">
+    <line id="svg_319" stroke="#000000" stroke-width="1" x1="685.5" x2="685.5" y1="1105.5" y2="1117.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_320">
+   <polyline fill="none" id="svg_321" points="1121.5,126.5 1121.5,198.5 1687.5,198.5 1687.5,627.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_322">
+    <line id="svg_323" stroke="#000000" stroke-width="1" x1="1687.5" x2="1681.5" y1="540.5" y2="555.5"/>
+    <line id="svg_324" stroke="#000000" stroke-width="1" x1="1687.5" x2="1693.5" y1="540.5" y2="555.5"/>
+    <line id="svg_325" stroke="#000000" stroke-width="1" x1="1681.5" x2="1693.5" y1="540.5" y2="540.5"/>
+   </g>
+   <g class="mandatory" id="svg_326">
+    <line id="svg_327" stroke="#000000" stroke-width="1" x1="1115.5" x2="1127.5" y1="177.5" y2="177.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_328">
+   <polyline fill="none" id="svg_329" points="1097.5,332.5 1097.5,416.5 1669.5,416.5 1669.5,566.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_330">
+    <line id="svg_331" stroke="#000000" stroke-width="1" x1="1663.5" x2="1675.5" y1="540.5" y2="540.5"/>
+   </g>
+   <g class="mandatory" id="svg_332">
+    <g id="svg_333" transform="translate(1097, 366)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_334" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+  </g>
+  <g class="reference" id="svg_335">
+   <polyline fill="none" id="svg_336" points="656.5,1047.5 656.5,897.5 1205.5,897.5 1205.5,845.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_337">
+    <line id="svg_338" stroke="#000000" stroke-width="1" x1="1199.5" x2="1211.5" y1="887.5" y2="887.5"/>
+   </g>
+   <g class="mandatory" id="svg_339">
+    <line id="svg_340" stroke="#000000" stroke-width="1" x1="650.5" x2="662.5" y1="1018.5" y2="1018.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_341">
+   <polyline fill="none" id="svg_342" points="1028.5,136.5 1028.5,193.5 1708.5,193.5 1708.5,602.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_343">
+    <line id="svg_344" stroke="#000000" stroke-width="1" x1="1708.5" x2="1702.5" y1="540.5" y2="555.5"/>
+    <line id="svg_345" stroke="#000000" stroke-width="1" x1="1708.5" x2="1714.5" y1="540.5" y2="555.5"/>
+    <g id="svg_346" transform="translate(1708, 540)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_347" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_348">
+    <g id="svg_349" transform="translate(1028, 193)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_350" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+  </g>
+  <g class="reference" id="svg_351">
+   <polyline fill="none" id="svg_352" points="1391.5,113.5 1391.5,533.5 1475.5,533.5 1475.5,787.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_353">
+    <line id="svg_354" stroke="#000000" stroke-width="1" x1="1475.5" x2="1469.5" y1="712.5" y2="727.5"/>
+    <line id="svg_355" stroke="#000000" stroke-width="1" x1="1475.5" x2="1481.5" y1="712.5" y2="727.5"/>
+    <g id="svg_356" transform="translate(1475, 712)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_357" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_358">
+    <line id="svg_359" stroke="#000000" stroke-width="1" x1="1385.5" x2="1397.5" y1="198.5" y2="198.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_360">
+   <polyline fill="none" id="svg_361" points="570.5,1098.5 316.5,1098.5 316.5,961.5 168.5,961.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_362">
+    <line id="svg_363" stroke="#000000" stroke-width="1" x1="306.5" x2="306.5" y1="955.5" y2="967.5"/>
+   </g>
+   <g class="mandatory" id="svg_364">
+    <line id="svg_365" stroke="#000000" stroke-width="1" x1="420.5" x2="420.5" y1="1092.5" y2="1104.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_366">
+   <polyline fill="none" id="svg_367" points="1037.5,332.5 20.5,332.5 20.5,952.5 130.5,952.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_368">
+    <line id="svg_369" stroke="#000000" stroke-width="1" x1="70.5" x2="70.5" y1="946.5" y2="958.5"/>
+   </g>
+   <g class="mandatory" id="svg_370">
+    <line id="svg_371" stroke="#000000" stroke-width="1" x1="888.5" x2="888.5" y1="326.5" y2="338.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_372">
+   <polyline fill="none" id="svg_373" points="1120.5,56.5 762.5,56.5 762.5,905.5 178.5,905.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_374">
+    <line id="svg_375" stroke="#000000" stroke-width="1" x1="306.5" x2="291.5" y1="905.5" y2="899.5"/>
+    <line id="svg_376" stroke="#000000" stroke-width="1" x1="306.5" x2="291.5" y1="905.5" y2="911.5"/>
+    <g id="svg_377" transform="translate(306, 905)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_378" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_379">
+    <line id="svg_380" stroke="#000000" stroke-width="1" x1="1056.5" x2="1056.5" y1="50.5" y2="62.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_381">
+   <polyline fill="none" id="svg_382" points="1025.5,579.5 1025.5,1251.5 212.5,1251.5 212.5,1167.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_383">
+    <line id="svg_384" stroke="#000000" stroke-width="1" x1="212.5" x2="206.5" y1="1206.5" y2="1191.5"/>
+    <line id="svg_385" stroke="#000000" stroke-width="1" x1="212.5" x2="218.5" y1="1206.5" y2="1191.5"/>
+    <g id="svg_386" transform="translate(212, 1206)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_387" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_388">
+    <line id="svg_389" stroke="#000000" stroke-width="1" x1="1019.5" x2="1031.5" y1="606.5" y2="606.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_390">
+   <polyline fill="none" id="svg_391" points="817.5,456.5 817.5,411.5 171.5,411.5 171.5,456.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_392">
+    <line id="svg_393" stroke="#000000" stroke-width="1" x1="171.5" x2="165.5" y1="426.5" y2="441.5"/>
+    <line id="svg_394" stroke="#000000" stroke-width="1" x1="171.5" x2="177.5" y1="426.5" y2="441.5"/>
+    <g id="svg_395" transform="translate(171, 426)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_396" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_397">
+    <line id="svg_398" stroke="#000000" stroke-width="1" x1="811.5" x2="823.5" y1="431.5" y2="431.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_399">
+   <polyline fill="none" id="svg_400" points="902.5,456.5 902.5,380.5 324.5,380.5 324.5,451.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_401">
+    <line id="svg_402" stroke="#000000" stroke-width="1" x1="324.5" x2="318.5" y1="426.5" y2="441.5"/>
+    <line id="svg_403" stroke="#000000" stroke-width="1" x1="324.5" x2="330.5" y1="426.5" y2="441.5"/>
+    <g id="svg_404" transform="translate(324, 426)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_405" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_406">
+    <line id="svg_407" stroke="#000000" stroke-width="1" x1="896.5" x2="908.5" y1="431.5" y2="431.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_408">
+   <polyline fill="none" id="svg_409" points="509.5,1079.5 56.5,1079.5 56.5,598.5 122.5,598.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_410">
+    <line id="svg_411" stroke="#000000" stroke-width="1" x1="97.5" x2="97.5" y1="592.5" y2="604.5"/>
+   </g>
+   <g class="mandatory" id="svg_412">
+    <line id="svg_413" stroke="#000000" stroke-width="1" x1="420.5" x2="420.5" y1="1073.5" y2="1085.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_414">
+   <polyline fill="none" id="svg_415" points="1175.5,59.5 740.5,59.5 740.5,608.5 225.5,608.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_416">
+    <line id="svg_417" stroke="#000000" stroke-width="1" x1="348.5" x2="333.5" y1="608.5" y2="602.5"/>
+    <line id="svg_418" stroke="#000000" stroke-width="1" x1="348.5" x2="333.5" y1="608.5" y2="614.5"/>
+    <g id="svg_419" transform="translate(348, 608)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_420" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_421">
+    <line id="svg_422" stroke="#000000" stroke-width="1" x1="1056.5" x2="1056.5" y1="53.5" y2="65.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_423">
+   <polyline fill="none" id="svg_424" points="1112.5,142.5 1112.5,20.5 118.5,20.5 118.5,703.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_425">
+    <line id="svg_426" stroke="#000000" stroke-width="1" x1="118.5" x2="112.5" y1="678.5" y2="693.5"/>
+    <line id="svg_427" stroke="#000000" stroke-width="1" x1="118.5" x2="124.5" y1="678.5" y2="693.5"/>
+    <g id="svg_428" transform="translate(118, 678)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_429" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_430">
+    <line id="svg_431" stroke="#000000" stroke-width="1" x1="1106.5" x2="1118.5" y1="31.5" y2="31.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_432">
+   <polyline fill="none" id="svg_433" points="853.5,112.5 749.5,112.5 749.5,798.5 339.5,798.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_434">
+    <line id="svg_435" stroke="#000000" stroke-width="1" x1="445.5" x2="430.5" y1="798.5" y2="792.5"/>
+    <line id="svg_436" stroke="#000000" stroke-width="1" x1="445.5" x2="430.5" y1="798.5" y2="804.5"/>
+    <g id="svg_437" transform="translate(445, 798)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_438" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_439">
+    <g id="svg_440" transform="translate(778, 112)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_441" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+  </g>
+  <g class="reference" id="svg_442">
+   <polyline fill="none" id="svg_443" points="1033.5,327.5 775.5,327.5 775.5,817.5 381.5,817.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_444">
+    <line id="svg_445" stroke="#000000" stroke-width="1" x1="445.5" x2="430.5" y1="817.5" y2="811.5"/>
+    <line id="svg_446" stroke="#000000" stroke-width="1" x1="445.5" x2="430.5" y1="817.5" y2="823.5"/>
+    <g id="svg_447" transform="translate(445, 817)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_448" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_449">
+    <line id="svg_450" stroke="#000000" stroke-width="1" x1="888.5" x2="888.5" y1="321.5" y2="333.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_451">
+   <polyline fill="none" id="svg_452" points="422.5,786.5 76.5,786.5 76.5,141.5 422.5,141.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_453">
+    <line id="svg_454" stroke="#000000" stroke-width="1" x1="302.5" x2="317.5" y1="141.5" y2="135.5"/>
+    <line id="svg_455" stroke="#000000" stroke-width="1" x1="302.5" x2="317.5" y1="141.5" y2="147.5"/>
+    <line id="svg_456" stroke="#000000" stroke-width="1" x1="302.5" x2="302.5" y1="135.5" y2="147.5"/>
+   </g>
+   <g class="mandatory" id="svg_457">
+    <g id="svg_458" transform="translate(78, 786)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_459" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+  </g>
+  <g class="reference" id="svg_460">
+   <polyline fill="none" id="svg_461" points="880.5,156.5 562.5,156.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_462">
+    <line id="svg_463" stroke="#000000" stroke-width="1" x1="625.5" x2="610.5" y1="156.5" y2="150.5"/>
+    <line id="svg_464" stroke="#000000" stroke-width="1" x1="625.5" x2="610.5" y1="156.5" y2="162.5"/>
+    <g id="svg_465" transform="translate(625, 156)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_466" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_467">
+    <g id="svg_468" transform="translate(778, 156)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_469" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+  </g>
+  <g class="reference" id="svg_470">
+   <polyline fill="none" id="svg_471" points="1096.5,58.5 1096.5,30.5 582.5,30.5 582.5,57.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_472">
+    <line id="svg_473" stroke="#000000" stroke-width="1" x1="582.5" x2="576.5" y1="32.5" y2="47.5"/>
+    <line id="svg_474" stroke="#000000" stroke-width="1" x1="582.5" x2="588.5" y1="32.5" y2="47.5"/>
+    <g id="svg_475" transform="translate(582, 32)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_476" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_477">
+    <line id="svg_478" stroke="#000000" stroke-width="1" x1="1090.5" x2="1102.5" y1="31.5" y2="31.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_479">
+   <polyline fill="none" id="svg_480" points="1504.5,173.5 1142.5,173.5 1142.5,1015.5 548.5,1015.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_481">
+    <line id="svg_482" stroke="#000000" stroke-width="1" x1="653.5" x2="638.5" y1="1015.5" y2="1009.5"/>
+    <line id="svg_483" stroke="#000000" stroke-width="1" x1="653.5" x2="638.5" y1="1015.5" y2="1021.5"/>
+    <g id="svg_484" transform="translate(653, 1015)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_485" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_486">
+    <line id="svg_487" stroke="#000000" stroke-width="1" x1="1346.5" x2="1346.5" y1="167.5" y2="179.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_488">
+   <polyline fill="none" id="svg_489" points="1031.5,579.5 1031.5,1219.5 571.5,1219.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_490">
+    <line id="svg_491" stroke="#000000" stroke-width="1" x1="619.5" x2="604.5" y1="1219.5" y2="1213.5"/>
+    <line id="svg_492" stroke="#000000" stroke-width="1" x1="619.5" x2="604.5" y1="1219.5" y2="1225.5"/>
+    <g id="svg_493" transform="translate(619, 1219)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_494" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_495">
+    <line id="svg_496" stroke="#000000" stroke-width="1" x1="1025.5" x2="1037.5" y1="606.5" y2="606.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_497">
+   <polyline fill="none" id="svg_498" points="817.5,530.5 487.5,530.5 487.5,932.5 571.5,932.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_499">
+    <line id="svg_500" stroke="#000000" stroke-width="1" x1="487.5" x2="481.5" y1="907.5" y2="922.5"/>
+    <line id="svg_501" stroke="#000000" stroke-width="1" x1="487.5" x2="493.5" y1="907.5" y2="922.5"/>
+    <g id="svg_502" transform="translate(487, 907)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_503" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_504">
+    <line id="svg_505" stroke="#000000" stroke-width="1" x1="792.5" x2="792.5" y1="524.5" y2="536.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_506">
+   <polyline fill="none" id="svg_507" points="987.5,524.5 1099.5,524.5 1099.5,811.5 996.5,811.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_508">
+    <line id="svg_509" stroke="#000000" stroke-width="1" x1="1021.5" x2="1021.5" y1="805.5" y2="817.5"/>
+   </g>
+   <g class="mandatory" id="svg_510">
+    <line id="svg_511" stroke="#000000" stroke-width="1" x1="1061.5" x2="1061.5" y1="518.5" y2="530.5"/>
+   </g>
+  </g>
+  <g class="reference" id="svg_512">
+   <polyline fill="none" id="svg_513" points="718.5,1143.5 718.5,1029.5 583.5,1029.5 583.5,972.5 " stroke="#000000"/>
+   <g class="cardinality" id="svg_514">
+    <line id="svg_515" stroke="#000000" stroke-width="1" x1="583.5" x2="577.5" y1="1029.5" y2="1014.5"/>
+    <line id="svg_516" stroke="#000000" stroke-width="1" x1="583.5" x2="589.5" y1="1029.5" y2="1014.5"/>
+    <g id="svg_517" transform="translate(583, 1029)">
+     <circle cx="0.5" cy="0.5" fill="white" id="svg_518" r="3.5" stroke="#000000" stroke-width="1"/>
+    </g>
+   </g>
+   <g class="mandatory" id="svg_519">
+    <line id="svg_520" stroke="#000000" stroke-width="1" x1="712.5" x2="724.5" y1="1110.5" y2="1110.5"/>
+   </g>
+  </g>
+  <g class="table" id="svg_521">
+   <g id="svg_522" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_523" width="239" x="807.5" y="446.5"/>
+   </g>
+   <g id="svg_524" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_525" text-anchor="middle" x="928" y="460.69">Students</text>
+   </g>
+   <g id="svg_526" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="125" id="svg_527" width="239" x="807.5" y="446.5"/>
+    <g id="svg_528" transform="translate(4, 3)">
+     <g id="svg_529" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_530" x="808.5" y="457.64">StudentID</text>
+     </g>
+     <g id="svg_531" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_532" x="808.5" y="457.64">FirstName</text>
+     </g>
+     <g id="svg_533" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_534" x="808.5" y="457.64">LastName</text>
+     </g>
+     <g id="svg_535" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_536" x="808.5" y="457.64">Address</text>
+     </g>
+     <g id="svg_537" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_538" x="808.5" y="457.64">CityID</text>
+     </g>
+     <g id="svg_539" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_540" x="808.5" y="457.64">PostalCode</text>
+     </g>
+     <g id="svg_541" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_542" x="808.5" y="457.64">Phone</text>
+     </g>
+     <g id="svg_543" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_544" x="808.5" y="457.64">Email</text>
+     </g>
+    </g>
+    <g id="svg_545" transform="translate(145, 3)">
+     <g id="svg_546" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_547" x="808.5" y="457.64">int</text>
+     </g>
+     <g id="svg_548" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_549" x="808.5" y="457.64">varchar(30)</text>
+     </g>
+     <g id="svg_550" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_551" x="808.5" y="457.64">varchar(30)</text>
+     </g>
+     <g id="svg_552" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_553" x="808.5" y="457.64">varchar(30)</text>
+     </g>
+     <g id="svg_554" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_555" x="808.5" y="457.64">int</text>
+     </g>
+     <g id="svg_556" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_557" x="808.5" y="457.64">varchar(10)</text>
+     </g>
+     <g id="svg_558" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_559" x="808.5" y="457.64">varchar(15)</text>
+     </g>
+     <g id="svg_560" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_561" x="808.5" y="457.64">varchar(60)</text>
+     </g>
+    </g>
+    <g id="svg_562" transform="translate(219.75, 3)">
+     <g id="svg_563" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_564" x="808.5" y="457.64">PK</text>
+     </g>
+     <g id="svg_565" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_566" x="808.5" y="457.64"/>
+     </g>
+     <g id="svg_567" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_568" x="808.5" y="457.64"/>
+     </g>
+     <g id="svg_569" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_570" x="808.5" y="457.64"/>
+     </g>
+     <g id="svg_571" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_572" x="808.5" y="457.64">FK</text>
+     </g>
+     <g id="svg_573" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_574" x="808.5" y="457.64"/>
+     </g>
+     <g id="svg_575" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_576" x="808.5" y="457.64">N</text>
+     </g>
+     <g id="svg_577" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_578" x="808.5" y="457.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_579" points="807.5,466.5 807.5,446.5 1046.5,446.5 1046.5,466.5 807.5,466.5 807.5,591.5 1046.5,591.5 1046.5,466.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_580">
+   <g id="svg_581" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_582" width="201" x="808.5" y="599.5"/>
+   </g>
+   <g id="svg_583" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_584" text-anchor="middle" x="910" y="613.69">Cities</text>
+   </g>
+   <g id="svg_585" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="52" id="svg_586" width="201" x="808.5" y="599.5"/>
+    <g id="svg_587" transform="translate(4, 3)">
+     <g id="svg_588" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_589" x="809.5" y="610.64">CityID</text>
+     </g>
+     <g id="svg_590" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_591" x="809.5" y="610.64">CityName</text>
+     </g>
+     <g id="svg_592" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_593" x="809.5" y="610.64">CountryID</text>
+     </g>
+    </g>
+    <g id="svg_594" transform="translate(107, 3)">
+     <g id="svg_595" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_596" x="809.5" y="610.64">int</text>
+     </g>
+     <g id="svg_597" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_598" x="809.5" y="610.64">varchar(40)</text>
+     </g>
+     <g id="svg_599" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_600" x="809.5" y="610.64">int</text>
+     </g>
+    </g>
+    <g id="svg_601" transform="translate(181.75, 3)">
+     <g id="svg_602" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_603" x="809.5" y="610.64">PK</text>
+     </g>
+     <g id="svg_604" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_605" x="809.5" y="610.64"/>
+     </g>
+     <g id="svg_606" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_607" x="809.5" y="610.64">FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_608" points="808.5,619.5 808.5,599.5 1009.5,599.5 1009.5,619.5 808.5,619.5 808.5,671.5 1009.5,671.5 1009.5,619.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_609">
+   <g id="svg_610" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_611" width="202" x="804.5" y="691.5"/>
+   </g>
+   <g id="svg_612" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_613" text-anchor="middle" x="906.5" y="705.69">Countries</text>
+   </g>
+   <g id="svg_614" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="44" id="svg_615" width="202" x="804.5" y="691.5"/>
+    <g id="svg_616" transform="translate(4, 3)">
+     <g id="svg_617" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_618" x="805.5" y="702.64">CountryID</text>
+     </g>
+     <g id="svg_619" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_620" x="805.5" y="702.64">CountryName</text>
+     </g>
+    </g>
+    <g id="svg_621" transform="translate(108, 3)">
+     <g id="svg_622" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_623" x="805.5" y="702.64">int</text>
+     </g>
+     <g id="svg_624" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_625" x="805.5" y="702.64">varchar(40)</text>
+     </g>
+    </g>
+    <g id="svg_626" transform="translate(182.75, 3)">
+     <g id="svg_627" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_628" x="805.5" y="702.64">PK</text>
+     </g>
+     <g id="svg_629" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_630" x="805.5" y="702.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_631" points="804.5,711.5 804.5,691.5 1006.5,691.5 1006.5,711.5 804.5,711.5 804.5,755.5 1006.5,755.5 1006.5,711.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_632">
+   <g id="svg_633" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_634" width="290" x="1361.5" y="50.5"/>
+   </g>
+   <g id="svg_635" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_636" text-anchor="middle" x="1507.5" y="64.69">Employees</text>
+   </g>
+   <g id="svg_637" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="113" id="svg_638" width="290" x="1361.5" y="50.5"/>
+    <g id="svg_639" transform="translate(4, 3)">
+     <g id="svg_640" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_641" x="1362.5" y="61.64">EmployeeID</text>
+     </g>
+     <g id="svg_642" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_643" x="1362.5" y="61.64">FirstName</text>
+     </g>
+     <g id="svg_644" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_645" x="1362.5" y="61.64">LastName</text>
+     </g>
+     <g id="svg_646" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_647" x="1362.5" y="61.64">HireDate</text>
+     </g>
+     <g id="svg_648" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_649" x="1362.5" y="61.64">EmployeeTypeID</text>
+     </g>
+     <g id="svg_650" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_651" x="1362.5" y="61.64">Phone</text>
+     </g>
+     <g id="svg_652" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_653" x="1362.5" y="61.64">Email</text>
+     </g>
+    </g>
+    <g id="svg_654" transform="translate(196, 3)">
+     <g id="svg_655" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_656" x="1362.5" y="61.64">int</text>
+     </g>
+     <g id="svg_657" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_658" x="1362.5" y="61.64">varchar(30)</text>
+     </g>
+     <g id="svg_659" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_660" x="1362.5" y="61.64">varchar(30)</text>
+     </g>
+     <g id="svg_661" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_662" x="1362.5" y="61.64">date</text>
+     </g>
+     <g id="svg_663" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_664" x="1362.5" y="61.64">int</text>
+     </g>
+     <g id="svg_665" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_666" x="1362.5" y="61.64">varchar(15)</text>
+     </g>
+     <g id="svg_667" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_668" x="1362.5" y="61.64">varchar(60)</text>
+     </g>
+    </g>
+    <g id="svg_669" transform="translate(270.75, 3)">
+     <g id="svg_670" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_671" x="1362.5" y="61.64">PK</text>
+     </g>
+     <g id="svg_672" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_673" x="1362.5" y="61.64"/>
+     </g>
+     <g id="svg_674" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_675" x="1362.5" y="61.64"/>
+     </g>
+     <g id="svg_676" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_677" x="1362.5" y="61.64">N</text>
+     </g>
+     <g id="svg_678" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_679" x="1362.5" y="61.64">FK</text>
+     </g>
+     <g id="svg_680" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_681" x="1362.5" y="61.64">N</text>
+     </g>
+     <g id="svg_682" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_683" x="1362.5" y="61.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_684" points="1361.5,70.5 1361.5,50.5 1651.5,50.5 1651.5,70.5 1361.5,70.5 1361.5,183.5 1651.5,183.5 1651.5,70.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_685">
+   <g id="svg_686" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_687" width="247" x="793.5" y="63.5"/>
+   </g>
+   <g id="svg_688" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_689" text-anchor="middle" x="918" y="77.69">Translators</text>
+   </g>
+   <g id="svg_690" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="96" id="svg_691" width="247" x="793.5" y="63.5"/>
+    <g id="svg_692" transform="translate(4, 3)">
+     <g id="svg_693" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_694" x="794.5" y="74.64">TranslatorID</text>
+     </g>
+     <g id="svg_695" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_696" x="794.5" y="74.64">FirstName</text>
+     </g>
+     <g id="svg_697" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_698" x="794.5" y="74.64">LastName</text>
+     </g>
+     <g id="svg_699" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_700" x="794.5" y="74.64">HireDate</text>
+     </g>
+     <g id="svg_701" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_702" x="794.5" y="74.64">Phone</text>
+     </g>
+     <g id="svg_703" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_704" x="794.5" y="74.64">Email</text>
+     </g>
+    </g>
+    <g id="svg_705" transform="translate(153, 3)">
+     <g id="svg_706" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_707" x="794.5" y="74.64">int</text>
+     </g>
+     <g id="svg_708" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_709" x="794.5" y="74.64">varchar(30)</text>
+     </g>
+     <g id="svg_710" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_711" x="794.5" y="74.64">varchar(30)</text>
+     </g>
+     <g id="svg_712" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_713" x="794.5" y="74.64">date</text>
+     </g>
+     <g id="svg_714" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_715" x="794.5" y="74.64">varchar(15)</text>
+     </g>
+     <g id="svg_716" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_717" x="794.5" y="74.64">varchar(60)</text>
+     </g>
+    </g>
+    <g id="svg_718" transform="translate(227.75, 3)">
+     <g id="svg_719" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_720" x="794.5" y="74.64">PK</text>
+     </g>
+     <g id="svg_721" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_722" x="794.5" y="74.64"/>
+     </g>
+     <g id="svg_723" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_724" x="794.5" y="74.64"/>
+     </g>
+     <g id="svg_725" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_726" x="794.5" y="74.64">N</text>
+     </g>
+     <g id="svg_727" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_728" x="794.5" y="74.64">N</text>
+     </g>
+     <g id="svg_729" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_730" x="794.5" y="74.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_731" points="793.5,83.5 793.5,63.5 1040.5,63.5 1040.5,83.5 793.5,83.5 793.5,179.5 1040.5,179.5 1040.5,83.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_732">
+   <g id="svg_733" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_734" width="247" x="1071.5" y="46.5"/>
+   </g>
+   <g id="svg_735" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_736" text-anchor="middle" x="1196" y="60.69">Teachers</text>
+   </g>
+   <g id="svg_737" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="96" id="svg_738" width="247" x="1071.5" y="46.5"/>
+    <g id="svg_739" transform="translate(4, 3)">
+     <g id="svg_740" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_741" x="1072.5" y="57.64">TeacherID</text>
+     </g>
+     <g id="svg_742" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_743" x="1072.5" y="57.64">FirstName</text>
+     </g>
+     <g id="svg_744" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_745" x="1072.5" y="57.64">LastName</text>
+     </g>
+     <g id="svg_746" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_747" x="1072.5" y="57.64">HireDate</text>
+     </g>
+     <g id="svg_748" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_749" x="1072.5" y="57.64">Phone</text>
+     </g>
+     <g id="svg_750" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_751" x="1072.5" y="57.64">Email</text>
+     </g>
+    </g>
+    <g id="svg_752" transform="translate(153, 3)">
+     <g id="svg_753" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_754" x="1072.5" y="57.64">int</text>
+     </g>
+     <g id="svg_755" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_756" x="1072.5" y="57.64">varchar(30)</text>
+     </g>
+     <g id="svg_757" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_758" x="1072.5" y="57.64">varchar(30)</text>
+     </g>
+     <g id="svg_759" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_760" x="1072.5" y="57.64">date</text>
+     </g>
+     <g id="svg_761" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_762" x="1072.5" y="57.64">varchar(15)</text>
+     </g>
+     <g id="svg_763" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_764" x="1072.5" y="57.64">varchar(60)</text>
+     </g>
+    </g>
+    <g id="svg_765" transform="translate(227.75, 3)">
+     <g id="svg_766" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_767" x="1072.5" y="57.64">PK</text>
+     </g>
+     <g id="svg_768" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_769" x="1072.5" y="57.64"/>
+     </g>
+     <g id="svg_770" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_771" x="1072.5" y="57.64"/>
+     </g>
+     <g id="svg_772" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_773" x="1072.5" y="57.64">N</text>
+     </g>
+     <g id="svg_774" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_775" x="1072.5" y="57.64">N</text>
+     </g>
+     <g id="svg_776" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_777" x="1072.5" y="57.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_778" points="1071.5,66.5 1071.5,46.5 1318.5,46.5 1318.5,66.5 1071.5,66.5 1071.5,162.5 1318.5,162.5 1318.5,66.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_779">
+   <g id="svg_780" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_781" width="221" x="794.5" y="202.5"/>
+   </g>
+   <g id="svg_782" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_783" text-anchor="middle" x="906" y="216.69">TranslatorsLanguages</text>
+   </g>
+   <g id="svg_784" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="37" id="svg_785" width="221" x="794.5" y="202.5"/>
+    <g id="svg_786" transform="translate(4, 3)">
+     <g id="svg_787" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_788" x="795.5" y="213.64">TranslatorID</text>
+     </g>
+     <g id="svg_789" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_790" x="795.5" y="213.64">LanguageID</text>
+     </g>
+    </g>
+    <g id="svg_791" transform="translate(163.5, 3)">
+     <g id="svg_792" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_793" x="795.5" y="213.64">int</text>
+     </g>
+     <g id="svg_794" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_795" x="795.5" y="213.64">int</text>
+     </g>
+    </g>
+    <g id="svg_796" transform="translate(183.25, 3)">
+     <g id="svg_797" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_798" x="795.5" y="213.64">PK FK</text>
+     </g>
+     <g id="svg_799" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_800" x="795.5" y="213.64">PK FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_801" points="794.5,222.5 794.5,202.5 1015.5,202.5 1015.5,222.5 794.5,222.5 794.5,259.5 1015.5,259.5 1015.5,222.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_802">
+   <g id="svg_803" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_804" width="224" x="1146.5" y="218.5"/>
+   </g>
+   <g id="svg_805" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_806" text-anchor="middle" x="1259.5" y="232.69">TeacherLanguages</text>
+   </g>
+   <g id="svg_807" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="38" id="svg_808" width="224" x="1146.5" y="218.5"/>
+    <g id="svg_809" transform="translate(4, 3)">
+     <g id="svg_810" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_811" x="1147.5" y="229.64">TeacherID</text>
+     </g>
+     <g id="svg_812" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_813" x="1147.5" y="229.64">LanguageID</text>
+     </g>
+    </g>
+    <g id="svg_814" transform="translate(166.5, 3)">
+     <g id="svg_815" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_816" x="1147.5" y="229.64">int</text>
+     </g>
+     <g id="svg_817" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_818" x="1147.5" y="229.64">int</text>
+     </g>
+    </g>
+    <g id="svg_819" transform="translate(186.25, 3)">
+     <g id="svg_820" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_821" x="1147.5" y="229.64">PK FK</text>
+     </g>
+     <g id="svg_822" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_823" x="1147.5" y="229.64">PK FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_824" points="1146.5,238.5 1146.5,218.5 1370.5,218.5 1370.5,238.5 1146.5,238.5 1146.5,276.5 1370.5,276.5 1370.5,238.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_825">
+   <g id="svg_826" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_827" width="218" x="903.5" y="291.5"/>
+   </g>
+   <g id="svg_828" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_829" text-anchor="middle" x="1013.5" y="305.69">Languages</text>
+   </g>
+   <g id="svg_830" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="40" id="svg_831" width="218" x="903.5" y="291.5"/>
+    <g id="svg_832" transform="translate(4, 3)">
+     <g id="svg_833" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_834" x="904.5" y="302.64">LanguageID</text>
+     </g>
+     <g id="svg_835" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_836" x="904.5" y="302.64">LanguageName</text>
+     </g>
+    </g>
+    <g id="svg_837" transform="translate(124, 3)">
+     <g id="svg_838" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_839" x="904.5" y="302.64">int</text>
+     </g>
+     <g id="svg_840" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_841" x="904.5" y="302.64">varchar(40)</text>
+     </g>
+    </g>
+    <g id="svg_842" transform="translate(198.75, 3)">
+     <g id="svg_843" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_844" x="904.5" y="302.64">PK</text>
+     </g>
+     <g id="svg_845" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_846" x="904.5" y="302.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_847" points="903.5,311.5 903.5,291.5 1121.5,291.5 1121.5,311.5 903.5,311.5 903.5,351.5 1121.5,351.5 1121.5,311.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_848">
+   <g id="svg_849" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_850" width="246" x="1404.5" y="229.5"/>
+   </g>
+   <g id="svg_851" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_852" text-anchor="middle" x="1528.5" y="243.69">EmployeeTypes</text>
+   </g>
+   <g id="svg_853" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="47" id="svg_854" width="246" x="1404.5" y="229.5"/>
+    <g id="svg_855" transform="translate(4, 3)">
+     <g id="svg_856" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_857" x="1405.5" y="240.64">EmployeeTypeID</text>
+     </g>
+     <g id="svg_858" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_859" x="1405.5" y="240.64">EmployeeTypeName</text>
+     </g>
+    </g>
+    <g id="svg_860" transform="translate(152, 3)">
+     <g id="svg_861" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_862" x="1405.5" y="240.64">int</text>
+     </g>
+     <g id="svg_863" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_864" x="1405.5" y="240.64">varchar(30)</text>
+     </g>
+    </g>
+    <g id="svg_865" transform="translate(226.75, 3)">
+     <g id="svg_866" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_867" x="1405.5" y="240.64">PK</text>
+     </g>
+     <g id="svg_868" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_869" x="1405.5" y="240.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_870" points="1404.5,249.5 1404.5,229.5 1650.5,229.5 1650.5,249.5 1404.5,249.5 1404.5,296.5 1650.5,296.5 1650.5,249.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_871">
+   <g id="svg_872" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_873" width="337" x="93.5" y="693.5"/>
+   </g>
+   <g id="svg_874" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_875" text-anchor="middle" x="263" y="707.69">CourseModules</text>
+   </g>
+   <g id="svg_876" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="136" id="svg_877" width="337" x="93.5" y="693.5"/>
+    <g id="svg_878" transform="translate(4, 3)">
+     <g id="svg_879" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_880" x="94.5" y="704.64">ModuleID</text>
+     </g>
+     <g id="svg_881" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_882" x="94.5" y="704.64">CourseID</text>
+     </g>
+     <g id="svg_883" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_884" x="94.5" y="704.64">ModuleName</text>
+     </g>
+     <g id="svg_885" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_886" x="94.5" y="704.64">Date</text>
+     </g>
+     <g id="svg_887" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_888" x="94.5" y="704.64">DurationTime</text>
+     </g>
+     <g id="svg_889" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_890" x="94.5" y="704.64">TeacherID</text>
+     </g>
+     <g id="svg_891" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_892" x="94.5" y="704.64">TranslatorID</text>
+     </g>
+     <g id="svg_893" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_894" x="94.5" y="704.64">LanguageID</text>
+     </g>
+    </g>
+    <g id="svg_895" transform="translate(230.5, 3)">
+     <g id="svg_896" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_897" x="94.5" y="704.64">int</text>
+     </g>
+     <g id="svg_898" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_899" x="94.5" y="704.64">int</text>
+     </g>
+     <g id="svg_900" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_901" x="94.5" y="704.64">varchar(50)</text>
+     </g>
+     <g id="svg_902" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_903" x="94.5" y="704.64">datetime</text>
+     </g>
+     <g id="svg_904" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_905" x="94.5" y="704.64">time(0)</text>
+     </g>
+     <g id="svg_906" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_907" x="94.5" y="704.64">int</text>
+     </g>
+     <g id="svg_908" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_909" x="94.5" y="704.64">int</text>
+     </g>
+     <g id="svg_910" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_911" x="94.5" y="704.64">int</text>
+     </g>
+    </g>
+    <g id="svg_912" transform="translate(305.25, 3)">
+     <g id="svg_913" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_914" x="94.5" y="704.64">PK</text>
+     </g>
+     <g id="svg_915" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_916" x="94.5" y="704.64">FK</text>
+     </g>
+     <g id="svg_917" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_918" x="94.5" y="704.64"/>
+     </g>
+     <g id="svg_919" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_920" x="94.5" y="704.64"/>
+     </g>
+     <g id="svg_921" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_922" x="94.5" y="704.64"/>
+     </g>
+     <g id="svg_923" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_924" x="94.5" y="704.64">FK</text>
+     </g>
+     <g id="svg_925" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_926" x="94.5" y="704.64">N FK</text>
+     </g>
+     <g id="svg_927" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_928" x="94.5" y="704.64">FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_929" points="93.5,713.5 93.5,693.5 430.5,693.5 430.5,713.5 93.5,713.5 93.5,849.5 430.5,849.5 430.5,713.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_930">
+   <g id="svg_931" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_932" width="221" x="112.5" y="535.5"/>
+   </g>
+   <g id="svg_933" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_934" text-anchor="middle" x="224" y="549.69">Courses</text>
+   </g>
+   <g id="svg_935" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="96" id="svg_936" width="221" x="112.5" y="535.5"/>
+    <g id="svg_937" transform="translate(4, 3)">
+     <g id="svg_938" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_939" x="113.5" y="546.64">CourseID</text>
+     </g>
+     <g id="svg_940" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_941" x="113.5" y="546.64">ActivityID</text>
+     </g>
+     <g id="svg_942" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_943" x="113.5" y="546.64">CourseName</text>
+     </g>
+     <g id="svg_944" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_945" x="113.5" y="546.64">CourseDescription</text>
+     </g>
+     <g id="svg_946" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_947" x="113.5" y="546.64">CoursePrice</text>
+     </g>
+     <g id="svg_948" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_949" x="113.5" y="546.64">CourseCoordinatorI</text>
+     </g>
+    </g>
+    <g id="svg_950" transform="translate(127, 3)">
+     <g id="svg_951" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_952" x="113.5" y="546.64">int</text>
+     </g>
+     <g id="svg_953" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_954" x="113.5" y="546.64">int</text>
+     </g>
+     <g id="svg_955" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_956" x="113.5" y="546.64">varchar(50)</text>
+     </g>
+     <g id="svg_957" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_958" x="113.5" y="546.64">text</text>
+     </g>
+     <g id="svg_959" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_960" x="113.5" y="546.64">money</text>
+     </g>
+     <g id="svg_961" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_962" x="113.5" y="546.64">int</text>
+     </g>
+    </g>
+    <g id="svg_963" transform="translate(201.75, 3)">
+     <g id="svg_964" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_965" x="113.5" y="546.64">PK</text>
+     </g>
+     <g id="svg_966" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_967" x="113.5" y="546.64">FK</text>
+     </g>
+     <g id="svg_968" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_969" x="113.5" y="546.64"/>
+     </g>
+     <g id="svg_970" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_971" x="113.5" y="546.64">N</text>
+     </g>
+     <g id="svg_972" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_973" x="113.5" y="546.64"/>
+     </g>
+     <g id="svg_974" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_975" x="113.5" y="546.64">FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_976" points="112.5,555.5 112.5,535.5 333.5,535.5 333.5,555.5 112.5,555.5 112.5,651.5 333.5,651.5 333.5,555.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_977">
+   <g id="svg_978" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_979" width="128" x="113.5" y="441.5"/>
+   </g>
+   <g id="svg_980" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_981" x="114.5" y="455.69">CourseParticipant</text>
+   </g>
+   <g id="svg_982" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="41" id="svg_983" width="128" x="113.5" y="441.5"/>
+    <g id="svg_984" transform="translate(4, 3)">
+     <g id="svg_985" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_986" x="114.5" y="452.64">CourseID</text>
+     </g>
+     <g id="svg_987" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_988" x="114.5" y="452.64">StudentID</text>
+     </g>
+    </g>
+    <g id="svg_989" transform="translate(70.5, 3)">
+     <g id="svg_990" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_991" x="114.5" y="452.64">int</text>
+     </g>
+     <g id="svg_992" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_993" x="114.5" y="452.64">int</text>
+     </g>
+    </g>
+    <g id="svg_994" transform="translate(90.25, 3)">
+     <g id="svg_995" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_996" x="114.5" y="452.64">PK FK</text>
+     </g>
+     <g id="svg_997" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_998" x="114.5" y="452.64">PK FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_999" points="113.5,461.5 113.5,441.5 241.5,441.5 241.5,461.5 113.5,461.5 113.5,502.5 241.5,502.5 241.5,461.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1000">
+   <g id="svg_1001" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1002" width="157" x="263.5" y="441.5"/>
+   </g>
+   <g id="svg_1003" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1004" text-anchor="middle" x="343" y="455.69">CoursesAttendance</text>
+   </g>
+   <g id="svg_1005" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="53" id="svg_1006" width="157" x="263.5" y="441.5"/>
+    <g id="svg_1007" transform="translate(4, 3)">
+     <g id="svg_1008" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1009" x="264.5" y="452.64">ModuleID</text>
+     </g>
+     <g id="svg_1010" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1011" x="264.5" y="452.64">StudentID</text>
+     </g>
+     <g id="svg_1012" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1013" x="264.5" y="452.64">Attendance</text>
+     </g>
+    </g>
+    <g id="svg_1014" transform="translate(99.5, 3)">
+     <g id="svg_1015" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1016" x="264.5" y="452.64">int</text>
+     </g>
+     <g id="svg_1017" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1018" x="264.5" y="452.64">int</text>
+     </g>
+     <g id="svg_1019" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1020" x="264.5" y="452.64">bit</text>
+     </g>
+    </g>
+    <g id="svg_1021" transform="translate(119.25, 3)">
+     <g id="svg_1022" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1023" x="264.5" y="452.64">PK FK</text>
+     </g>
+     <g id="svg_1024" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1025" x="264.5" y="452.64">PK FK</text>
+     </g>
+     <g id="svg_1026" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1027" x="264.5" y="452.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1028" points="263.5,461.5 263.5,441.5 420.5,441.5 420.5,461.5 263.5,461.5 263.5,514.5 420.5,514.5 420.5,461.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1029">
+   <g id="svg_1030" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1031" width="250" x="475.5" y="436.5"/>
+   </g>
+   <g id="svg_1032" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1033" text-anchor="middle" x="601.5" y="450.69">StationaryModule</text>
+   </g>
+   <g id="svg_1034" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="55" id="svg_1035" width="250" x="475.5" y="436.5"/>
+    <g id="svg_1036" transform="translate(4, 3)">
+     <g id="svg_1037" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1038" x="476.5" y="447.64">StationaryModuleID</text>
+     </g>
+     <g id="svg_1039" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1040" x="476.5" y="447.64">ClassID</text>
+     </g>
+     <g id="svg_1041" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1042" x="476.5" y="447.64">Limit</text>
+     </g>
+    </g>
+    <g id="svg_1043" transform="translate(192.5, 3)">
+     <g id="svg_1044" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1045" x="476.5" y="447.64">int</text>
+     </g>
+     <g id="svg_1046" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1047" x="476.5" y="447.64">int</text>
+     </g>
+     <g id="svg_1048" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1049" x="476.5" y="447.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1050" transform="translate(212.25, 3)">
+     <g id="svg_1051" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1052" x="476.5" y="447.64">PK FK</text>
+     </g>
+     <g id="svg_1053" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1054" x="476.5" y="447.64">FK</text>
+     </g>
+     <g id="svg_1055" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1056" x="476.5" y="447.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1057" points="475.5,456.5 475.5,436.5 725.5,436.5 725.5,456.5 475.5,456.5 475.5,511.5 725.5,511.5 725.5,456.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1058">
+   <g id="svg_1059" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1060" width="209" x="514.5" y="617.5"/>
+   </g>
+   <g id="svg_1061" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1062" text-anchor="middle" x="620" y="631.69">OnlineAsyncModule</text>
+   </g>
+   <g id="svg_1063" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="43" id="svg_1064" width="209" x="514.5" y="617.5"/>
+    <g id="svg_1065" transform="translate(4, 3)">
+     <g id="svg_1066" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1067" x="515.5" y="628.64">OnlineAsyncM</text>
+     </g>
+     <g id="svg_1068" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1069" x="515.5" y="628.64">Video</text>
+     </g>
+    </g>
+    <g id="svg_1070" transform="translate(96.5, 3)">
+     <g id="svg_1071" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1072" x="515.5" y="628.64">int</text>
+     </g>
+     <g id="svg_1073" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1074" x="515.5" y="628.64">varchar(60)</text>
+     </g>
+    </g>
+    <g id="svg_1075" transform="translate(171.25, 3)">
+     <g id="svg_1076" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1077" x="515.5" y="628.64">PK FK</text>
+     </g>
+     <g id="svg_1078" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1079" x="515.5" y="628.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1080" points="514.5,637.5 514.5,617.5 723.5,617.5 723.5,637.5 514.5,637.5 514.5,680.5 723.5,680.5 723.5,637.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1081">
+   <g id="svg_1082" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1083" width="209" x="515.5" y="541.5"/>
+   </g>
+   <g id="svg_1084" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1085" text-anchor="middle" x="621" y="555.69">OnlineSyncModule</text>
+   </g>
+   <g id="svg_1086" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="42" id="svg_1087" width="209" x="515.5" y="541.5"/>
+    <g id="svg_1088" transform="translate(4, 3)">
+     <g id="svg_1089" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1090" x="516.5" y="552.64">OnlineSyncMo</text>
+     </g>
+     <g id="svg_1091" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1092" x="516.5" y="552.64">Link</text>
+     </g>
+    </g>
+    <g id="svg_1093" transform="translate(96.5, 3)">
+     <g id="svg_1094" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1095" x="516.5" y="552.64">int</text>
+     </g>
+     <g id="svg_1096" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1097" x="516.5" y="552.64">varchar(60)</text>
+     </g>
+    </g>
+    <g id="svg_1098" transform="translate(171.25, 3)">
+     <g id="svg_1099" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1100" x="516.5" y="552.64">PK FK</text>
+     </g>
+     <g id="svg_1101" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1102" x="516.5" y="552.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1103" points="515.5,561.5 515.5,541.5 724.5,541.5 724.5,561.5 515.5,561.5 515.5,603.5 724.5,603.5 724.5,561.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1104">
+   <g id="svg_1105" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1106" width="206" x="85.5" y="888.5"/>
+   </g>
+   <g id="svg_1107" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1108" text-anchor="middle" x="189.5" y="902.69">Webinars</text>
+   </g>
+   <g id="svg_1109" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="156" id="svg_1110" width="206" x="85.5" y="888.5"/>
+    <g id="svg_1111" transform="translate(4, 3)">
+     <g id="svg_1112" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1113" x="86.5" y="899.64">WebinarID</text>
+     </g>
+     <g id="svg_1114" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1115" x="86.5" y="899.64">ActivityID</text>
+     </g>
+     <g id="svg_1116" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1117" x="86.5" y="899.64">TeacherID</text>
+     </g>
+     <g id="svg_1118" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1119" x="86.5" y="899.64">WebinarName</text>
+     </g>
+     <g id="svg_1120" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1121" x="86.5" y="899.64">WebinarPrice</text>
+     </g>
+     <g id="svg_1122" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1123" x="86.5" y="899.64">VideoLink</text>
+     </g>
+     <g id="svg_1124" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1125" x="86.5" y="899.64">WebinarDate</text>
+     </g>
+     <g id="svg_1126" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1127" x="86.5" y="899.64">DurationTime</text>
+     </g>
+     <g id="svg_1128" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1129" x="86.5" y="899.64">WebinarDescripti</text>
+     </g>
+     <g id="svg_1130" transform="translate(0, 126)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1131" x="86.5" y="899.64">LanguageID</text>
+     </g>
+    </g>
+    <g id="svg_1132" transform="translate(112, 3)">
+     <g id="svg_1133" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1134" x="86.5" y="899.64">int</text>
+     </g>
+     <g id="svg_1135" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1136" x="86.5" y="899.64">int</text>
+     </g>
+     <g id="svg_1137" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1138" x="86.5" y="899.64">int</text>
+     </g>
+     <g id="svg_1139" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1140" x="86.5" y="899.64">varchar(50)</text>
+     </g>
+     <g id="svg_1141" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1142" x="86.5" y="899.64">money</text>
+     </g>
+     <g id="svg_1143" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1144" x="86.5" y="899.64">varchar(50)</text>
+     </g>
+     <g id="svg_1145" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1146" x="86.5" y="899.64">datetime</text>
+     </g>
+     <g id="svg_1147" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1148" x="86.5" y="899.64">time(0)</text>
+     </g>
+     <g id="svg_1149" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1150" x="86.5" y="899.64">text</text>
+     </g>
+     <g id="svg_1151" transform="translate(0, 126)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1152" x="86.5" y="899.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1153" transform="translate(186.75, 3)">
+     <g id="svg_1154" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1155" x="86.5" y="899.64">PK</text>
+     </g>
+     <g id="svg_1156" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1157" x="86.5" y="899.64">FK</text>
+     </g>
+     <g id="svg_1158" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1159" x="86.5" y="899.64">FK</text>
+     </g>
+     <g id="svg_1160" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1161" x="86.5" y="899.64"/>
+     </g>
+     <g id="svg_1162" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1163" x="86.5" y="899.64"/>
+     </g>
+     <g id="svg_1164" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1165" x="86.5" y="899.64"/>
+     </g>
+     <g id="svg_1166" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1167" x="86.5" y="899.64"/>
+     </g>
+     <g id="svg_1168" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1169" x="86.5" y="899.64"/>
+     </g>
+     <g id="svg_1170" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1171" x="86.5" y="899.64"/>
+     </g>
+     <g id="svg_1172" transform="translate(0, 126)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1173" x="86.5" y="899.64">FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1174" points="85.5,908.5 85.5,888.5 291.5,888.5 291.5,908.5 85.5,908.5 85.5,1064.5 291.5,1064.5 291.5,908.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1175">
+   <g id="svg_1176" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1177" width="147" x="81.5" y="1105.5"/>
+   </g>
+   <g id="svg_1178" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1179" text-anchor="middle" x="156" y="1119.69">WebinarDetails</text>
+   </g>
+   <g id="svg_1180" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="66" id="svg_1181" width="147" x="81.5" y="1105.5"/>
+    <g id="svg_1182" transform="translate(4, 3)">
+     <g id="svg_1183" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1184" x="82.5" y="1116.64">StudentID</text>
+     </g>
+     <g id="svg_1185" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1186" x="82.5" y="1116.64">WebinarID</text>
+     </g>
+     <g id="svg_1187" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1188" x="82.5" y="1116.64">Complete</text>
+     </g>
+     <g id="svg_1189" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1190" x="82.5" y="1116.64">AvailableD</text>
+     </g>
+    </g>
+    <g id="svg_1191" transform="translate(78, 3)">
+     <g id="svg_1192" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1193" x="82.5" y="1116.64">int</text>
+     </g>
+     <g id="svg_1194" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1195" x="82.5" y="1116.64">int</text>
+     </g>
+     <g id="svg_1196" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1197" x="82.5" y="1116.64">bit</text>
+     </g>
+     <g id="svg_1198" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1199" x="82.5" y="1116.64">date</text>
+     </g>
+    </g>
+    <g id="svg_1200" transform="translate(109.25, 3)">
+     <g id="svg_1201" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1202" x="82.5" y="1116.64">PK FK</text>
+     </g>
+     <g id="svg_1203" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1204" x="82.5" y="1116.64">PK FK</text>
+     </g>
+     <g id="svg_1205" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1206" x="82.5" y="1116.64"/>
+     </g>
+     <g id="svg_1207" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1208" x="82.5" y="1116.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1209" points="81.5,1125.5 81.5,1105.5 228.5,1105.5 228.5,1125.5 81.5,1125.5 81.5,1191.5 228.5,1191.5 228.5,1125.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1210">
+   <g id="svg_1211" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1212" width="264" x="317.5" y="250.5"/>
+   </g>
+   <g id="svg_1213" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1214" text-anchor="middle" x="450.5" y="264.69">Buildings</text>
+   </g>
+   <g id="svg_1215" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="57" id="svg_1216" width="264" x="317.5" y="250.5"/>
+    <g id="svg_1217" transform="translate(4, 3)">
+     <g id="svg_1218" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1219" x="318.5" y="261.64">ClassID</text>
+     </g>
+     <g id="svg_1220" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1221" x="318.5" y="261.64">BuildingName</text>
+     </g>
+     <g id="svg_1222" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1223" x="318.5" y="261.64">RoomNumber</text>
+     </g>
+    </g>
+    <g id="svg_1224" transform="translate(170, 3)">
+     <g id="svg_1225" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1226" x="318.5" y="261.64">int</text>
+     </g>
+     <g id="svg_1227" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1228" x="318.5" y="261.64">varchar(30)</text>
+     </g>
+     <g id="svg_1229" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1230" x="318.5" y="261.64">varchar(30)</text>
+     </g>
+    </g>
+    <g id="svg_1231" transform="translate(244.75, 3)">
+     <g id="svg_1232" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1233" x="318.5" y="261.64">PK</text>
+     </g>
+     <g id="svg_1234" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1235" x="318.5" y="261.64"/>
+     </g>
+     <g id="svg_1236" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1237" x="318.5" y="261.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1238" points="317.5,270.5 317.5,250.5 581.5,250.5 581.5,270.5 317.5,270.5 317.5,327.5 581.5,327.5 581.5,270.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1239">
+   <g id="svg_1240" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1241" width="194" x="444.5" y="922.5"/>
+   </g>
+   <g id="svg_1242" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1243" text-anchor="middle" x="542.5" y="936.69">Orders</text>
+   </g>
+   <g id="svg_1244" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="83" id="svg_1245" width="194" x="444.5" y="922.5"/>
+    <g id="svg_1246" transform="translate(4, 3)">
+     <g id="svg_1247" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1248" x="445.5" y="933.64">OrderID</text>
+     </g>
+     <g id="svg_1249" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1250" x="445.5" y="933.64">StudentID</text>
+     </g>
+     <g id="svg_1251" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1252" x="445.5" y="933.64">OrderDate</text>
+     </g>
+     <g id="svg_1253" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1254" x="445.5" y="933.64">PaymentURL</text>
+     </g>
+     <g id="svg_1255" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1256" x="445.5" y="933.64">EmployeeHandlin</text>
+     </g>
+    </g>
+    <g id="svg_1257" transform="translate(116.5, 3)">
+     <g id="svg_1258" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1259" x="445.5" y="933.64">int</text>
+     </g>
+     <g id="svg_1260" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1261" x="445.5" y="933.64">int</text>
+     </g>
+     <g id="svg_1262" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1263" x="445.5" y="933.64">datetime</text>
+     </g>
+     <g id="svg_1264" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1265" x="445.5" y="933.64">int</text>
+     </g>
+     <g id="svg_1266" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1267" x="445.5" y="933.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1268" transform="translate(174.75, 3)">
+     <g id="svg_1269" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1270" x="445.5" y="933.64">PK</text>
+     </g>
+     <g id="svg_1271" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1272" x="445.5" y="933.64">FK</text>
+     </g>
+     <g id="svg_1273" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1274" x="445.5" y="933.64">FK</text>
+     </g>
+     <g id="svg_1275" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1276" x="445.5" y="933.64">FK</text>
+     </g>
+     <g id="svg_1277" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1278" x="445.5" y="933.64">FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1279" points="444.5,942.5 444.5,922.5 638.5,922.5 638.5,942.5 444.5,942.5 444.5,1025.5 638.5,1025.5 638.5,942.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1280">
+   <g id="svg_1281" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1282" width="166" x="729.5" y="1027.5"/>
+   </g>
+   <g id="svg_1283" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1284" text-anchor="middle" x="813.5" y="1041.69">OrderDetails</text>
+   </g>
+   <g id="svg_1285" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="56" id="svg_1286" width="166" x="729.5" y="1027.5"/>
+    <g id="svg_1287" transform="translate(4, 3)">
+     <g id="svg_1288" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1289" x="730.5" y="1038.64">OrderID</text>
+     </g>
+     <g id="svg_1290" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1291" x="730.5" y="1038.64">ActivityID</text>
+     </g>
+    </g>
+    <g id="svg_1292" transform="translate(108.5, 3)">
+     <g id="svg_1293" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1294" x="730.5" y="1038.64">int</text>
+     </g>
+     <g id="svg_1295" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1296" x="730.5" y="1038.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1297" transform="translate(128.25, 3)">
+     <g id="svg_1298" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1299" x="730.5" y="1038.64">PK FK</text>
+     </g>
+     <g id="svg_1300" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1301" x="730.5" y="1038.64">PK FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1302" points="729.5,1047.5 729.5,1027.5 895.5,1027.5 895.5,1047.5 729.5,1047.5 729.5,1103.5 895.5,1103.5 895.5,1047.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1303">
+   <g id="svg_1304" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1305" width="293" x="317.5" y="47.5"/>
+   </g>
+   <g id="svg_1306" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1307" text-anchor="middle" x="465" y="61.69">Schedule</text>
+   </g>
+   <g id="svg_1308" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="155" id="svg_1309" width="293" x="317.5" y="47.5"/>
+    <g id="svg_1310" transform="translate(4, 3)">
+     <g id="svg_1311" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1312" x="318.5" y="58.64">ScheduleID</text>
+     </g>
+     <g id="svg_1313" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1314" x="318.5" y="58.64">ClassID</text>
+     </g>
+     <g id="svg_1315" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1316" x="318.5" y="58.64">CourseModuleID</text>
+     </g>
+     <g id="svg_1317" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1318" x="318.5" y="58.64">StudiesSubjectID</text>
+     </g>
+     <g id="svg_1319" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1320" x="318.5" y="58.64">DayOfWeek</text>
+     </g>
+     <g id="svg_1321" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1322" x="318.5" y="58.64">StartTime</text>
+     </g>
+     <g id="svg_1323" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1324" x="318.5" y="58.64">EndTime</text>
+     </g>
+     <g id="svg_1325" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1326" x="318.5" y="58.64">TeacherID</text>
+     </g>
+     <g id="svg_1327" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1328" x="318.5" y="58.64">TranslatorID</text>
+     </g>
+    </g>
+    <g id="svg_1329" transform="translate(186.5, 3)">
+     <g id="svg_1330" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1331" x="318.5" y="58.64">int</text>
+     </g>
+     <g id="svg_1332" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1333" x="318.5" y="58.64">int</text>
+     </g>
+     <g id="svg_1334" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1335" x="318.5" y="58.64">int</text>
+     </g>
+     <g id="svg_1336" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1337" x="318.5" y="58.64">int</text>
+     </g>
+     <g id="svg_1338" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1339" x="318.5" y="58.64">varchar(10)</text>
+     </g>
+     <g id="svg_1340" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1341" x="318.5" y="58.64">time</text>
+     </g>
+     <g id="svg_1342" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1343" x="318.5" y="58.64">time</text>
+     </g>
+     <g id="svg_1344" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1345" x="318.5" y="58.64">int</text>
+     </g>
+     <g id="svg_1346" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1347" x="318.5" y="58.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1348" transform="translate(261.25, 3)">
+     <g id="svg_1349" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1350" x="318.5" y="58.64">PK</text>
+     </g>
+     <g id="svg_1351" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1352" x="318.5" y="58.64">FK</text>
+     </g>
+     <g id="svg_1353" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1354" x="318.5" y="58.64">N FK</text>
+     </g>
+     <g id="svg_1355" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1356" x="318.5" y="58.64">N FK</text>
+     </g>
+     <g id="svg_1357" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1358" x="318.5" y="58.64"/>
+     </g>
+     <g id="svg_1359" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1360" x="318.5" y="58.64"/>
+     </g>
+     <g id="svg_1361" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1362" x="318.5" y="58.64"/>
+     </g>
+     <g id="svg_1363" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1364" x="318.5" y="58.64">FK</text>
+     </g>
+     <g id="svg_1365" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1366" x="318.5" y="58.64">N FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1367" points="317.5,67.5 317.5,47.5 610.5,47.5 610.5,67.5 317.5,67.5 317.5,222.5 610.5,222.5 610.5,67.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1368">
+   <g id="svg_1369" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1370" width="220" x="673.5" y="918.5"/>
+   </g>
+   <g id="svg_1371" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1372" text-anchor="middle" x="784.5" y="932.69">OrderPaymentStatus</text>
+   </g>
+   <g id="svg_1373" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="53" id="svg_1374" width="220" x="673.5" y="918.5"/>
+    <g id="svg_1375" transform="translate(4, 3)">
+     <g id="svg_1376" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1377" x="674.5" y="929.64">PaymentURL</text>
+     </g>
+     <g id="svg_1378" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1379" x="674.5" y="929.64">OrderPaymentStat</text>
+     </g>
+     <g id="svg_1380" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1381" x="674.5" y="929.64">PaidDate</text>
+     </g>
+    </g>
+    <g id="svg_1382" transform="translate(126, 3)">
+     <g id="svg_1383" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1384" x="674.5" y="929.64">int</text>
+     </g>
+     <g id="svg_1385" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1386" x="674.5" y="929.64">varchar(20)</text>
+     </g>
+     <g id="svg_1387" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1388" x="674.5" y="929.64">datetime</text>
+     </g>
+    </g>
+    <g id="svg_1389" transform="translate(200.75, 3)">
+     <g id="svg_1390" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1391" x="674.5" y="929.64">PK</text>
+     </g>
+     <g id="svg_1392" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1393" x="674.5" y="929.64"/>
+     </g>
+     <g id="svg_1394" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1395" x="674.5" y="929.64">N</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1396" points="673.5,938.5 673.5,918.5 893.5,918.5 893.5,938.5 673.5,938.5 673.5,991.5 893.5,991.5 893.5,938.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1397">
+   <g id="svg_1398" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1399" width="166" x="438.5" y="1168.5"/>
+   </g>
+   <g id="svg_1400" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1401" text-anchor="middle" x="522.5" y="1182.69">ShoppingCart</text>
+   </g>
+   <g id="svg_1402" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="41" id="svg_1403" width="166" x="438.5" y="1168.5"/>
+    <g id="svg_1404" transform="translate(4, 3)">
+     <g id="svg_1405" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1406" x="439.5" y="1179.64">StudentID</text>
+     </g>
+     <g id="svg_1407" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1408" x="439.5" y="1179.64">ActivityID</text>
+     </g>
+    </g>
+    <g id="svg_1409" transform="translate(108.5, 3)">
+     <g id="svg_1410" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1411" x="439.5" y="1179.64">int</text>
+     </g>
+     <g id="svg_1412" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1413" x="439.5" y="1179.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1414" transform="translate(128.25, 3)">
+     <g id="svg_1415" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1416" x="439.5" y="1179.64">PK FK</text>
+     </g>
+     <g id="svg_1417" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1418" x="439.5" y="1179.64">PK FK</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1419" points="438.5,1188.5 438.5,1168.5 604.5,1168.5 604.5,1188.5 438.5,1188.5 438.5,1229.5 604.5,1229.5 604.5,1188.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1420">
+   <g id="svg_1421" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1422" width="235" x="435.5" y="1033.5"/>
+   </g>
+   <g id="svg_1423" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1424" text-anchor="middle" x="554" y="1047.69">Activities</text>
+   </g>
+   <g id="svg_1425" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="68" id="svg_1426" width="235" x="435.5" y="1033.5"/>
+    <g id="svg_1427" transform="translate(4, 3)">
+     <g id="svg_1428" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1429" x="436.5" y="1044.64">ActivityID</text>
+     </g>
+     <g id="svg_1430" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1431" x="436.5" y="1044.64">Price</text>
+     </g>
+     <g id="svg_1432" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1433" x="436.5" y="1044.64">Title</text>
+     </g>
+     <g id="svg_1434" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1435" x="436.5" y="1044.64">Active</text>
+     </g>
+    </g>
+    <g id="svg_1436" transform="translate(141, 3)">
+     <g id="svg_1437" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1438" x="436.5" y="1044.64">int</text>
+     </g>
+     <g id="svg_1439" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1440" x="436.5" y="1044.64">money</text>
+     </g>
+     <g id="svg_1441" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1442" x="436.5" y="1044.64">varchar(50)</text>
+     </g>
+     <g id="svg_1443" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1444" x="436.5" y="1044.64">bit</text>
+     </g>
+    </g>
+    <g id="svg_1445" transform="translate(215.75, 3)">
+     <g id="svg_1446" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1447" x="436.5" y="1044.64">PK</text>
+     </g>
+     <g id="svg_1448" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1449" x="436.5" y="1044.64"/>
+     </g>
+     <g id="svg_1450" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1451" x="436.5" y="1044.64"/>
+     </g>
+     <g id="svg_1452" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1453" x="436.5" y="1044.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1454" points="435.5,1053.5 435.5,1033.5 670.5,1033.5 670.5,1053.5 435.5,1053.5 435.5,1121.5 670.5,1121.5 670.5,1053.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1455">
+   <g id="svg_1456" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1457" width="290" x="1195.5" y="727.5"/>
+   </g>
+   <g id="svg_1458" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1459" text-anchor="middle" x="1341.5" y="741.69">Studies</text>
+   </g>
+   <g id="svg_1460" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="125" id="svg_1461" width="290" x="1195.5" y="727.5"/>
+    <g id="svg_1462" transform="translate(4, 3)">
+     <g id="svg_1463" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1464" x="1196.5" y="738.64">StudiesID</text>
+     </g>
+     <g id="svg_1465" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1466" x="1196.5" y="738.64">ActivityID</text>
+     </g>
+     <g id="svg_1467" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1468" x="1196.5" y="738.64">StudiesName</text>
+     </g>
+     <g id="svg_1469" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1470" x="1196.5" y="738.64">StudiesDescription</text>
+     </g>
+     <g id="svg_1471" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1472" x="1196.5" y="738.64">StudiesEntryFeePrice</text>
+     </g>
+     <g id="svg_1473" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1474" x="1196.5" y="738.64">Syllabus</text>
+     </g>
+     <g id="svg_1475" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1476" x="1196.5" y="738.64">StudiesEmployee</text>
+     </g>
+     <g id="svg_1477" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1478" x="1196.5" y="738.64">Limit</text>
+     </g>
+    </g>
+    <g id="svg_1479" transform="translate(196, 3)">
+     <g id="svg_1480" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1481" x="1196.5" y="738.64">int</text>
+     </g>
+     <g id="svg_1482" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1483" x="1196.5" y="738.64">int</text>
+     </g>
+     <g id="svg_1484" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1485" x="1196.5" y="738.64">varchar(50)</text>
+     </g>
+     <g id="svg_1486" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1487" x="1196.5" y="738.64">text</text>
+     </g>
+     <g id="svg_1488" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1489" x="1196.5" y="738.64">money</text>
+     </g>
+     <g id="svg_1490" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1491" x="1196.5" y="738.64">text</text>
+     </g>
+     <g id="svg_1492" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1493" x="1196.5" y="738.64">int</text>
+     </g>
+     <g id="svg_1494" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1495" x="1196.5" y="738.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1496" transform="translate(270.75, 3)">
+     <g id="svg_1497" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1498" x="1196.5" y="738.64">PK</text>
+     </g>
+     <g id="svg_1499" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1500" x="1196.5" y="738.64">FK</text>
+     </g>
+     <g id="svg_1501" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1502" x="1196.5" y="738.64"/>
+     </g>
+     <g id="svg_1503" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1504" x="1196.5" y="738.64">N</text>
+     </g>
+     <g id="svg_1505" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1506" x="1196.5" y="738.64"/>
+     </g>
+     <g id="svg_1507" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1508" x="1196.5" y="738.64"/>
+     </g>
+     <g id="svg_1509" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1510" x="1196.5" y="738.64">FK</text>
+     </g>
+     <g id="svg_1511" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1512" x="1196.5" y="738.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1513" points="1195.5,747.5 1195.5,727.5 1485.5,727.5 1485.5,747.5 1195.5,747.5 1195.5,872.5 1485.5,872.5 1485.5,747.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1514">
+   <g id="svg_1515" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1516" width="223" x="1242.5" y="566.5"/>
+   </g>
+   <g id="svg_1517" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1518" text-anchor="middle" x="1355" y="580.69">Subject</text>
+   </g>
+   <g id="svg_1519" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="84" id="svg_1520" width="223" x="1242.5" y="566.5"/>
+    <g id="svg_1521" transform="translate(4, 3)">
+     <g id="svg_1522" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1523" x="1243.5" y="577.64">SubjectID</text>
+     </g>
+     <g id="svg_1524" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1525" x="1243.5" y="577.64">StudiesID</text>
+     </g>
+     <g id="svg_1526" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1527" x="1243.5" y="577.64">CoordinatorID</text>
+     </g>
+     <g id="svg_1528" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1529" x="1243.5" y="577.64">SubjectName</text>
+     </g>
+     <g id="svg_1530" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1531" x="1243.5" y="577.64">SubjectDescription</text>
+     </g>
+    </g>
+    <g id="svg_1532" transform="translate(129, 3)">
+     <g id="svg_1533" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1534" x="1243.5" y="577.64">int</text>
+     </g>
+     <g id="svg_1535" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1536" x="1243.5" y="577.64">int</text>
+     </g>
+     <g id="svg_1537" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1538" x="1243.5" y="577.64">int</text>
+     </g>
+     <g id="svg_1539" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1540" x="1243.5" y="577.64">varchar(50)</text>
+     </g>
+     <g id="svg_1541" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1542" x="1243.5" y="577.64">text</text>
+     </g>
+    </g>
+    <g id="svg_1543" transform="translate(203.75, 3)">
+     <g id="svg_1544" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1545" x="1243.5" y="577.64">PK</text>
+     </g>
+     <g id="svg_1546" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1547" x="1243.5" y="577.64">FK</text>
+     </g>
+     <g id="svg_1548" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1549" x="1243.5" y="577.64">FK</text>
+     </g>
+     <g id="svg_1550" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1551" x="1243.5" y="577.64"/>
+     </g>
+     <g id="svg_1552" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1553" x="1243.5" y="577.64">N</text>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1554" points="1242.5,586.5 1242.5,566.5 1465.5,566.5 1465.5,586.5 1242.5,586.5 1242.5,670.5 1465.5,670.5 1465.5,586.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1555">
+   <g id="svg_1556" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1557" width="193" x="1195.5" y="921.5"/>
+   </g>
+   <g id="svg_1558" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1559" text-anchor="middle" x="1293" y="935.69">Internship</text>
+   </g>
+   <g id="svg_1560" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="56" id="svg_1561" width="193" x="1195.5" y="921.5"/>
+    <g id="svg_1562" transform="translate(4, 3)">
+     <g id="svg_1563" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1564" x="1196.5" y="932.64">InternshipID</text>
+     </g>
+     <g id="svg_1565" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1566" x="1196.5" y="932.64">StudiesID</text>
+     </g>
+     <g id="svg_1567" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1568" x="1196.5" y="932.64">StartDate</text>
+     </g>
+    </g>
+    <g id="svg_1569" transform="translate(115.5, 3)">
+     <g id="svg_1570" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1571" x="1196.5" y="932.64">int</text>
+     </g>
+     <g id="svg_1572" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1573" x="1196.5" y="932.64">int</text>
+     </g>
+     <g id="svg_1574" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1575" x="1196.5" y="932.64">datetime</text>
+     </g>
+    </g>
+    <g id="svg_1576" transform="translate(173.75, 3)">
+     <g id="svg_1577" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1578" x="1196.5" y="932.64">PK</text>
+     </g>
+     <g id="svg_1579" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1580" x="1196.5" y="932.64">FK</text>
+     </g>
+     <g id="svg_1581" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1582" x="1196.5" y="932.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1583" points="1195.5,941.5 1195.5,921.5 1388.5,921.5 1388.5,941.5 1195.5,941.5 1195.5,997.5 1388.5,997.5 1388.5,941.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1584">
+   <g id="svg_1585" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1586" width="179" x="1202.5" y="1039.5"/>
+   </g>
+   <g id="svg_1587" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1588" text-anchor="middle" x="1293" y="1053.69">InternshipAttendance</text>
+   </g>
+   <g id="svg_1589" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="53" id="svg_1590" width="179" x="1202.5" y="1039.5"/>
+    <g id="svg_1591" transform="translate(4, 3)">
+     <g id="svg_1592" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1593" x="1203.5" y="1050.64">InternshipID</text>
+     </g>
+     <g id="svg_1594" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1595" x="1203.5" y="1050.64">StudentID</text>
+     </g>
+     <g id="svg_1596" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1597" x="1203.5" y="1050.64">Attendance</text>
+     </g>
+    </g>
+    <g id="svg_1598" transform="translate(121.5, 3)">
+     <g id="svg_1599" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1600" x="1203.5" y="1050.64">int</text>
+     </g>
+     <g id="svg_1601" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1602" x="1203.5" y="1050.64">int</text>
+     </g>
+     <g id="svg_1603" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1604" x="1203.5" y="1050.64">bit</text>
+     </g>
+    </g>
+    <g id="svg_1605" transform="translate(141.25, 3)">
+     <g id="svg_1606" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1607" x="1203.5" y="1050.64">PK FK</text>
+     </g>
+     <g id="svg_1608" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1609" x="1203.5" y="1050.64">PK FK</text>
+     </g>
+     <g id="svg_1610" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1611" x="1203.5" y="1050.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1612" points="1202.5,1059.5 1202.5,1039.5 1381.5,1039.5 1381.5,1059.5 1202.5,1059.5 1202.5,1112.5 1381.5,1112.5 1381.5,1059.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1613">
+   <g id="svg_1614" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1615" width="172" x="1201.5" y="439.5"/>
+   </g>
+   <g id="svg_1616" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1617" text-anchor="middle" x="1288.5" y="453.69">SubjectGrades</text>
+   </g>
+   <g id="svg_1618" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="52" id="svg_1619" width="172" x="1201.5" y="439.5"/>
+    <g id="svg_1620" transform="translate(4, 3)">
+     <g id="svg_1621" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1622" x="1202.5" y="450.64">SubjectID</text>
+     </g>
+     <g id="svg_1623" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1624" x="1202.5" y="450.64">StudentID</text>
+     </g>
+     <g id="svg_1625" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1626" x="1202.5" y="450.64">SubjectGrade</text>
+     </g>
+    </g>
+    <g id="svg_1627" transform="translate(114.5, 3)">
+     <g id="svg_1628" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1629" x="1202.5" y="450.64">int</text>
+     </g>
+     <g id="svg_1630" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1631" x="1202.5" y="450.64">int</text>
+     </g>
+     <g id="svg_1632" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1633" x="1202.5" y="450.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1634" transform="translate(134.25, 3)">
+     <g id="svg_1635" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1636" x="1202.5" y="450.64">PK FK</text>
+     </g>
+     <g id="svg_1637" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1638" x="1202.5" y="450.64">PK FK</text>
+     </g>
+     <g id="svg_1639" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1640" x="1202.5" y="450.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1641" points="1201.5,459.5 1201.5,439.5 1373.5,439.5 1373.5,459.5 1201.5,459.5 1201.5,511.5 1373.5,511.5 1373.5,459.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1642">
+   <g id="svg_1643" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1644" width="201" x="1439.5" y="436.5"/>
+   </g>
+   <g id="svg_1645" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1646" text-anchor="middle" x="1541" y="450.69">StudiesClassAttendance</text>
+   </g>
+   <g id="svg_1647" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="54" id="svg_1648" width="201" x="1439.5" y="436.5"/>
+    <g id="svg_1649" transform="translate(4, 3)">
+     <g id="svg_1650" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1651" x="1440.5" y="447.64">StudyClassID</text>
+     </g>
+     <g id="svg_1652" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1653" x="1440.5" y="447.64">StudentID</text>
+     </g>
+     <g id="svg_1654" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1655" x="1440.5" y="447.64">Attendance</text>
+     </g>
+    </g>
+    <g id="svg_1656" transform="translate(143.5, 3)">
+     <g id="svg_1657" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1658" x="1440.5" y="447.64">int</text>
+     </g>
+     <g id="svg_1659" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1660" x="1440.5" y="447.64">int</text>
+     </g>
+     <g id="svg_1661" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1662" x="1440.5" y="447.64">bit</text>
+     </g>
+    </g>
+    <g id="svg_1663" transform="translate(163.25, 3)">
+     <g id="svg_1664" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1665" x="1440.5" y="447.64">PK FK</text>
+     </g>
+     <g id="svg_1666" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1667" x="1440.5" y="447.64">PK FK</text>
+     </g>
+     <g id="svg_1668" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1669" x="1440.5" y="447.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1670" points="1439.5,456.5 1439.5,436.5 1640.5,436.5 1640.5,456.5 1439.5,456.5 1439.5,510.5 1640.5,510.5 1640.5,456.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1671">
+   <g id="svg_1672" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1673" width="205" x="1529.5" y="555.5"/>
+   </g>
+   <g id="svg_1674" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1675" text-anchor="middle" x="1633" y="569.69">StudiesClass</text>
+   </g>
+   <g id="svg_1676" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="168" id="svg_1677" width="205" x="1529.5" y="555.5"/>
+    <g id="svg_1678" transform="translate(4, 3)">
+     <g id="svg_1679" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1680" x="1530.5" y="566.64">StudyClassID</text>
+     </g>
+     <g id="svg_1681" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1682" x="1530.5" y="566.64">SubjectID</text>
+     </g>
+     <g id="svg_1683" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1684" x="1530.5" y="566.64">ActivityID</text>
+     </g>
+     <g id="svg_1685" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1686" x="1530.5" y="566.64">TeacherID</text>
+     </g>
+     <g id="svg_1687" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1688" x="1530.5" y="566.64">ClassName</text>
+     </g>
+     <g id="svg_1689" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1690" x="1530.5" y="566.64">ClassPrice</text>
+     </g>
+     <g id="svg_1691" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1692" x="1530.5" y="566.64">Date</text>
+     </g>
+     <g id="svg_1693" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1694" x="1530.5" y="566.64">DurationTime</text>
+     </g>
+     <g id="svg_1695" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1696" x="1530.5" y="566.64">LanguageID</text>
+     </g>
+     <g id="svg_1697" transform="translate(0, 126)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1698" x="1530.5" y="566.64">TranslatorID</text>
+     </g>
+     <g id="svg_1699" transform="translate(0, 140)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1700" x="1530.5" y="566.64">LimitClass</text>
+     </g>
+    </g>
+    <g id="svg_1701" transform="translate(98.5, 3)">
+     <g id="svg_1702" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1703" x="1530.5" y="566.64">int</text>
+     </g>
+     <g id="svg_1704" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1705" x="1530.5" y="566.64">int</text>
+     </g>
+     <g id="svg_1706" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1707" x="1530.5" y="566.64">int</text>
+     </g>
+     <g id="svg_1708" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1709" x="1530.5" y="566.64">int</text>
+     </g>
+     <g id="svg_1710" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1711" x="1530.5" y="566.64">varchar(50)</text>
+     </g>
+     <g id="svg_1712" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1713" x="1530.5" y="566.64">money</text>
+     </g>
+     <g id="svg_1714" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1715" x="1530.5" y="566.64">datetime</text>
+     </g>
+     <g id="svg_1716" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1717" x="1530.5" y="566.64">time(0)</text>
+     </g>
+     <g id="svg_1718" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1719" x="1530.5" y="566.64">int</text>
+     </g>
+     <g id="svg_1720" transform="translate(0, 126)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1721" x="1530.5" y="566.64">int</text>
+     </g>
+     <g id="svg_1722" transform="translate(0, 140)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1723" x="1530.5" y="566.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1724" transform="translate(173.25, 3)">
+     <g id="svg_1725" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1726" x="1530.5" y="566.64">PK</text>
+     </g>
+     <g id="svg_1727" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1728" x="1530.5" y="566.64">FK</text>
+     </g>
+     <g id="svg_1729" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1730" x="1530.5" y="566.64">FK</text>
+     </g>
+     <g id="svg_1731" transform="translate(0, 42)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1732" x="1530.5" y="566.64">FK</text>
+     </g>
+     <g id="svg_1733" transform="translate(0, 56)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1734" x="1530.5" y="566.64"/>
+     </g>
+     <g id="svg_1735" transform="translate(0, 70)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1736" x="1530.5" y="566.64"/>
+     </g>
+     <g id="svg_1737" transform="translate(0, 84)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1738" x="1530.5" y="566.64"/>
+     </g>
+     <g id="svg_1739" transform="translate(0, 98)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1740" x="1530.5" y="566.64">N</text>
+     </g>
+     <g id="svg_1741" transform="translate(0, 112)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1742" x="1530.5" y="566.64">N FK</text>
+     </g>
+     <g id="svg_1743" transform="translate(0, 126)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1744" x="1530.5" y="566.64">N FK</text>
+     </g>
+     <g id="svg_1745" transform="translate(0, 140)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1746" x="1530.5" y="566.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1747" points="1529.5,575.5 1529.5,555.5 1734.5,555.5 1734.5,575.5 1529.5,575.5 1529.5,743.5 1734.5,743.5 1734.5,575.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1748">
+   <g id="svg_1749" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1750" width="236" x="1537.5" y="781.5"/>
+   </g>
+   <g id="svg_1751" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1752" text-anchor="middle" x="1656.5" y="795.69">StationaryClass</text>
+   </g>
+   <g id="svg_1753" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="54" id="svg_1754" width="236" x="1537.5" y="781.5"/>
+    <g id="svg_1755" transform="translate(4, 3)">
+     <g id="svg_1756" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1757" x="1538.5" y="792.64">StationaryClassID</text>
+     </g>
+     <g id="svg_1758" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1759" x="1538.5" y="792.64">ClassID</text>
+     </g>
+     <g id="svg_1760" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1761" x="1538.5" y="792.64">Limit</text>
+     </g>
+    </g>
+    <g id="svg_1762" transform="translate(178.5, 3)">
+     <g id="svg_1763" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1764" x="1538.5" y="792.64">int</text>
+     </g>
+     <g id="svg_1765" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1766" x="1538.5" y="792.64">int</text>
+     </g>
+     <g id="svg_1767" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1768" x="1538.5" y="792.64">int</text>
+     </g>
+    </g>
+    <g id="svg_1769" transform="translate(198.25, 3)">
+     <g id="svg_1770" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1771" x="1538.5" y="792.64">PK FK</text>
+     </g>
+     <g id="svg_1772" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1773" x="1538.5" y="792.64">FK</text>
+     </g>
+     <g id="svg_1774" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1775" x="1538.5" y="792.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1776" points="1537.5,801.5 1537.5,781.5 1773.5,781.5 1773.5,801.5 1537.5,801.5 1537.5,855.5 1773.5,855.5 1773.5,801.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1777">
+   <g id="svg_1778" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1779" width="278" x="1499.5" y="884.5"/>
+   </g>
+   <g id="svg_1780" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1781" text-anchor="middle" x="1639.5" y="898.69">OnlineSyncClass</text>
+   </g>
+   <g id="svg_1782" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="41" id="svg_1783" width="278" x="1499.5" y="884.5"/>
+    <g id="svg_1784" transform="translate(4, 3)">
+     <g id="svg_1785" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1786" x="1500.5" y="895.64">OnlineSyncClassID</text>
+     </g>
+     <g id="svg_1787" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1788" x="1500.5" y="895.64">Link</text>
+     </g>
+    </g>
+    <g id="svg_1789" transform="translate(165.5, 3)">
+     <g id="svg_1790" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1791" x="1500.5" y="895.64">int</text>
+     </g>
+     <g id="svg_1792" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1793" x="1500.5" y="895.64">varchar(50)</text>
+     </g>
+    </g>
+    <g id="svg_1794" transform="translate(240.25, 3)">
+     <g id="svg_1795" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1796" x="1500.5" y="895.64">PK FK</text>
+     </g>
+     <g id="svg_1797" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1798" x="1500.5" y="895.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1799" points="1499.5,904.5 1499.5,884.5 1777.5,884.5 1777.5,904.5 1499.5,904.5 1499.5,945.5 1777.5,945.5 1777.5,904.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1800">
+   <g id="svg_1801" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1802" width="226" x="1453.5" y="972.5"/>
+   </g>
+   <g id="svg_1803" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1804" text-anchor="middle" x="1567.5" y="986.69">OnlineAsyncClass</text>
+   </g>
+   <g id="svg_1805" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="40" id="svg_1806" width="226" x="1453.5" y="972.5"/>
+    <g id="svg_1807" transform="translate(4, 3)">
+     <g id="svg_1808" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1809" x="1454.5" y="983.64">OnlineAsyncClas</text>
+     </g>
+     <g id="svg_1810" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1811" x="1454.5" y="983.64">Video</text>
+     </g>
+    </g>
+    <g id="svg_1812" transform="translate(113.5, 3)">
+     <g id="svg_1813" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1814" x="1454.5" y="983.64">int</text>
+     </g>
+     <g id="svg_1815" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1816" x="1454.5" y="983.64">varchar(50)</text>
+     </g>
+    </g>
+    <g id="svg_1817" transform="translate(188.25, 3)">
+     <g id="svg_1818" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1819" x="1454.5" y="983.64">PK FK</text>
+     </g>
+     <g id="svg_1820" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1821" x="1454.5" y="983.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1822" points="1453.5,992.5 1453.5,972.5 1679.5,972.5 1679.5,992.5 1453.5,992.5 1453.5,1032.5 1679.5,1032.5 1679.5,992.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1823">
+   <g id="svg_1824" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1825" width="202" x="804.5" y="772.5"/>
+   </g>
+   <g id="svg_1826" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1827" text-anchor="middle" x="906.5" y="786.69">RODO_Table</text>
+   </g>
+   <g id="svg_1828" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="53" id="svg_1829" width="202" x="804.5" y="772.5"/>
+    <g id="svg_1830" transform="translate(4, 3)">
+     <g id="svg_1831" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1832" x="805.5" y="783.64">StudentID</text>
+     </g>
+     <g id="svg_1833" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1834" x="805.5" y="783.64">Date</text>
+     </g>
+     <g id="svg_1835" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1836" x="805.5" y="783.64">Withdraw</text>
+     </g>
+    </g>
+    <g id="svg_1837" transform="translate(133, 3)">
+     <g id="svg_1838" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1839" x="805.5" y="783.64">int</text>
+     </g>
+     <g id="svg_1840" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1841" x="805.5" y="783.64">date</text>
+     </g>
+     <g id="svg_1842" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1843" x="805.5" y="783.64">bit</text>
+     </g>
+    </g>
+    <g id="svg_1844" transform="translate(164.25, 3)">
+     <g id="svg_1845" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1846" x="805.5" y="783.64">PK FK</text>
+     </g>
+     <g id="svg_1847" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1848" x="805.5" y="783.64"/>
+     </g>
+     <g id="svg_1849" transform="translate(0, 28)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1850" x="805.5" y="783.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1851" points="804.5,792.5 804.5,772.5 1006.5,772.5 1006.5,792.5 804.5,792.5 804.5,845.5 1006.5,845.5 1006.5,792.5 " stroke="#000000"/>
+  </g>
+  <g class="table" id="svg_1852">
+   <g id="svg_1853" transform="translate(0)">
+    <rect fill="#f0f0f0" height="20" id="svg_1854" width="166" x="694.5" y="1125.5"/>
+   </g>
+   <g id="svg_1855" transform="translate(0)">
+    <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="700" id="svg_1856" text-anchor="middle" x="778.5" y="1139.69">EuroExchangeRate</text>
+   </g>
+   <g id="svg_1857" transform="translate(0, 20)">
+    <rect fill="#ffffff" height="56" id="svg_1858" width="166" x="694.5" y="1125.5"/>
+    <g id="svg_1859" transform="translate(4, 3)">
+     <g id="svg_1860" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1861" x="695.5" y="1136.64">Date</text>
+     </g>
+     <g id="svg_1862" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1863" x="695.5" y="1136.64">Rate</text>
+     </g>
+    </g>
+    <g id="svg_1864" transform="translate(59.25, 3)">
+     <g id="svg_1865" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1866" x="695.5" y="1136.64">datetime</text>
+     </g>
+     <g id="svg_1867" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1868" x="695.5" y="1136.64">decimal(10,2)</text>
+     </g>
+    </g>
+    <g id="svg_1869" transform="translate(146.75, 3)">
+     <g id="svg_1870" transform="translate(0)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1871" x="695.5" y="1136.64">PK</text>
+     </g>
+     <g id="svg_1872" transform="translate(0, 14)">
+      <text fill="black" font-family="arial, sans-serif" font-size="12" font-weight="400" id="svg_1873" x="695.5" y="1136.64"/>
+     </g>
+    </g>
+   </g>
+   <polyline fill="none" id="svg_1874" points="694.5,1145.5 694.5,1125.5 860.5,1125.5 860.5,1145.5 694.5,1145.5 694.5,1201.5 860.5,1201.5 860.5,1145.5 " stroke="#000000"/>
+  </g>
+ </g>
+</svg>

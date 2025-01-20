@@ -1,0 +1,3663 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0}
+}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{polski}
+% \usepackage[T1]{fontenc}
+\usepackage{multirow} 
+\usepackage{fancyhdr}
+\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage[polish]{babel}
+\babelprovide[transforms = oneletter.nobreak]{polish} 
+
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-0.5pt}
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+top=20mm,
+}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage[format=hang,font=small,labelfont=bf]{caption}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+\fancypagestyle{spis}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \fancyhead[L]{Spis Treści}
+    \fancyhead[R]{\theauthor}
+}
+
+
+\fancypagestyle{dokumentacja}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0.4pt} 
+    \renewcommand{\footrulewidth}{0pt} 
+    \fancyhead[L]{Dokumentacja projektu Bazy Danych}
+    \fancyhead[R]{\theauthor}
+    \fancyfoot[C]{\thepage}
+}
+
+
+\captionsetup{
+    justification=centering,
+    labelfont=bf
+}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1em%
+  \end{center}%
+  \par
+  \vskip 1em}
+\makeatother
+
+
+\title{%
+  \textbf{\Huge Podstawy Baz Danych} \\ 
+  \LARGE Projekt  2024/25}
+
+
+
+\author{Maciej Kmąk, Jakub Stachecki, Kacper Wdowiak}
+\date{\today}
+
+% Definicje kolorów dla kodu
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{examplebackcolour}{rgb}{0.90,0.95,1.0}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    literate={ą}{{\k{a}}}1
+             {ć}{{\'c}}1
+             {ę}{{\k{e}}}1
+             {ł}{{\l{}}}1
+             {ń}{{\'n}}1
+             {ó}{{\'o}}1
+             {ś}{{\'s}}1
+             {ź}{{\'z}}1
+             {ż}{{\.z}}1
+             {Ą}{{\k{A}}}1
+             {Ć}{{\'C}}1
+             {Ę}{{\k{E}}}1
+             {Ł}{{\L{}}}1
+             {Ń}{{\'N}}1
+             {Ó}{{\'O}}1
+             {Ś}{{\'S}}1
+             {Ź}{{\'Z}}1
+             {Ż}{{\.Z}}1,
+}
+
+\lstdefinestyle{examplestyle}{
+    backgroundcolor=\color{examplebackcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    literate={ą}{{\k{a}}}1
+             {ć}{{\'c}}1
+             {ę}{{\k{e}}}1
+             {ł}{{\l{}}}1
+             {ń}{{\'n}}1
+             {ó}{{\'o}}1
+             {ś}{{\'s}}1
+             {ź}{{\'z}}1
+             {ż}{{\.z}}1
+             {Ą}{{\k{A}}}1
+             {Ć}{{\'C}}1
+             {Ę}{{\k{E}}}1
+             {Ł}{{\L{}}}1
+             {Ń}{{\'N}}1
+             {Ó}{{\'O}}1
+             {Ś}{{\'S}}1
+             {Ź}{{\'Z}}1
+             {Ż}{{\.Z}}1,
+}
+
+\lstset{style=mystyle}
+\setlength{\parskip}{0.1em}
+
+\begin{document}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{agh_nzw_s_pl_3w_wbr_rgb_150ppi.jpg}
+    \label{fig:agh}
+\end{figure}
+\maketitle
+
+{\centering \Large\theauthor\par}
+{\centering
+Informatyka WI AGH, II rok \\ } 
+
+\thispagestyle{plain}
+
+\newpage
+\pagestyle{spis}
+\tableofcontents
+
+\newpage
+\pagestyle{dokumentacja}
+%-----------------------------------------------------------------------------
+\section{Wprowadzenie}
+
+Niniejszy dokument przedstawia szczegółową dokumentację projektu bazy danych, którego celem było zaprojektowanie i implementacja kompleksowego systemu bazodanowego dla firmy oferującej różnego rodzaju kursy i szkolenia. Projekt obejmuje różnorodne aspekty związane z zarządzaniem procesami edukacyjnymi, uwzględniając zarówno hybrydowy model świadczenia usług, jak i specyficzne wymagania dotyczące różnych form kształcenia, takich jak webinary, kursy czy studia.
+
+\noindent System został zaprojektowany z myślą o integracji z zewnętrznymi systemami płatności oraz możliwością generowania raportów na potrzeby analityczne i operacyjne. Implementacja projektu została zrealizowana w środowisku MS SQL Server.
+
+\noindent Dokument zawiera szczegółowy opis elementów składowych bazy danych, w tym: \begin{itemize} 
+\item Zdefiniowanych ról i przypisanych im uprawnień, 
+\item Struktury tabel i ich przeznaczenia, 
+\item Relacji pomiędzy tabelami, uwzględniających integralność danych, 
+\item Przygotowanych mechanizmów rozszerzenia funkcjonalności bazy danych, takich jak: \begin{itemize} 
+        \item Funkcje i procedury (\texttt{Functions}, \texttt{Stored Procedures}),
+        \item Triggery, które automatyzują określone operacje w systemie, 
+        \item Widoki (\texttt{Views}), umożliwiające łatwy dostęp do przetworzonych danych, 
+        \item Metody generowania danych testowych w celu walidacji systemu, 
+        \item Schemat bazy danych w formie diagramów obrazujących strukturę i zależności. 
+    \end{itemize} 
+\end{itemize}
+
+\noindent Projekt został zrealizowany przez studentów kierunku Informatyka na Akademii Górniczo-Hutniczej im. Stanisława Staszica w Krakowie w ramach przedmiotu \textbf{Podstawy Baz Danych}. 
+
+\noindent Autorami projektu są:
+\begin{itemize}
+    \item Maciej Kmąk,
+    \item Jakub Stachecki,
+    \item Kacper Wdowiak, 
+\end{itemize}
+
+\noindent Wkład poszczególnych autorów w implementację systemu został szczegółowo omówiony w późniejszych sekcjach niniejszego dokumentu.
+
+
+\noindent Niniejsza dokumentacja ma na celu nie tylko szczegółowe przedstawienie aspektów technicznych implementacji systemu bazodanowego, ale również dostarczenie pełnego obrazu procesu jego projektowania i wdrażania. Dokumentacja ta może również służyć jako punkt odniesienia przy wdrażaniu dodatkowych modułów, integracji z nowymi technologiami czy dostosowywaniu systemu.
+
+\newpage
+%-----------------------------------------------------------------------------
+\section{Role i uprawnienia}
+
+W celu zapewnienia bezpieczeństwa, organizacji dostępu do danych oraz kontroli nad operacjami wykonywanymi w systemie, w bazie danych zostały zdefiniowane role użytkowników. Dzięki temu system umożliwia precyzyjne przypisanie dostępów w zależności od funkcji i obowiązków danej grupy użytkowników.
+
+\subsection{Możliwe role użytkowników}
+W projekcie bazy danych utworzono następujące role:
+\begin{itemize}
+    \item \textbf{Role\_Admin} -- administrator systemu,
+    \item \textbf{Role\_Teacher} -- nauczyciel,
+    \item \textbf{Role\_Student} -- student,
+    \item \textbf{Role\_Translator} -- pracownik administarcyjny,
+    \item \textbf{Role\_Employee} -- tłumacz.
+\end{itemize}
+
+\noindent Każda z ról ma przypisane uprawnienia, które pozwalają jej użytkownikom na wykonywanie określonych operacji na bazie danych. W kolejnych podrozdziałach zostaną omówione szczegółowe uprawnienia dla każdej roli.
+
+\subsection{Uprawnienia przypisane do ról}
+
+Każda rola ma ściśle określone uprawnienia, które pozwalają jej użytkownikom na wykonywanie określonych operacji. Uprawnienia te obejmują:
+\begin{itemize}
+    \item \texttt{SELECT} -- odczyt danych z tabeli,
+    \item \texttt{INSERT} -- wstawianie nowych rekordów,
+    \item \texttt{UPDATE} -- modyfikacja istniejących danych,
+    \item \texttt{DELETE} -- usuwanie rekordów,
+    \item \texttt{ALTER} -- modyfikacja struktury tabeli,
+    \item \texttt{REFERENCES} -- definiowanie kluczy obcych i relacji między tabelami.
+\end{itemize}
+
+\newpage
+
+\subsubsection{\texttt{Role\_Admin} (Administrator)}
+
+\begin{lstlisting}[language=SQL]
+GRANT SELECT, INSERT, UPDATE, DELETE, ALTER, REFERENCES 
+ON SCHEMA::dbo 
+TO Role_Admin;
+\end{lstlisting}
+
+\noindent Administrator ma pełny dostęp do całej bazy danych i może wykonywać wszystkie operacje. Użytkownicy tej roli mogą:
+\begin{itemize}
+    \item Tworzyć, modyfikować i usuwać wszystkie obiekty bazy danych (tabele, widoki, procedury, funkcje itp.).
+    \item Przeglądać, edytować i usuwać dane w każdej tabeli.
+    \item Zarządzać użytkownikami i nadawać uprawnienia innym rolom.
+\end{itemize}
+Tym samym \texttt{Role\_Admin} jest przeznaczona wyłącznie dla osób, które odpowiadają za techniczną administrację i utrzymanie bazy danych.
+
+\subsubsection{\texttt{Role\_Teacher} (Nauczyciel)}
+
+\begin{lstlisting}[language=SQL]
+GRANT SELECT, UPDATE ON dbo.CoursesAttendance TO Role_Teacher;
+GRANT SELECT, UPDATE ON dbo.StudiesClassAttendance TO Role_Teacher;
+GRANT SELECT ON dbo.Students TO Role_Teacher;
+GRANT SELECT ON dbo.Courses TO Role_Teacher;
+GRANT SELECT ON dbo.Studies TO Role_Teacher;
+GRANT SELECT ON dbo.Translators TO Role_Teacher;
+GRANT SELECT, INSERT, UPDATE ON dbo.SubjectGrades TO Role_Teacher;
+\end{lstlisting}
+
+
+\noindent Nauczyciele mają dostęp do danych dotyczących ich kursów oraz studentów uczestniczących w zajęciach. Uprawnienia tej roli obejmują:
+\begin{itemize}
+    \item Zarządzanie obecnością studentów (\texttt{CoursesAttendance},  \texttt{StudiesClassAttendance}).
+    \item Przeglądanie listy studentów oraz kursów.
+    \item Wystawianie ocen (\texttt{SubjectGrades}).
+\end{itemize}
+Rola \texttt{Role\_Teacher} nie ma praw do zarządzania krytycznymi elementami systemu, takimi jak \texttt{Employee} czy \texttt{Orders}, co pozwala ograniczyć jej zakres wyłącznie do działań dydaktycznych.
+
+\subsubsection{\texttt{Role\_Student} (Student)}
+
+\begin{lstlisting}[language=SQL]
+GRANT SELECT ON dbo.Activities TO Role_Student;
+GRANT SELECT ON dbo.Courses TO Role_Student;
+GRANT SELECT ON dbo.Webinars TO Role_Student;
+GRANT SELECT ON dbo.Studies TO Role_Student;
+GRANT SELECT, INSERT, DELETE ON dbo.ShoppingCart TO Role_Student;
+GRANT SELECT, INSERT ON dbo.Orders TO Role_Student;
+GRANT SELECT, INSERT ON dbo.OrderDetails TO Role_Student;
+\end{lstlisting}
+
+\noindent Studenci mają ograniczony dostęp do systemu i mogą jedynie przeglądać informacje o kursach, rejestrować się na nie oraz zarządzać swoimi zamówieniami. Uprawnienia studentów obejmują:
+\begin{itemize}
+    \item Przeglądanie kursów, webinarów i studiów (\texttt{Activities}, \texttt{Courses}, \texttt{Webinars}, \texttt{Studies}).
+    \item Składanie zamówień i zarządzanie koszykiem (\texttt{ShoppingCart}, \texttt{Orders}, \texttt{OrderDetails}).
+
+\end{itemize}
+
+\subsubsection{\texttt{Role\_Translator} (Tłumacz)}
+
+
+\begin{lstlisting}[language=SQL]
+GRANT SELECT ON dbo.Webinars TO Role_Translator;
+GRANT SELECT ON dbo.CourseModules TO Role_Translator;
+GRANT SELECT ON dbo.Translators TO Role_Translator;
+GRANT SELECT ON dbo.TranslatorsLanguages TO Role_Translator;
+GRANT UPDATE ON dbo.TranslatorsLanguages TO Role_Translator;
+\end{lstlisting}
+
+
+
+\noindent Tłumacze w systemie mogą zarządzać danymi dotyczącymi języków i tłumaczeń. Uprawnienia tej roli obejmują:
+\begin{itemize}
+    \item Przeglądanie webinarów i modułów kursów.
+        \item Przeglądanie i aktualizowanie przypisanych języków (\textt{TranslatorsLanguages}).
+\end{itemize}
+
+
+\subsubsection{\texttt{Role\_Employee} (Pracownik administracyjny)}
+
+
+\begin{lstlisting}[language=SQL]
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Orders TO Role_Employee;
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.OrderDetails TO Role_Employee;
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Studies TO Role_Employee;
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Students TO Role_Employee;
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Courses TO Role_Employee;
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Teachers TO Role_Employee;
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Translators TO Role_Employee;
+GRANT SELECT, UPDATE ON dbo.OrderPaymentStatus TO Role_Employee;
+GRANT SELECT, UPDATE ON dbo.RODO_Table TO Role_Employee;
+\end{lstlisting}
+
+
+
+\noindent Rola pracownika została stworzona dla użytkowników odpowiedzialnych za administracyjne aspekty funkcjonowania systemu, takie jak obsługa zamówień, studentów i kursów. Pracownik może:
+\begin{itemize}
+    \item Zarządzać zamówieniami i ich szczegółami (\texttt{Orders}, \texttt{OrderDetails}).
+    \item Dodawać, edytować i usuwać kursy, studia i studentów.
+    \item Aktualizować status płatności zamówień (\texttt{OrderPaymentStatus}).
+    \item Zarządzać danymi RODO (\texttt{RODO\_Table}).
+    
+\end{itemize}
+Pracownicy nie mają pełnych praw administracyjnych – np. nie mogą modyfikować struktury bazy czy nadawać uprawnień innym użytkownikom, co jest domeną Administratora -- \texttt{Role\_Admin}.
+
+\subsection{Podsumowanie zakresu ról}
+Jak wynika z powyższych opisów, każda rola ma jasno wydzielony obszar kompetencji.
+
+\noindent Zdefiniowany w~ten sposób \textbf{podział ról} pozwala na \emph{precyzyjne rozdzielenie kompetencji} oraz zapewnia \emph{bezpieczeństwo} i \emph{porządek} w systemie. Możliwe jest także doprecyzowanie niektórych uprawnień (np. jedynie \texttt{SELECT} w konkretnej tabeli, a \texttt{INSERT} w innej), zgodnie z potrzebami organizacji.
+
+
+%-----------------------------------------------------------------------------
+\newpage
+\section{Struktura wszystkich tabel}
+
+W poniższych podsekcjach opisano \textbf{wszystkie tabele} zdefiniowane w~bazie danych.  
+Dla każdej tabeli przedstawiono:
+
+\begin{itemize}
+  \item \textbf{Kolumny} (z~typami danych, NOT~NULL, itp.).
+  \item Klucz główny (PRIMARY KEY).
+  \item Przykładowe przeznaczenie/wykorzystanie danej tabeli w~systemie.
+\end{itemize}
+
+\vspace{1em}
+
+\subsection{Activities}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Activities}
+    \item \textbf{Kolumny}:
+          \begin{itemize}
+            \item \texttt{ActivityID} (INT, NOT NULL) -- klucz główny (\texttt{PK\_Activities})
+            \item \texttt{Price} (MONEY, NOT NULL)
+            \item \texttt{Title} (VARCHAR(50), NOT NULL)
+            \item \texttt{Active} (BIT, NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{Activities} zawiera ogólne informacje o dostępnych aktywnościach, takich jak kursy, webinary czy studia. Każda aktywność ma swoją unikalną cenę, tytuł oraz status aktywności. Tabela \texttt{Activities} jest nadrzędną encją dla różnych typów zajęć, które można wykupić lub zapisać się na nie (np.\texttt{Courses}, \texttt{Webinars}, \texttt{Studies}).
+\end{itemize}
+
+\subsection{Buildings}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Buildings}
+    \item \textbf{Kolumny}:
+          \begin{itemize}
+            \item \texttt{ClassID} (INT, NOT NULL) -- klucz główny (\texttt{PK\_Buildings})
+            \item \texttt{BuildingName} (VARCHAR(30), NOT NULL)
+            \item \texttt{RoomNumber} (VARCHAR(30), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+         Tabela \texttt{Buildings} przechowuje informacje o budynkach i salach, w których odbywają się zajęcia stacjonarne.
+\end{itemize}
+
+\subsection{Cities}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Cities}
+    \item \textbf{Kolumny}:
+          \begin{itemize}
+            \item \texttt{CityID} (INT, NOT NULL) -- klucz główny (\texttt{PK\_Cities})
+            \item \texttt{CityName} (VARCHAR(40), NOT NULL)
+            \item \texttt{CountryID} (INT, NOT NULL) -- klucz obcy do \texttt{Countries}
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Spis miast. Każde miasto jest przypisane do państwa (\texttt{CountryID}).  
+          Służy do przechowywania adresów studentów (tabela \texttt{Students}).
+\end{itemize}
+
+\subsection{Countries}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Countries}
+    \item \textbf{Kolumny}:
+          \begin{itemize}
+            \item \texttt{CountryID} (INT, NOT NULL) -- klucz główny (\texttt{PK\_Countries})
+            \item \texttt{CountryName} (VARCHAR(40), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Lista krajów. Z~nią powiązana jest tabela \texttt{Cities}, przechowująca konkretne miasta. Wykorzystywana w tabeli \texttt{Cities}.
+\end{itemize}
+
+\subsection{CourseModules}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{CourseModules}
+    \item \textbf{Kolumny}:
+          \begin{itemize}
+            \item \texttt{ModuleID} (INT, NOT NULL) -- klucz główny (\texttt{PK\_CourseModules})
+            \item \texttt{CourseID} (INT, NOT NULL) -- FK do \texttt{Courses}
+            \item \texttt{ModuleName} (VARCHAR(50), NOT NULL)
+            \item \texttt{Date} (DATETIME, NOT NULL)
+            \item \texttt{DurationTime} (TIME(0), NOT NULL)
+            \item \texttt{TeacherID} (INT, NOT NULL) -- FK do \texttt{Teachers}
+            \item \texttt{TranslatorID} (INT, NULL) -- FK do \texttt{Translators}
+            \item \texttt{LanguageID} (INT, NOT NULL) -- FK do \texttt{Languages}
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Poszczególne moduły w~obrębie kursu (np. lekcje, bloki tematyczne). Zawiera informacje 
+          o~prowadzącym (\texttt{TeacherID}) i~ewentualnym tłumaczu (\texttt{TranslatorID}).
+\end{itemize}
+
+\subsection{CourseParticipants}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{CourseParticipants}
+    \item \textbf{Klucz główny}: (\texttt{CourseID}, \texttt{StudentID})  
+    \item \textbf{Opis / przeznaczenie}:  
+          Informuje o~udziale konkretnego studenta (\texttt{StudentID}) w~danym kursie (\texttt{CourseID}). Każdy student może być przypisany do wielu kursów, a każdy kurs może mieć wielu studentów.
+\end{itemize}
+
+\newpage
+
+\subsection{Courses}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Courses}
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{CourseID} (INT, NOT NULL) -- PK
+            \item \texttt{ActivityID} (INT, NOT NULL) -- FK do \texttt{Activities}
+            \item \texttt{CourseName} (VARCHAR(50), NOT NULL)
+            \item \texttt{CourseDescription} (TEXT, NULL)
+            \item \texttt{CoursePrice} (MONEY, NOT NULL)
+            \item \texttt{CourseCoordinatorID} (INT, NOT NULL) -- FK do \texttt{Teachers}
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{Courses} przechowuje kursy (nazwa, opis, cena), które mogą być dostępne dla studentów w ramach różnych aktywności, łączy się z~\texttt{Activities}.
+\end{itemize}
+
+\subsection{CoursesAttendance}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{CoursesAttendance}
+    \item \textbf{Klucz główny}: (\texttt{ModuleID}, \texttt{StudentID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela służy do monitorowania frekwencji studentów na zajęciach.
+\end{itemize}
+
+\subsection{EmployeeTypes}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{EmployeeTypes}
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{EmployeeTypeID} (INT, NOT NULL) -- PK
+            \item \texttt{EmployeeTypeName} (VARCHAR(30), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Typ pracownika (np. administracyjny, kadra zarządzająca, techniczny itp.).  
+          Powiązane z~\texttt{Employees}.
+\end{itemize}
+
+\subsection{Employees}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Employees}
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{EmployeeID} (INT, NOT NULL) -- PK
+            \item \texttt{FirstName}, \texttt{LastName} (VARCHAR(30), NOT NULL)
+            \item \texttt{HireDate} (DATE, NULL)
+            \item \texttt{EmployeeTypeID} (INT, NOT NULL) -- FK do \texttt{EmployeeTypes}
+            \item \texttt{Phone} (VARCHAR(15), NULL)
+            \item \texttt{Email} (VARCHAR(60), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela przechowuje listę osób zatrudnionych.
+\end{itemize}
+
+\subsection{EuroExchangeRate}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{EuroExchangeRate}
+    \item \textbf{Klucz główny}: \texttt{[Date]} (DATETIME)
+    \item \textbf{Kolumny}:
+          \begin{itemize}
+            \item \texttt{Date} (DATETIME, NOT NULL) -- PK
+            \item \texttt{Rate} (DECIMAL(10,2), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Zawiera kurs wymiany waluty (EUR) w~danym dniu.
+\end{itemize}
+
+\subsection{Internship}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Internship}
+    \item \textbf{Klucz główny}: \texttt{InternshipID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{InternshipID} (INT, NOT NULL)
+            \item \texttt{StudiesID} (INT, NOT NULL) -- FK do \texttt{Studies}
+            \item \texttt{StartDate} (DATETIME, NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+        Tabela \texttt{Internship} przechowuje informacje o praktykach studenckich związanych z danym kierunkiem studiów.
+\end{itemize}
+
+\subsection{InternshipAttendance}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{InternshipAttendance}
+    \item \textbf{Klucz główny}: (\texttt{InternshipID}, \texttt{StudentID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{InternshipAttendance} przechowuje informacje o obecności studentów na praktykach.
+\end{itemize}
+
+\subsection{Languages}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Languages}
+    \item \textbf{Kolumny}:
+          \begin{itemize}
+            \item \texttt{LanguageID} (INT, NOT NULL) -- PK
+            \item \texttt{LanguageName} (VARCHAR(40), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela Languages przechowuje listę dostępnych języków wykorzystywanych w systemie. Wykorzystywana w~\texttt{CourseModules}, \texttt{StudiesClass}, \texttt{Webinars}, \texttt{TeacherLanguages}, \texttt{TranslatorsLanguages}.
+\end{itemize}
+
+\subsection{OnlineAsyncClass}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{OnlineAsyncClass}
+    \item \textbf{Klucz główny}: \texttt{OnlineAsyncClassID} (INT)
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{OnlineAsyncClass} przechowuje informacje o zajęciach asynchronicznych dostępnych online. Są to materiały edukacyjne, np. nagrane wykłady lub kursy wideo, które studenci mogą oglądać w dowolnym czasie.
+\end{itemize}
+
+\subsection{OnlineAsyncModule}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{OnlineAsyncModule}
+    \item \textbf{Klucz główny}: \texttt{OnlineAsyncModuleID} (INT)
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{OnlineAsyncModule} przechowuje informacje o modułach kursowych dostępnych w formie nagranych lekcji wideo, które można oglądać w dowolnym czasie.
+\end{itemize}
+
+\subsection{OnlineSyncClass}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{OnlineSyncClass}
+    \item \textbf{Klucz główny}: \texttt{OnlineSyncClassID} (INT)
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{OnlineSyncClass} przechowuje informacje o zajęciach online odbywających się na żywo, np. przez wideokonferencję.
+\end{itemize}
+
+\subsection{OnlineSyncModule}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{OnlineSyncModule}
+    \item \textbf{Klucz główny}: \texttt{OnlineSyncModuleID} (INT)
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{OnlineSyncModule} przechowuje informacje o modułach kursowych realizowanych w formie zajęć online na żywo, powiązany z~\texttt{CourseModules}.
+\end{itemize}
+
+\subsection{OrderDetails}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{OrderDetails}
+    \item \textbf{Klucz główny}: (\texttt{OrderID}, \texttt{ActivityID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{OrderDetails} przechowuje szczegóły dotyczące zakupionych aktywności w ramach zamówienia.
+\end{itemize}
+
+\newpage
+
+\subsection{OrderPaymentStatus}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{OrderPaymentStatus}
+    \item \textbf{Klucz główny}: \texttt{PaymentURL} (INT)
+    \item \textbf{Kolumny}:
+          \begin{itemize}
+            \item \texttt{PaymentURL} (INT, NOT NULL) -- PK
+            \item \texttt{OrderPaymentStatus} (VARCHAR(20), NOT NULL)
+            \item \texttt{PaidDate} (DATETIME, NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{OrderPaymentStatus} przechowuje informacje o statusie płatności zamówienia.
+\end{itemize}
+
+\subsection{Orders}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Orders}
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{OrderID} (INT, NOT NULL) -- PK
+            \item \texttt{StudentID} (INT, NOT NULL) -- FK do \texttt{Students}
+            \item \texttt{OrderDate} (DATETIME, NOT NULL) -- FK do \texttt{EuroExchangeRate}(\texttt{Date})
+            \item \texttt{PaymentURL} (INT, NOT NULL) -- FK do \texttt{OrderPaymentStatus}
+            \item \texttt{EmployeeHandling} (INT, NOT NULL) -- FK do \texttt{Employees}
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Rejestr zamówień składanych przez studentów, wraz z~informacją o~płatności i~obsługującym pracowniku.
+\end{itemize}
+
+\subsection{RODO\_Table}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{RODO\_Table}
+    \item \textbf{Klucz główny}: \texttt{StudentID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{StudentID} (INT, NOT NULL)
+            \item \texttt{Date} (DATE, NOT NULL)
+            \item \texttt{Withdraw} (BIT, NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{RODO\_Table} przechowuje informacje dotyczące zgód RODO studentów, w tym datę udzielenia zgody oraz jej ewentualnego wycofania.
+\end{itemize}
+
+\subsection{Schedule}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Schedule}
+    \item \textbf{Klucz główny}: \texttt{ScheduleID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{ScheduleID} (INT, NOT NULL)
+            \item \texttt{ClassID} (INT, NOT NULL) -- FK do \texttt{Buildings}
+            \item \texttt{CourseModuleID} (INT, NULL) -- FK do \texttt{CourseModules}
+            \item \texttt{StudiesSubjectID} (INT, NULL) -- FK do \texttt{Subject}
+            \item \texttt{DayOfWeek} (VARCHAR(10), NOT NULL)
+            \item \texttt{StartTime} (TIME, NOT NULL)
+            \item \texttt{EndTime} (TIME, NOT NULL)
+            \item \texttt{TeacherID} (INT, NOT NULL) -- FK do \texttt{Teachers}
+            \item \texttt{TranslatorID} (INT, NULL) -- FK do \texttt{Translators}
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Harmonogram zajęć (dzień tygodnia, godziny, sala i~prowadzący).
+\end{itemize}
+
+\subsection{ShoppingCart}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{ShoppingCart}
+    \item \textbf{Klucz główny}: (\texttt{StudentID}, \texttt{ActivityID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{ShoppingCart} przechowuje listę aktywności dodanych do koszyka przez studentów przed finalizacją zamówienia.
+\end{itemize}
+
+\subsection{StationaryClass}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{StationaryClass}
+    \item \textbf{Klucz główny}: \texttt{StationaryClassID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{StationaryClassID} (INT, NOT NULL)
+            \item \texttt{ClassID} (INT, NOT NULL) -- FK do \texttt{Buildings}
+            \item \texttt{Limit} (INT, NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela opisująca stacjonarne zajęcia z~przypisaną salą (\texttt{ClassID}). 
+          Limit uczestników definiuje maksymalną liczbę osób mogących wziąć udział.
+\end{itemize}
+
+\subsection{StationaryModule}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{StationaryModule}
+    \item \textbf{Klucz główny}: \texttt{StationaryModuleID} (INT)
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{StationaryModule} przechowuje informacje o modułach kursowych realizowanych w formie zajęć stacjonarnych.
+\end{itemize}
+
+\subsection{Students}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Students}
+    \item \textbf{Klucz główny}: \texttt{StudentID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{StudentID} (INT, NOT NULL)
+            \item \texttt{FirstName}, \texttt{LastName} (VARCHAR(30), NOT NULL)
+            \item \texttt{Address} (VARCHAR(30), NOT NULL)
+            \item \texttt{CityID} (INT, NOT NULL) -- FK do \texttt{Cities}
+            \item \texttt{PostalCode} (VARCHAR(10), NOT NULL)
+            \item \texttt{Phone} (VARCHAR(15), NULL)
+            \item \texttt{Email} (VARCHAR(60), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{Students} przechowuje dane osobowe studentów.
+\end{itemize}
+
+\subsection{Studies}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Studies}
+    \item \textbf{Klucz główny}: \texttt{StudiesID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{StudiesID} (INT, NOT NULL)
+            \item \texttt{ActivityID} (INT, NOT NULL) -- FK do \texttt{Activities}
+            \item \texttt{StudiesName} (VARCHAR(50), NOT NULL)
+            \item \texttt{StudiesDescription} (TEXT, NULL)
+            \item \texttt{StudiesEntryFeePrice} (MONEY, NOT NULL)
+            \item \texttt{Syllabus} (TEXT, NOT NULL)
+            \item \texttt{StudiesEmployee} (INT, NOT NULL) -- FK do \texttt{Employees}
+            \item \texttt{Limit} (INT, NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Określa kierunek studiów, jego szczegółowy opis, cenę wpisowego i~pracownika odpowiedzialnego.
+\end{itemize}
+\newpage
+\subsection{StudiesClass}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{StudiesClass}
+    \item \textbf{Klucz główny}: \texttt{StudyClassID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{StudyClassID} (INT, NOT NULL)
+            \item \texttt{SubjectID} (INT, NOT NULL) -- FK do \texttt{Subject}
+            \item \texttt{ActivityID} (INT, NOT NULL) -- FK do \texttt{Activities}
+            \item \texttt{TeacherID} (INT, NOT NULL) -- FK do \texttt{Teachers}
+            \item \texttt{ClassName} (VARCHAR(50), NOT NULL)
+            \item \texttt{ClassPrice} (MONEY, NOT NULL)
+            \item \texttt{Date} (DATETIME, NOT NULL)
+            \item \texttt{DurationTime} (TIME(0), NULL)
+            \item \texttt{LanguageID} (INT, NULL) -- FK do \texttt{Languages}
+            \item \texttt{TranslatorID} (INT, NULL) -- FK do \texttt{Translators}
+            \item \texttt{LimitClass} (INT, NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+         Tabela \texttt{StudiesClass} przechowuje informacje o zajęciach (klasach) realizowanych w ramach studiów.
+\end{itemize}
+
+\subsection{StudiesClassAttendance}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{StudiesClassAttendance}
+    \item \textbf{Klucz główny}: (\texttt{StudentID}, \texttt{StudyClassID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{StudiesClassAttendance} przechowuje informacje o obecności studentów na zajęciach w ramach studiów.
+\end{itemize}
+
+\subsection{Subject}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Subject}
+    \item \textbf{Klucz główny}: \texttt{SubjectID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{SubjectID} (INT, NOT NULL)
+            \item \texttt{StudiesID} (INT, NOT NULL) -- FK do \texttt{Studies}
+            \item \texttt{CoordinatorID} (INT, NOT NULL) -- FK do \texttt{Teachers}
+            \item \texttt{SubjectName} (VARCHAR(50), NOT NULL)
+            \item \texttt{SubjectDescription} (TEXT, NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Przedmiot w~ramach kierunku \texttt{Studies}.  
+          Każdy przedmiot ma koordynatora (\texttt{CoordinatorID}).
+\end{itemize}
+
+\subsection{SubjectGrades}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{SubjectGrades}
+    \item \textbf{Klucz główny}: (\texttt{StudentID}, \texttt{SubjectID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Oceny studenta (wartość w~\texttt{SubjectGrade}) z~danego przedmiotu.
+\end{itemize}
+
+\subsection{TeacherLanguages}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{TeacherLanguages}
+    \item \textbf{Klucz główny}: (\texttt{TeacherID}, \texttt{LanguageID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Informacja o~językach, którymi posługuje się dany nauczyciel.
+\end{itemize}
+
+\subsection{Teachers}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Teachers}
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{TeacherID} (INT, NOT NULL) -- PK
+            \item \texttt{FirstName}, \texttt{LastName} (VARCHAR(30), NOT NULL)
+            \item \texttt{HireDate} (DATE, NULL)
+            \item \texttt{Phone} (VARCHAR(15), NULL)
+            \item \texttt{Email} (VARCHAR(60), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{Teachers} przechowuje dane nauczycieli, którzy prowadzą zajęcia w ramach studiów oraz kursów.
+\end{itemize}
+
+\subsection{Translators}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Translators}
+    \item \textbf{Klucz główny}: \texttt{TranslatorID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{TranslatorID} (INT, NOT NULL)
+            \item \texttt{FirstName}, \texttt{LastName} (VARCHAR(30), NOT NULL)
+            \item \texttt{HireDate} (DATE, NULL)
+            \item \texttt{Phone} (VARCHAR(15), NULL)
+            \item \texttt{Email} (VARCHAR(60), NOT NULL)
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{Translators} przechowuje dane tłumaczy, którzy obsługują kursy, wykłady i inne materiały.
+\end{itemize}
+
+\subsection{TranslatorsLanguages}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{TranslatorsLanguages}
+    \item \textbf{Klucz główny}: (\texttt{TranslatorID}, \texttt{LanguageID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Informacja, jakie języki obsługuje dany tłumacz.
+\end{itemize}
+
+\subsection{WebinarDetails}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{WebinarDetails}
+    \item \textbf{Klucz główny}: (\texttt{StudentID}, \texttt{WebinarID})
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{WebinarDetails} przechowuje informacje o uczestnictwie studentów w webinarach, w tym status ukończenia i dostępność
+\end{itemize}
+
+\subsection{Webinars}
+\begin{itemize}
+    \item \textbf{Nazwa tabeli}: \texttt{Webinars}
+    \item \textbf{Klucz główny}: \texttt{WebinarID} (INT)
+    \item \textbf{Kolumny} (m.in.):
+          \begin{itemize}
+            \item \texttt{WebinarID} (INT, NOT NULL)
+            \item \texttt{ActivityID} (INT, NOT NULL) -- FK do \texttt{Activities}
+            \item \texttt{TeacherID} (INT, NOT NULL) -- FK do \texttt{Teachers}
+            \item \texttt{WebinarName} (VARCHAR(50), NOT NULL)
+            \item \texttt{WebinarPrice} (MONEY, NOT NULL)
+            \item \texttt{VideoLink} (VARCHAR(50), NOT NULL)
+            \item \texttt{WebinarDate} (DATETIME, NOT NULL)
+            \item \texttt{DurationTime} (TIME(0), NOT NULL)
+            \item \texttt{WebinarDescription} (TEXT, NOT NULL)
+            \item \texttt{LanguageID} (INT, NOT NULL) -- FK do \texttt{Languages}
+          \end{itemize}
+    \item \textbf{Opis / przeznaczenie}:  
+          Tabela \texttt{Webinars} przechowuje informacje o dostępnych webinarach, w tym nazwę, prowadzącego, cenę i język.
+\end{itemize}
+
+\newpage
+%-----------------------------------------------------------------------------
+\section{Relacje (klucze obce)}
+
+W~tej sekcji przedstawiono \textbf{kompletną listę kluczy obcych (FOREIGN KEY)}:
+
+\begin{itemize}
+    \item \textbf{Activities} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{Courses (ActivityID)}
+            \item \texttt{OrderDetails (ActivityID)}
+            \item \texttt{ShoppingCart (ActivityID)}
+            \item \texttt{StudiesClass (ActivityID)}
+            \item \texttt{Webinars (ActivityID)}
+            \item \texttt{Studies (ActivityID)}
+        \end{itemize}
+    \item \textbf{Buildings} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{StationaryClass (ClassID)}
+            \item \texttt{StationaryModule (ClassID)}
+            \item \texttt{Schedule (ClassID)}
+        \end{itemize}
+    \item \textbf{Cities} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{Countries (CountryID) -- w tabeli Cities istnieje kolumna CountryID}
+            \item \texttt{Students (CityID)}
+        \end{itemize}
+    \item \textbf{Courses} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{CourseModules (CourseID)}
+            \item \texttt{CourseParticipants (CourseID)}
+            \item \texttt{CoursesAttendance (ModuleID \(\rightarrow\) CourseModules, ale CourseModules z kolei FK do Courses)}
+        \end{itemize}
+        
+    \item \textbf{CourseModules} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{OnlineAsyncModule (OnlineAsyncModuleID = ModuleID)}
+            \item \texttt{OnlineSyncModule (OnlineSyncModuleID = ModuleID)}
+            \item \texttt{Schedule (CourseModuleID)}
+            \item \texttt{StationaryModule (StationaryModuleID = ModuleID)}
+            \item \texttt{CoursesAttendance (ModuleID)}
+        \end{itemize}
+    \item \textbf{Teachers} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{CourseModules (TeacherID)}
+            \item \texttt{StudiesClass (TeacherID)}
+            \item \texttt{Webinars (TeacherID)}
+            \item \texttt{Subject (CoordinatorID)}
+            \item \texttt{TeacherLanguages (TeacherID)}
+            \item \texttt{Courses (CourseCoordinatorID)}
+            \item \texttt{Schedule (TeacherID)}
+        \end{itemize}
+    \item \textbf{Translators} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{CourseModules (TranslatorID)}
+            \item \texttt{StudiesClass (TranslatorID)}
+            \item \texttt{TranslatorsLanguages (TranslatorID)}
+            \item \texttt{Schedule (TranslatorID)}
+        \end{itemize}
+    \item \textbf{Languages} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{CourseModules (LanguageID)}
+            \item \texttt{StudiesClass (LanguageID)}
+            \item \texttt{Webinars (LanguageID)}
+            \item \texttt{TeacherLanguages (LanguageID)}
+            \item \texttt{TranslatorsLanguages (LanguageID)}
+        \end{itemize}
+    \item \textbf{Students} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{CourseParticipants (StudentID)}
+            \item \texttt{CoursesAttendance (StudentID)}
+            \item \texttt{Orders (StudentID)}
+            \item \texttt{RODO\_Table (StudentID)}
+            \item \texttt{ShoppingCart (StudentID)}
+            \item \texttt{StudiesClassAttendance (StudentID)}
+            \item \texttt{SubjectGrades (StudentID)}
+            \item \texttt{WebinarDetails (StudentID)}
+            \item \texttt{InternshipAttendance (StudentID)}
+        \end{itemize}
+    \item \textbf{Studies} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{Subject (StudiesID)}
+            \item \texttt{Internship (StudiesID)}
+        \end{itemize}
+    \item \textbf{StudiesClass} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{StudiesClassAttendance (StudyClassID)}
+            \item \texttt{StationaryClass (StationaryClassID = StudyClassID)}
+            \item \texttt{OnlineAsyncClass (OnlineAsyncClassID = StudyClassID)}
+            \item \texttt{OnlineSyncClass (OnlineSyncClassID = StudyClassID)}
+        \end{itemize}
+    \item \textbf{Subject} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{StudiesClass (SubjectID)}
+            \item \texttt{StudiesClassAttendance (StudyClassID \(\rightarrow\) StudiesClass, Subject \(\rightarrow\) Studies???}
+            \item \texttt{SubjectGrades (SubjectID)}
+        \end{itemize}
+\newpage
+    \item \textbf{Employees} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{Orders (EmployeeHandling)}
+            \item \texttt{Studies (StudiesEmployee)}
+        \end{itemize}
+    \item \textbf{EmployeeTypes} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{Employees (EmployeeTypeID)}
+        \end{itemize}
+    \item \textbf{EuroExchangeRate} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{Orders (OrderDate)}
+        \end{itemize}
+    \item \textbf{Internship} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{InternshipAttendance (InternshipID)}
+        \end{itemize}
+    \item \textbf{OrderPaymentStatus} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{Orders (PaymentURL)}
+        \end{itemize}
+    \item \textbf{Orders} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{OrderDetails (OrderID)}
+        \end{itemize}
+    \item \textbf{Webinars} \(\rightarrow\)
+        \begin{itemize}
+            \item \texttt{WebinarDetails (WebinarID)}
+        \end{itemize}
+\end{itemize}
+
+\newpage
+\section{Triggery}
+\label{sec:triggery}
+
+W~niniejszej sekcji opisano wszystkie triggery używane w bazie danych. Triggery służą do 
+automatyzacji operacji, zapewnienia spójności danych oraz ochrony przed błędami użytkownika.
+
+\begin{itemize}
+    \item \textbf{\texttt{TR\_OrderPaymentStatus\_AfterInsert}}  
+          – Automatyczne ustawianie statusu płatności.
+    \item \textbf{\texttt{TR\_OrderPaymentStatus\_AfterUpdate\_PaymentSuccess}}  
+          – Automatyczna rejestracja studentów na kursy, webinary i studia po opłaceniu zamówienia.
+    \item \textbf{\texttt{TR\_Courses\_AfterDelete}}  
+          – Usuwanie powiązanych danych po usunięciu kursu.
+    \item \textbf{\texttt{TR\_Webinars\_AfterInsert\_UniqueTeacherWebinar}}  
+          – Zapobieganie duplikatom webinarów dla tego samego nauczyciela.
+    \item \textbf{\texttt{TR\_Teachers\_InsteadOfDelete\_BlockIfActive}}  
+          – Blokowanie usunięcia nauczyciela, jeśli prowadzi aktywne zajęcia.
+    \item \textbf{\texttt{TR\_Students\_AfterInsert\_AddCity}}  
+          – Automatyczne dodawanie miast do bazy na podstawie wpisu studenta.
+\end{itemize}
+
+\subsection{TR\_OrderPaymentStatus\_AfterInsert}
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER TRIGGER TR_OrderPaymentStatus_AfterInsert
+ON dbo.OrderPaymentStatus
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE ops
+    SET
+        OrderPaymentStatus =
+            CASE
+                WHEN i.OrderPaymentStatus IS NULL THEN 'Pending'
+                ELSE i.OrderPaymentStatus
+            END,
+        PaidDate =
+            CASE
+                WHEN i.OrderPaymentStatus = 'Paid' THEN GETDATE()
+                ELSE ops.PaidDate
+            END
+    FROM dbo.OrderPaymentStatus ops
+    JOIN inserted i ON ops.PaymentURL = i.PaymentURL;
+END;
+GO
+\end{lstlisting}
+
+\noindent \textbf{Cel}: Automatyczne ustawienie domyślnego statusu płatności oraz oznaczanie zamówienia jako opłacone.  
+
+
+\noindent \textbf{Działanie}:  
+\begin{itemize}
+    \item Jeśli nowa płatność nie ma określonego statusu, domyślnie ustawiany jest \texttt{"Pending"}.
+    \item Jeśli status to \texttt{"Paid"}, ustawiana jest data zaksięgowania płatności.
+\end{itemize}
+
+
+\newpage
+\subsection{TR\_OrderPaymentStatus\_AfterUpdate\_PaymentSuccess}
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER TRIGGER TR_OrderPaymentStatus_AfterUpdate_PaymentSuccess
+ON dbo.OrderPaymentStatus
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+    UPDATE ops
+    SET PaidDate = GETDATE()
+    FROM dbo.OrderPaymentStatus ops
+    JOIN inserted i ON ops.PaymentURL = i.PaymentURL
+    WHERE i.OrderPaymentStatus = 'Paid';
+
+    ;WITH Changed AS
+    (
+        SELECT i.PaymentURL
+        FROM inserted i
+        JOIN deleted d ON i.PaymentURL = d.PaymentURL
+        WHERE i.OrderPaymentStatus = 'Paid'
+          AND d.OrderPaymentStatus <> 'Paid'
+    )
+    SELECT PaymentURL
+    INTO #Changed
+    FROM Changed;
+    
+    INSERT INTO WebinarDetails (StudentID, WebinarID, Complete, AvailableDue)
+    SELECT
+       o.StudentID,
+       wb.WebinarID,
+       0 AS Complete,
+       DATEADD(DAY, 30, GETDATE()) AS AvailableDue
+    FROM #Changed ch
+    JOIN dbo.Orders o ON o.PaymentURL = ch.PaymentURL
+    JOIN dbo.OrderDetails od ON od.OrderID = o.OrderID
+    JOIN dbo.Webinars wb ON wb.ActivityID = od.ActivityID;
+
+    INSERT INTO CourseParticipants (CourseID, StudentID)
+    SELECT
+       c.CourseID,
+       o.StudentID
+    FROM #Changed ch
+    JOIN dbo.Orders o ON o.PaymentURL = ch.PaymentURL
+    JOIN dbo.OrderDetails od ON od.OrderID = o.OrderID
+    JOIN dbo.Courses c ON c.ActivityID = od.ActivityID;
+
+    INSERT INTO StudiesClassAttendance (StudyClassID, StudentID, Attendance)
+    SELECT
+       sc.StudyClassID,
+       o.StudentID,
+       0 
+    FROM #Changed ch
+    JOIN dbo.Orders o ON o.PaymentURL = ch.PaymentURL
+    JOIN dbo.OrderDetails od ON od.OrderID = o.OrderID
+    JOIN dbo.Studies st ON st.ActivityID = od.ActivityID
+    JOIN dbo.StudiesClass sc ON sc.ActivityID = st.ActivityID;
+
+    DROP TABLE #Changed;
+END;
+GO
+\end{lstlisting}
+
+\noindent \textbf{Cel}: Automatyczna rejestracja studentów na kursy, webinary i studia po opłaceniu zamówienia.  
+
+\noindent \textbf{Działanie}:  
+\begin{itemize}
+    \item Po zmianie statusu płatności na \texttt{"Paid"}:
+    \begin{itemize}
+        \item Student zostaje dodany do \texttt{WebinarDetails}, z 30-dniowym dostępem.
+        \item Student zostaje przypisany do kursów (\texttt{CourseParticipants}).
+        \item Student zostaje dodany do zajęć studiów (\texttt{StudiesClassAttendance}).
+    \end{itemize}
+\end{itemize}
+
+\vspace{1em}
+
+\subsection{TR\_Courses\_AfterDelete}
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER TRIGGER TR_Courses_AfterDelete
+ON dbo.Courses
+AFTER DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE cp
+    FROM dbo.CourseParticipants cp
+    JOIN deleted d ON cp.CourseID = d.CourseID;
+
+    DELETE ca
+    FROM dbo.CoursesAttendance ca
+    JOIN dbo.CourseModules cm ON ca.ModuleID = cm.ModuleID
+    JOIN deleted d ON cm.CourseID = d.CourseID;
+
+    DELETE cm
+    FROM dbo.CourseModules cm
+    JOIN deleted d ON cm.CourseID = d.CourseID;
+
+    PRINT 'All related participants, attendance records, and modules removed.';
+END;
+GO
+\end{lstlisting}
+
+
+\noindent \textbf{Cel}: Usunięcie wszystkich powiązanych danych po usunięciu kursu.  
+
+\noindent \textbf{Działanie}:  
+\begin{itemize}
+    \item Usuwa wszystkich uczestników kursu (\texttt{CourseParticipants}).
+    \item Usuwa wpisy o frekwencji (\texttt{CoursesAttendance}).
+    \item Usuwa moduły kursowe (\texttt{CourseModules}).
+\end{itemize}
+
+\vspace{1em}
+
+\newpage
+
+\subsection{TR\_Webinars\_AfterInsert\_UniqueTeacherWebinar}
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER TRIGGER TR_Webinars_AfterInsert_UniqueTeacherWebinar
+ON dbo.Webinars
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (
+        SELECT 1
+        FROM dbo.Webinars w
+        JOIN inserted i ON
+             w.TeacherID = i.TeacherID
+             AND w.WebinarName = i.WebinarName
+             AND w.WebinarID <> i.WebinarID
+    )
+    BEGIN
+        RAISERROR('Cannot add duplicate webinar for the same teacher.', 16, 1);
+        ROLLBACK TRANSACTION;
+        RETURN;
+    END;
+END;
+GO
+\end{lstlisting}
+
+\noindent \textbf{Cel}: Zapobieganie duplikatom webinarów dla tego samego nauczyciela.
+
+\noindent \textbf{Działanie}:  
+\begin{itemize}
+    \item Jeśli istnieje już webinar o tej samej nazwie dla danego nauczyciela, system odrzuca operację.
+    \item Wywoływany jest błąd \texttt{RAISERROR}, a transakcja jest wycofywana.
+\end{itemize}
+
+
+\newpage
+\subsection{TR\_Teachers\_InsteadOfDelete\_BlockIfActive}
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER TRIGGER TR_Teachers_InsteadOfDelete_BlockIfActive
+ON dbo.Teachers
+INSTEAD OF DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+    IF EXISTS (
+        SELECT 1
+        FROM deleted d
+        JOIN CourseModules cm ON cm.TeacherID = d.TeacherID
+        JOIN Courses c ON c.CourseID = cm.CourseID
+        JOIN Activities a ON a.ActivityID = c.ActivityID
+        WHERE a.Active = 1
+    )
+    OR EXISTS (
+        SELECT 1
+        FROM deleted d
+        JOIN Webinars w ON w.TeacherID = d.TeacherID
+        JOIN Activities a ON a.ActivityID = w.ActivityID
+        WHERE a.Active = 1
+    )
+    BEGIN
+        RAISERROR('Cannot delete teacher: assigned to active classes.', 16, 1);
+        ROLLBACK TRANSACTION;
+        RETURN;
+    END;
+    
+    DELETE t
+    FROM dbo.Teachers t
+    JOIN deleted d ON t.TeacherID = d.TeacherID;
+END;
+GO
+\end{lstlisting}
+
+\noindent \textbf{Cel}: Blokowanie usunięcia nauczyciela, który jest przypisany do aktywnych kursów lub webinarów.  
+
+\noindent \textbf{Działanie}:  
+\begin{itemize}
+    \item Jeśli nauczyciel prowadzi aktywne kursy lub webinary, system uniemożliwia jego usunięcie.
+    \item Jeśli nauczyciel nie jest aktywny, usunięcie przebiega normalnie.
+\end{itemize}
+
+\vspace{1em}
+
+\newpage
+
+\subsection{TR\_Students\_AfterInsert\_AddCity}
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER TRIGGER TR_Students_AfterInsert_AddCity
+ON dbo.Students
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO dbo.Cities (CityID, CityName, CountryID)
+    SELECT DISTINCT
+        i.CityID,
+        'Unknown',  
+        1           
+    FROM inserted i
+    LEFT JOIN dbo.Cities c ON c.CityID = i.CityID
+    WHERE c.CityID IS NULL;
+END;
+GO
+\end{lstlisting}
+
+\noindent \textbf{Cel}: Automatyczne dodawanie nowego miasta do tabeli 
+
+\noindent \texttt{Cities}, jeśli student podał miasto, które jeszcze nie istnieje.  
+
+\noindent \textbf{Działanie}:  
+\begin{itemize}
+    \item System sprawdza, czy miasto podane przez studenta istnieje w bazie.
+    \item Jeśli nie, dodaje je jako nowy wpis w tabeli \texttt{Cities} z domyślną nazwą \texttt{"Unknown"} i \texttt{CountryID = 1}.
+\end{itemize}
+
+\vspace{1em}
+
+\subsection*{Podsumowanie triggerów}
+\vspace{1em}
+
+\noindent Triggery w systemie pełnią kluczową rolę w automatyzacji operacji, zachowaniu integralności danych oraz zabezpieczeniu przed niepożądanymi zmianami. Dzięki nim wiele procesów, które normalnie wymagałyby ręcznej interwencji administratorów bazy danych lub użytkowników, może zostać wykonanych automatycznie.
+
+\noindent Jednym z głównych zastosowań triggerów jest automatyczne zarządzanie danymi w systemie. Przykładowo:
+\begin{itemize}
+    \item Automatyczne rejestrowanie studentów na kursy i webinary po opłaceniu zamówienia eliminuje konieczność ręcznego dodawania użytkowników, przyspieszając cały proces.
+    \item Blokowanie usunięcia nauczyciela, który jest aktywny w systemie zapobiega przypadkowym błędom, które mogłyby prowadzić do niespójności danych.
+    \item Zapewnienie unikalności webinarów dla jednego nauczyciela dba o przejrzystość i uporządkowanie oferty edukacyjnej.
+\end{itemize}
+
+\noindent Mechanizmy takie jak automatyczne usuwanie powiązanych uczestników kursu czy czyszczenie listy frekwencji po skasowaniu kursu zapewniają, że baza pozostaje w spójnym stanie, bez zbędnych i nieużywanych wpisów.
+
+
+
+%-----------------------------------------------------------------------------
+\newpage
+\section{Widoki (\texttt{views})}
+\label{sec:views}
+
+\noindent W~niniejszej sekcji przedstawiono widoki (\texttt{views}) utworzone w~bazie danych.  
+Widoki pozwalają na predefiniowane zapytania, które dostarczają uporządkowanych informacji bez konieczności wykonywania skomplikowanych operacji na wielu tabelach.  
+Dzięki nim użytkownicy systemu mogą uzyskiwać dostęp do danych w sposób efektywny i zgodny z ich uprawnieniami.
+
+\noindent Każdy widok odpowiada za określoną funkcjonalność w systemie, np. prezentowanie studentów zapisanych na kursy, szczegółów zamówień, czy planów zajęć. W kolejnych podsekcjach przedstawiono pełne definicje widoków oraz ich zastosowania.
+
+\subsection{Lista widoków}
+
+W bazie danych zaimplementowano pięć głównych widoków:
+
+\begin{itemize}
+    \item \textbf{\texttt{v\_StudentCourses}} – pokazuje, którzy studenci są zapisani na jakie kursy, wraz z nazwą i ceną kursu oraz danymi studenta.
+    \item \textbf{\texttt{v\_CourseModulesDetailed}} – szczegółowe informacje o modułach kursów, w tym nauczyciel, tłumacz, język oraz data modułu.
+    \item \textbf{\texttt{v\_OrdersFull}} – pełna historia zamówień, łącznie z informacją o płatnościach, sumaryczną wartością zamówienia i danymi studenta oraz pracownika obsługującego zamówienie.
+    \item \textbf{\texttt{v\_ScheduleDetailed}} – szczegółowy harmonogram zajęć, łącznie z salą, nauczycielem, tłumaczem i przypisanym modułem kursowym lub przedmiotem studiów.
+    \item \textbf{\texttt{v\_StudentGrades}} – wykaz ocen studentów z poszczególnych przedmiotów, wraz z nazwą studiów i informacją o nauczycielu prowadzącym dany przedmiot.
+\end{itemize}
+
+\subsection{Widok \texttt{v\_StudentCourses}}
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER VIEW dbo.v_StudentCourses AS
+SELECT
+    s.StudentID,
+    s.FirstName AS StudentFirstName,
+    s.LastName  AS StudentLastName,
+    s.Email     AS StudentEmail,
+    c.CourseID,
+    c.CourseName,
+    c.CoursePrice
+FROM dbo.Students s
+JOIN dbo.CourseParticipants cp ON s.StudentID = cp.StudentID
+JOIN dbo.Courses c ON cp.CourseID = c.CourseID;
+GO
+\end{lstlisting}
+
+\noindent Widok \texttt{v\_StudentCourses} umożliwia uzyskanie informacji na temat studentów biorących udział w kursach. Zawiera następujące dane:
+\begin{itemize}
+    \item Identyfikator studenta i jego dane personalne (imię, nazwisko, e-mail).
+    \item Informacje o kursie, w którym uczestniczy dany student (nazwa, cena).
+\end{itemize}
+\noindent Widok ten może być przydatny do generowania raportów dotyczących aktywnych studentów oraz analizy popularności kursów.
+
+
+
+\subsection{Widok \texttt{v\_CourseModulesDetailed}}
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER VIEW dbo.v_CourseModulesDetailed AS
+SELECT
+    cm.ModuleID,
+    cm.ModuleName,
+    cm.[Date] AS ModuleDate,
+    cm.DurationTime,
+    t.TeacherID,
+    t.FirstName    AS TeacherFirstName,
+    t.LastName     AS TeacherLastName,
+    tr.TranslatorID,
+    tr.FirstName   AS TranslatorFirstName,
+    tr.LastName    AS TranslatorLastName,
+    l.LanguageName AS ModuleLanguage,
+    c.CourseID,
+    c.CourseName
+FROM dbo.CourseModules cm
+JOIN dbo.Teachers t ON cm.TeacherID = t.TeacherID
+LEFT JOIN dbo.Translators tr ON cm.TranslatorID = tr.TranslatorID
+JOIN dbo.Languages l ON cm.LanguageID = l.LanguageID
+JOIN dbo.Courses c ON cm.CourseID = c.CourseID;
+GO
+\end{lstlisting}
+
+\noindent Widok ten dostarcza szczegółowych informacji na temat modułów kursowych, obejmujących:
+\begin{itemize}
+    \item Nazwę modułu, datę i czas jego trwania.
+    \item Informacje o nauczycielu prowadzącym dany moduł.
+    \item Opcjonalne dane o tłumaczu prowadzącym zajęcia w innym języku.
+    \item Powiązanie modułu z kursem, do którego należy.
+\end{itemize}
+
+
+\subsection{Widok \texttt{v\_OrdersFull}}
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER VIEW dbo.v_OrdersFull AS
+SELECT
+    o.OrderID,
+    o.OrderDate,
+    ops.OrderPaymentStatus,
+    ops.PaidDate,
+    s.StudentID,
+    s.FirstName AS StudentFirstName,
+    s.LastName  AS StudentLastName,
+    e.EmployeeID,
+    e.FirstName AS EmployeeFirstName,
+    e.LastName  AS EmployeeLastName,
+    SUM(a.Price) AS TotalOrderPrice
+FROM dbo.Orders o
+JOIN dbo.OrderPaymentStatus ops ON o.PaymentURL = ops.PaymentURL
+JOIN dbo.Students s ON o.StudentID = s.StudentID
+JOIN dbo.Employees e ON o.EmployeeHandling = e.EmployeeID
+JOIN dbo.OrderDetails od ON o.OrderID = od.OrderID
+JOIN dbo.Activities a ON od.ActivityID = a.ActivityID
+GROUP BY
+    o.OrderID, o.OrderDate, ops.OrderPaymentStatus, ops.PaidDate,
+    s.StudentID, s.FirstName, s.LastName,
+    e.EmployeeID, e.FirstName, e.LastName;
+GO
+\end{lstlisting}
+
+\noindent Widok \texttt{v\_OrdersFull} dostarcza kompletnych informacji na temat zamówień w systemie, w tym:
+\begin{itemize}
+    \item Identyfikatora zamówienia, daty oraz statusu płatności.
+    \item Łącznej wartości zamówienia (suma cen wszystkich zakupionych aktywności).
+    \item Danych studenta składającego zamówienie.
+    \item Danych pracownika obsługującego zamówienie.
+\end{itemize}
+\noindent Widok ten jest szczególnie użyteczny do monitorowania realizowanych płatności oraz generowania raportów sprzedaży.
+
+
+\subsection{Widok \texttt{v\_ScheduleDetailed}}
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER VIEW dbo.v_ScheduleDetailed AS
+SELECT
+    sch.ScheduleID,
+    sch.DayOfWeek,
+    sch.StartTime,
+    sch.EndTime,
+    t.TeacherID,
+    t.FirstName AS TeacherFirstName,
+    t.LastName  AS TeacherLastName,
+    tr.TranslatorID,
+    tr.FirstName AS TranslatorFirstName,
+    tr.LastName  AS TranslatorLastName,
+    b.BuildingName,
+    b.RoomNumber,
+    cm.ModuleID,
+    cm.ModuleName,
+    sb.SubjectID,
+    sb.SubjectName
+FROM dbo.Schedule sch
+JOIN dbo.Buildings b ON sch.ClassID = b.ClassID
+JOIN dbo.Teachers t ON sch.TeacherID = t.TeacherID
+LEFT JOIN dbo.Translators tr ON sch.TranslatorID = tr.TranslatorID
+LEFT JOIN dbo.CourseModules cm ON sch.CourseModuleID = cm.ModuleID
+LEFT JOIN dbo.Subject sb ON sch.StudiesSubjectID = sb.SubjectID;
+GO
+\end{lstlisting}
+
+\noindent Widok \texttt{v\_ScheduleDetailed} agreguje dane związane z harmonogramem zajęć. Pozwala na uzyskanie następujących informacji:
+\begin{itemize}
+    \item Dnia tygodnia oraz godzin rozpoczęcia i zakończenia zajęć.
+    \item Nauczyciela oraz (jeśli obecny) tłumacza prowadzącego zajęcia.
+    \item Informacji o sali, w której odbywają się zajęcia.
+    \item Powiązanego modułu kursowego lub przedmiotu studiów.
+\end{itemize}
+
+\newpage
+\subsection{Widok \texttt{v\_StudentGrades}}
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER VIEW dbo.v_StudentGrades AS
+SELECT
+    sg.StudentID,
+    st.FirstName AS StudentFirstName,
+    st.LastName  AS StudentLastName,
+    sb.SubjectID,
+    sb.SubjectName,
+    sb.CoordinatorID,
+    tch.FirstName AS CoordinatorFirstName,
+    tch.LastName  AS CoordinatorLastName,
+    s.StudiesID,
+    s.StudiesName,
+    sg.SubjectGrade
+FROM dbo.SubjectGrades sg
+JOIN dbo.Students st ON sg.StudentID = st.StudentID
+JOIN dbo.Subject sb ON sg.SubjectID = sb.SubjectID
+JOIN dbo.Teachers tch ON sb.CoordinatorID = tch.TeacherID
+JOIN dbo.Studies s ON sb.StudiesID = s.StudiesID;
+GO
+\end{lstlisting}
+
+\noindent Widok ten zawiera zestawienie ocen studentów z poszczególnych przedmiotów. Pozwala uzyskać informacje:
+\begin{itemize}
+    \item O studentach oraz ich ocenach.
+    \item O przedmiotach, do których przypisane są oceny.
+    \item O nauczycielu prowadzącym dany przedmiot.
+    \item O studiach, w ramach których odbywa się przedmiot.
+\end{itemize}
+
+\subsection{Uprawnienia do poszczególnych widoków}
+
+\noindent Dostęp do widoków został przyznany w sposób umożliwiający różnym grupom użytkowników korzystanie z odpowiednich danych zgodnie z ich rolami w systemie.  
+Poniżej przedstawiono szczegółowe wyjaśnienie nadanych uprawnień.
+
+\begin{lstlisting}[language=SQL]
+GRANT SELECT ON OBJECT::dbo.v_StudentCourses 
+    TO Role_Admin, Role_Employee;
+GO
+
+GRANT SELECT ON OBJECT::dbo.v_CourseModulesDetailed
+    TO Role_Admin, Role_Employee, Role_Student, Role_Teacher, Role_Translator;
+GO
+
+GRANT SELECT ON OBJECT::dbo.v_OrdersFull
+    TO Role_Admin, Role_Employee, Role_Student;
+GO
+
+GRANT SELECT ON OBJECT::dbo.v_ScheduleDetailed
+    TO Role_Admin, Role_Employee, Role_Student, Role_Teacher, Role_Translator;
+GO
+
+GRANT SELECT ON OBJECT::dbo.v_StudentGrades
+    TO Role_Admin, Role_Employee, Role_Teacher;
+GO
+\end{lstlisting}
+
+
+\noindent Uprawnienia do widoków przydzielono zgodnie z rolami użytkowników:
+
+\begin{itemize}
+    \item \texttt{v\_StudentCourses} -- dostęp dla:
+        \begin{itemize}
+            \item \texttt{Role\_Admin}, \texttt{Role\_Employee} -- zarządzanie zapisami studentów na kursy.
+        \end{itemize}
+        Studenci nie mają dostępu, ponieważ widok zawiera dane innych użytkowników.
+
+    \item \texttt{v\_CourseModulesDetailed} -- dostęp dla:
+        \begin{itemize}
+            \item \texttt{Role\_Admin}, \texttt{Role\_Employee} -- kontrola administracyjna nad kursami.
+            \item \texttt{Role\_Student} -- możliwość podglądu struktury kursów.
+            \item \texttt{Role\_Teacher} -- dostęp do prowadzonych modułów.
+            \item \texttt{Role\_Translator} -- wgląd w materiały tłumaczeniowe.
+        \end{itemize}
+
+    \item \texttt{v\_OrdersFull} -- dostęp dla:
+        \begin{itemize}
+            \item \texttt{Role\_Admin}, \texttt{Role\_Employee} -- zarządzanie zamówieniami.
+            \item \texttt{Role\_Student} -- wgląd we własne zamówienia.
+        \end{itemize}
+        Nauczyciele i tłumacze nie mają dostępu, gdyż nie zarządzają płatnościami.
+
+    \item \texttt{v\_ScheduleDetailed} -- dostęp dla:
+        \begin{itemize}
+            \item \texttt{Role\_Admin}, \texttt{Role\_Employee} -- zarządzanie harmonogramem.
+            \item \texttt{Role\_Student} -- dostęp do planu zajęć.
+            \item \texttt{Role\_Teacher} -- podgląd prowadzonych zajęć.
+            \item \texttt{Role\_Translator} -- sprawdzanie przypisanych zajęć.
+        \end{itemize}
+
+    \item \texttt{v\_StudentGrades} -- dostęp dla:
+        \begin{itemize}
+            \item \texttt{Role\_Admin}, \texttt{Role\_Employee} -- monitorowanie wyników.
+            \item \texttt{Role\_Teacher} -- dostęp do ocen studentów na prowadzonych przedmiotach.
+        \end{itemize}
+        Studenci nie mają dostępu, ponieważ powinni widzieć tylko własne oceny.
+\end{itemize}
+
+
+\subsection{Podsumowanie}
+
+\noindent Widoki zostały zaprojektowane w celu:
+\begin{itemize}
+    \item ułatwienia dostępu do często używanych zestawień danych,
+    \item poprawy wydajności poprzez eliminację konieczności wielokrotnego wykonywania skomplikowanych zapytań,
+    \item ograniczenia dostępu do danych wyłącznie dla uprawnionych użytkowników.
+\end{itemize}
+
+\noindent Dzięki predefiniowanym widokom system umożliwia szybkie i efektywne zarządzanie informacjami w bazie danych, zapewniając jednocześnie odpowiedni poziom bezpieczeństwa poprzez precyzyjne przypisanie uprawnień do widoków dla różnych grup użytkowników.
+
+%-----------------------------------------------------------------------------
+\newpage
+\section{Indeksy w bazie danych}
+\label{sec:indeksy}
+
+\noindent W celu optymalizacji wydajności zapytań w bazie danych zastosowano indeksy na kluczowych kolumnach tabel. Indeksy te przyspieszają wyszukiwanie danych, sortowanie oraz filtrowanie wyników. Poniżej przedstawiono szczegółowy opis utworzonych indeksów wraz z ich uzasadnieniem.
+
+\subsection{Indeksy dla studentów}
+
+\noindent Dla tabeli \texttt{Students} utworzono kilka indeksów wspierających szybkie wyszukiwanie studentów według istotnych atrybutów:
+
+\begin{itemize}
+    \item \textbf{Indeks na e-mail} (\texttt{IX\_Students\_Email}) -- pozwala na szybkie wyszukiwanie studentów po adresie e-mail, co jest szczególnie przydatne w systemach logowania i korespondencji.
+    \item \textbf{Indeks na nazwisko} (\texttt{IX\_Students\_LastName}) -- umożliwia sprawne filtrowanie i sortowanie po nazwisku.
+    \item \textbf{Indeks na numer telefonu} (\texttt{IX\_Students\_Phone}) -- wspomaga wyszukiwanie studentów na podstawie numeru kontaktowego.
+    \item \textbf{Indeks na kod pocztowy} (\texttt{IX\_Students\_PostalCode}) -- ułatwia filtrowanie studentów według lokalizacji, np. w celach analitycznych.
+\end{itemize}
+
+\subsection{Indeksy dla kursów}
+
+\noindent W celu zwiększenia efektywności operacji związanych z kursami, utworzono indeksy w tabeli \texttt{Courses}:
+
+\begin{itemize}
+    \item \textbf{Indeks na nazwę kursu} (\texttt{IX\_Courses\_CourseName}) -- umożliwia szybkie wyszukiwanie kursów według ich nazwy.
+    \item \textbf{Indeks na cenę kursu} (\texttt{IX\_Courses\_CoursePrice}) -- wspiera operacje filtrowania kursów według przedziałów cenowych.
+    \item \textbf{Indeks na koordynatora kursu} (\texttt{IX\_Courses\_Coordinator}) -- ułatwia wyszukiwanie kursów prowadzonych przez konkretnego nauczyciela.
+\end{itemize}
+
+\subsection{Indeksy dla zamówień}
+
+\noindent Optymalizacja operacji związanych z zamówieniami (\texttt{Orders}) i płatnościami (\texttt{OrderPaymentStatus}) została osiągnięta poprzez zastosowanie następujących indeksów:
+
+\begin{itemize}
+    \item \textbf{Indeks na datę zamówienia} (\texttt{IX\_Orders\_OrderDate}) -- pozwala na szybkie wyszukiwanie zamówień w określonych ramach czasowych.
+    \item \textbf{Indeks na status płatności} (\texttt{IX\_OrderPaymentStatus\_Status}) -- wspiera operacje związane z filtrowaniem zamówień według statusu (\texttt{Pending}, \texttt{Paid}).
+    \item \textbf{Indeks na pracownika obsługującego zamówienie} (\texttt{IX\_Orders\_EmployeeHandling}) -- ułatwia analizę zamówień obsługiwanych przez konkretnych pracowników administracyjnych.
+\end{itemize}
+
+\subsection{Indeksy dla nauczycieli i tłumaczy}
+
+\noindent W celu optymalizacji operacji związanych z językami nauczycieli i tłumaczy, dodano następujące indeksy:
+
+\begin{itemize}
+    \item \textbf{Indeks na język tłumacza} (\texttt{IX\_TranslatorsLanguages\_LanguageID}) -- wspomaga wyszukiwanie tłumaczy obsługujących konkretne języki.
+    \item \textbf{Indeks na język wykładowy nauczyciela} (\texttt{IX\_TeacherLanguages\_LanguageID}) -- pozwala na szybkie filtrowanie nauczycieli według języka prowadzenia zajęć.
+\end{itemize}
+
+\subsection{Indeksy dla webinarów i harmonogramu}
+
+\noindent W tabeli \texttt{Webinars} dodano indeks wspomagający operacje wyszukiwania webinarów według daty:
+
+\begin{itemize}
+    \item \textbf{Indeks na datę webinaru} (\texttt{IX\_Webinars\_WebinarDate}) -- przyspiesza zapytania dotyczące webinarów odbywających się w określonym terminie.
+\end{itemize}
+
+\subsection{Podsumowanie}
+
+\noindent Zastosowane indeksy umożliwiają:
+\begin{itemize}
+    \item Przyspieszenie wyszukiwania studentów, kursów i zamówień według kluczowych atrybutów.
+    \item Optymalizację filtrowania według języka nauczycieli i tłumaczy.
+    \item Usprawnienie analizy zamówień oraz statusu płatności.
+    \item Zwiększenie efektywności operacji na webinarach i harmonogramie zajęć.
+\end{itemize}
+
+\noindent Dzięki dobrze zaprojektowanym indeksom baza danych zapewnia \textbf{wysoką wydajność} nawet przy dużej liczbie użytkowników i intensywnym wykorzystaniu systemu.
+
+
+%-----------------------------------------------------------------------------
+\newpage
+\section{Funkcje (\texttt{functions})}
+
+W poniższej sekcji przedstawiono implementację funkcji, które wspierają operacje obliczeniowe oraz analityczne w systemie bazodanowym. Każda funkcja posiada opis działania, parametrów oraz przykłady wywołań. Implementacja poniższych funkcji w systemie bazodanowym niesie ze sobą szereg korzyści:
+
+\begin{itemize}
+    \item \textbf{Modularność i ponowne użycie kodu:} Każda funkcja realizuje jasno określone zadanie, co ułatwia późniejsze modyfikacje oraz ponowne wykorzystanie logiki biznesowej w wielu zapytaniach.
+    \item \textbf{Poprawa wydajności:} Funkcje pozwalają na wykonywanie skomplikowanych obliczeń oraz łączenie danych w jednym wywołaniu, zmniejszając potrzebę powtarzania złożonej logiki w wielu miejscach aplikacji.
+    \item \textbf{Łatwość utrzymania:} Zcentralizowana logika obliczeniowa umożliwia szybsze diagnozowanie błędów oraz łatwiejsze wprowadzanie zmian, co pozytywnie wpływa na utrzymanie i rozwój systemu.
+    \item \textbf{Wsparcie dla analiz i raportowania:} Funkcje dedykowane do obliczania sum, średnich, przeliczania walut czy generowania harmonogramów umożliwiają dynamiczne generowanie raportów i analiz w czasie rzeczywistym.
+    \item \textbf{Elastyczność:} Możliwość przekazywania parametrów (takich jak identyfikatory, daty czy języki) pozwala na dynamiczną adaptację funkcji do bieżących potrzeb biznesowych i operacyjnych.
+\end{itemize}
+
+
+
+\subsection{Obliczanie całkowitej kwoty zamówienia}
+\label{sec:order_total}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetOrderTotal} oblicza sumaryczną wartość zamówienia, sumując ceny wszystkich aktywności przypisanych do danego zamówienia (tabela \texttt{Activities}) na podstawie szczegółów zamówienia z tabeli \texttt{OrderDetails}. Jeśli zamówienie nie zawiera pozycji, zwracana jest wartość \texttt{0}.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetOrderTotal
+(
+    @OrderID INT
+)
+RETURNS MONEY
+AS
+BEGIN
+    DECLARE @Total MONEY;
+
+    SELECT @Total = SUM(A.Price)
+    FROM OrderDetails OD
+    JOIN Activities A ON A.ActivityID = OD.ActivityID
+    WHERE OD.OrderID = @OrderID;
+
+    IF @Total IS NULL
+        SET @Total = 0;
+
+    RETURN @Total;
+END;
+GO
+\end{lstlisting}
+
+\textbf{Przykładowe wywołanie:}
+\begin{lstlisting}[language=SQL]
+SELECT dbo.ufnGetOrderTotal(11) AS OrderTotal;
+\end{lstlisting}
+
+\newpage
+
+\subsection{Sprawdzanie dostępności miejsca w grupie kursowej}
+\label{sec:stationary_module_free_slots}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetStationaryModuleFreeSlots} sprawdza liczbę wolnych miejsc w module stacjonarnym. Pobiera limit miejsc dla modułu z tabeli \texttt{StationaryModule} i odejmuje liczbę uczestników obecnych (tabela \texttt{CoursesAttendance} z warunkiem \texttt{Attendance = 1}). W przypadku braku modułu zwraca wartość \texttt{-1}.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetStationaryModuleFreeSlots
+(
+    @ModuleID INT  
+)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Limit INT, @Count INT, @FreeSlots INT;
+
+    SELECT @Limit = SM.[Limit]
+    FROM StationaryModule SM
+    WHERE SM.StationaryModuleID = @ModuleID;
+
+    IF @Limit IS NULL
+    BEGIN
+        RETURN -1;
+    END;
+
+    SELECT @Count = COUNT(*)
+    FROM CoursesAttendance CA
+    WHERE CA.ModuleID = @ModuleID
+      AND CA.Attendance = 1;
+
+    SET @FreeSlots = @Limit - ISNULL(@Count,0);
+
+    RETURN @FreeSlots;
+END;
+GO
+\end{lstlisting}
+
+\textbf{Przykładowe wywołanie:}
+\begin{lstlisting}[language=SQL]
+SELECT dbo.ufnGetStationaryModuleFreeSlots(10) AS FreeSlots;
+\end{lstlisting}
+
+\newpage
+
+\subsection{Zliczanie aktywnych kursów w danym okresie}
+\label{sec:active_courses_period}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnCountActiveCoursesInPeriod} zlicza liczbę unikalnych kursów, które są aktywne w zadanym przedziale czasowym. Łączy tabele \texttt{Courses}, \texttt{Activities} i \texttt{CourseModules} i uwzględnia tylko kursy, dla których aktywność jest aktywna (\texttt{a.Active = 1}) oraz moduły mieszczą się w przedziale czasowym.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnCountActiveCoursesInPeriod
+(
+    @StartDate DATETIME,
+    @EndDate   DATETIME
+)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Count INT;
+
+    WITH ActiveCourses AS
+    (
+      SELECT DISTINCT c.CourseID
+      FROM Courses c
+      JOIN Activities a ON a.ActivityID = c.ActivityID
+      JOIN CourseModules cm ON cm.CourseID = c.CourseID
+      WHERE a.Active = 1
+        AND cm.Date >= @StartDate
+        AND cm.Date <  @EndDate
+    )
+    SELECT @Count = COUNT(*)
+    FROM ActiveCourses;
+
+    RETURN @Count;
+END;
+GO
+\end{lstlisting}
+
+\textbf{Przykładowe wywołanie:}
+\begin{lstlisting}[language=SQL]
+SELECT dbo.ufnCountActiveCoursesInPeriod('2025-01-01','2025-12-31') AS TotalActiveCourses;
+\end{lstlisting}
+
+
+\newpage
+\subsection{Pobieranie średniej ocen z przedmiotu}
+\label{sec:subject_average_grade}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetSubjectAverageGrade} oblicza średnią ocen dla podanego przedmiotu na podstawie danych z tabeli \texttt{SubjectGrades}. Oceny są rzutowane na typ \texttt{DECIMAL(5,2)} i uśredniane. W przypadku braku ocen wynik jest ustawiany na \texttt{0}.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetSubjectAverageGrade
+(
+    @SubjectID INT
+)
+RETURNS DECIMAL(5,2)
+AS
+BEGIN
+    DECLARE @Average DECIMAL(5,2);
+
+    SELECT @Average = AVG(CAST(SubjectGrade AS DECIMAL(5,2)))
+    FROM SubjectGrades
+    WHERE SubjectID = @SubjectID;
+
+    IF @Average IS NULL
+        SET @Average = 0;
+
+    RETURN @Average;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Obliczanie wolnych miejsc w budynku}
+\label{sec:free_seats_building}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetFreeSeatsInBuilding} analizuje zajętość sal w budynku i oblicza liczbę dostępnych miejsc. Wykorzystuje dwa CTE: pierwszy pobiera sale (z tabeli \texttt{StationaryClass}) odpowiadające danemu identyfikatorowi budynku (\texttt{ClassID}), a drugi zlicza liczbę zajętych miejsc. Wynik obliczany jest jako suma różnicy między limitem miejsc a liczbą zajętych miejsc.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetFreeSeatsInBuilding
+(
+    @ClassID INT
+)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @FreeSeats INT;
+
+    ;WITH BuildingRooms AS
+    (
+        SELECT SC.StationaryClassID, SC.[Limit]
+        FROM StationaryClass SC
+        WHERE SC.ClassID = @ClassID
+    ),
+    Occupancy AS
+    (
+        SELECT
+            br.StationaryClassID,
+            COUNT(*) AS Occupied
+        FROM BuildingRooms br
+        JOIN StudiesClass sc ON sc.StudyClassID = br.StationaryClassID 
+        JOIN StudiesClassAttendance sca ON sca.StudyClassID = sc.StudyClassID
+        GROUP BY br.StationaryClassID
+    )
+    SELECT @FreeSeats = SUM(br.[Limit] - ISNULL(o.Occupied, 0))
+    FROM BuildingRooms br
+    LEFT JOIN Occupancy o ON o.StationaryClassID = br.StationaryClassID;
+
+    RETURN ISNULL(@FreeSeats, 0);
+END;
+GO
+\end{lstlisting}
+\newpage
+\subsection{Konwersja walut w cenach aktywności (EUR/PLN)}
+\label{sec:convert_price_eur}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnConvertActivityPriceToEUR} przelicza cenę aktywności wyrażoną w PLN na EUR. Najpierw pobiera cenę aktywności z tabeli \texttt{Activities}, a następnie wyszukuje kurs wymiany (tabela \texttt{EuroExchangeRate}) obowiązujący na lub przed podaną datą. W razie braku ceny lub kursu, funkcja zwraca \texttt{0}.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnConvertActivityPriceToEUR
+(
+    @ActivityID INT,
+    @RateDate   DATETIME
+)
+RETURNS DECIMAL(10,2)
+AS
+BEGIN
+    DECLARE @PLN MONEY, @Rate DECIMAL(10,2), @EUR DECIMAL(10,2);
+
+    SELECT @PLN = Price 
+    FROM Activities
+    WHERE ActivityID = @ActivityID;
+
+    IF @PLN IS NULL
+        RETURN 0;
+
+    SELECT TOP(1) @Rate = Rate
+    FROM EuroExchangeRate
+    WHERE [Date] <= @RateDate
+    ORDER BY [Date] DESC; 
+
+    IF @Rate IS NULL
+        RETURN 0;
+
+    SET @EUR = CAST(@PLN AS DECIMAL(10,2)) / @Rate;
+
+    RETURN @EUR;
+END;
+GO
+\end{lstlisting}
+
+\textbf{Przykładowe wywołanie:}
+\begin{lstlisting}[language=SQL]
+SELECT dbo.ufnConvertActivityPriceToEUR(101, '2025-01-10') AS PriceInEUR;
+\end{lstlisting}
+\newpage
+\subsection{Pobieranie listy nauczycieli dla danego języka}
+\label{sec:teachers_by_language}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetTeachersByLanguage} zwraca tabelaryczny zbiór danych z informacjami o nauczycielach, którzy prowadzą zajęcia w określonym języku. Łączy tabele \texttt{Teachers} i \texttt{TeacherLanguages} na podstawie \texttt{TeacherID}.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetTeachersByLanguage
+(
+    @LanguageID INT
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT t.TeacherID,
+           t.FirstName,
+           t.LastName,
+           t.Email
+    FROM Teachers t
+    JOIN TeacherLanguages tl ON tl.TeacherID = t.TeacherID
+    WHERE tl.LanguageID = @LanguageID
+);
+GO
+\end{lstlisting}
+
+\textbf{Przykładowe wywołanie:}
+\begin{lstlisting}[language=SQL]
+SELECT * FROM dbo.ufnGetTeachersByLanguage(2);
+\end{lstlisting}
+\subsection{Obliczanie liczby zajęć w kursie}
+\label{sec:course_total_hours}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetCourseTotalHours} sumuje łączny czas trwania modułów kursu (dane z tabeli \texttt{CourseModules}) wyrażony w minutach. Wynik przeliczany jest do formatu godzin dziesiętnych (np. 90 minut $\rightarrow$ 1.50 h).
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetCourseTotalHours
+(
+    @CourseID INT
+)
+RETURNS DECIMAL(5,2)
+AS
+BEGIN
+    DECLARE @TotalMinutes INT;
+
+    SELECT @TotalMinutes = SUM(DATEDIFF(MINUTE, 0, DurationTime))
+    FROM CourseModules
+    WHERE CourseID = @CourseID;
+
+    IF @TotalMinutes IS NULL
+        SET @TotalMinutes = 0;
+
+    RETURN CAST(@TotalMinutes AS DECIMAL(5,2)) / 60;
+END;
+GO
+\end{lstlisting}
+\newpage
+\subsection{Wyświetlanie listy aktywności dostępnych dla danego języka}
+\label{sec:activities_by_language}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnListActivitiesByLanguage} zwraca zbiór aktywności (tabela wynikowa) odpowiadających podanemu językowi. Uwzględnia trzy typy aktywności: Webinary, Kursy, Studia.
+
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnListActivitiesByLanguage
+(
+    @LanguageID INT
+)
+RETURNS @Result TABLE
+(
+    ActivityType VARCHAR(20),
+    ActivityName VARCHAR(50),
+    ActivityDate DATETIME,
+    LanguageID   INT,
+    Price        MONEY
+)
+AS
+BEGIN
+    INSERT INTO @Result
+    SELECT 
+        'Webinar' AS ActivityType,
+        w.WebinarName AS ActivityName,
+        w.WebinarDate AS ActivityDate,
+        w.LanguageID,
+        a.Price
+    FROM Webinars w
+    JOIN Activities a ON a.ActivityID = w.ActivityID
+    WHERE w.LanguageID = @LanguageID
+      AND a.Active = 1;
+
+    INSERT INTO @Result
+    SELECT 
+        'CourseModule' AS ActivityType,
+        c.CourseName + ' - ' + cm.ModuleName AS ActivityName,
+        cm.Date AS ActivityDate,
+        cm.LanguageID,
+        a.Price
+    FROM CourseModules cm
+    JOIN Courses c ON c.CourseID = cm.CourseID
+    JOIN Activities a ON a.ActivityID = c.ActivityID
+    WHERE cm.LanguageID = @LanguageID
+      AND a.Active = 1;
+
+    INSERT INTO @Result
+    SELECT 
+        'StudiesClass' AS ActivityType,
+        sc.ClassName AS ActivityName,
+        sc.[Date] AS ActivityDate,
+        sc.LanguageID,
+        a.Price
+    FROM StudiesClass sc
+    JOIN Activities a ON a.ActivityID = sc.ActivityID
+    WHERE sc.LanguageID = @LanguageID
+      AND a.Active = 1;
+
+    RETURN;
+END;
+GO
+\end{lstlisting}
+
+\textbf{Przykładowe wywołanie:}
+\begin{lstlisting}[language=SQL]
+SELECT *
+FROM dbo.ufnListActivitiesByLanguage(3)
+ORDER BY ActivityDate;
+\end{lstlisting}
+
+\subsection{Obliczanie sumarycznego czasu trwania webinaru}
+\label{sec:webinar_total_hours}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetWebinarTotalHours} oblicza łączny czas trwania webinaru na podstawie pola \texttt{DurationTime} w tabeli \texttt{Webinars}. Wynik wyrażony jest w godzinach dziesiętnych.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetWebinarTotalHours
+(
+    @WebinarID INT
+)
+RETURNS DECIMAL(5,2)
+AS
+BEGIN
+    DECLARE @Minutes INT;
+
+    SELECT @Minutes = DATEDIFF(MINUTE, 0, DurationTime)
+    FROM Webinars
+    WHERE WebinarID = @WebinarID;
+
+    IF @Minutes IS NULL
+        SET @Minutes = 0;
+
+    RETURN CAST(@Minutes AS DECIMAL(5,2)) / 60;
+END;
+GO
+\end{lstlisting}
+
+\subsection{Obliczanie liczby uczestników w kursie}
+\label{sec:course_total_participants}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetCourseTotalParticipants} zlicza liczbę uczestników w kursie na podstawie obecności (pole \texttt{Attendance = 1}) z tabeli \texttt{CoursesAttendance}.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetCourseTotalParticipants
+(
+    @CourseID INT
+)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @TotalParticipants INT;
+
+    SELECT @TotalParticipants = COUNT(*)
+    FROM CoursesAttendance
+    WHERE ModuleID = @CourseID
+      AND Attendance = 1;
+
+    RETURN @TotalParticipants;
+END;
+GO
+\end{lstlisting}
+\newpage
+\subsection{Harmonogram zajęć dla studenta}
+\label{sec:student_schedule}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetStudentSchedule} zwraca tabelaryczny harmonogram zajęć dla studenta. Uwzględnia:
+\begin{itemize}
+    \item Kursy (moduły) – łączone z kursami \texttt{CourseParticipants} i \texttt{CourseModules},
+    \item Webinary – na podstawie tabel \texttt{WebinarDetails} i \texttt{Webinars},
+    \item Studia – zajęcia pobierane z tabel \texttt{StudiesClassAttendance} i \texttt{StudiesClass}.
+\end{itemize}
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetStudentSchedule
+(
+    @StudentID INT
+)
+RETURNS @Schedule TABLE
+(
+    ActivityType  VARCHAR(20),
+    ActivityName  VARCHAR(50),
+    StartDate     DATETIME,
+    EndDate       DATETIME
+)
+AS
+BEGIN
+    INSERT INTO @Schedule
+    SELECT 
+        'Course' AS ActivityType,
+        c.CourseName + ' - ' + cm.ModuleName AS ActivityName,
+        cm.Date AS StartDate,
+        DATEADD(MINUTE, DATEDIFF(MINUTE, 0, cm.DurationTime), cm.Date) AS EndDate
+    FROM CourseParticipants cp
+    JOIN Courses c ON c.CourseID = cp.CourseID
+    JOIN CourseModules cm ON cm.CourseID = c.CourseID
+    WHERE cp.StudentID = @StudentID;
+
+    INSERT INTO @Schedule
+    SELECT
+        'Webinar' AS ActivityType,
+        w.WebinarName AS ActivityName,
+        w.WebinarDate AS StartDate,
+        DATEADD(MINUTE, DATEDIFF(MINUTE, 0, w.DurationTime), w.WebinarDate) AS EndDate
+    FROM WebinarDetails wd
+    JOIN Webinars w ON w.WebinarID = wd.WebinarID
+    WHERE wd.StudentID = @StudentID;
+
+    INSERT INTO @Schedule
+    SELECT
+        'StudiesClass' AS ActivityType,
+        sc.ClassName AS ActivityName,
+        sc.[Date] AS StartDate,
+        DATEADD(MINUTE, DATEDIFF(MINUTE, 0, sc.DurationTime), sc.[Date]) AS EndDate
+    FROM StudiesClassAttendance sca
+    JOIN StudiesClass sc ON sc.StudyClassID = sca.StudyClassID
+    WHERE sca.StudentID = @StudentID;
+
+    RETURN;
+END;
+GO
+\end{lstlisting}
+
+\subsection{Generowanie raportu ocen dla danego studenta}
+\label{sec:student_grades}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetStudentGrades} zwraca tabelaryczny zbiór raportu ocen studenta dla poszczególnych przedmiotów. Dane pobierane są z tabel \texttt{SubjectGrades} oraz \texttt{Subject}.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetStudentGrades
+(
+    @StudentID INT
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        sg.SubjectID,
+        s.SubjectName,
+        sg.SubjectGrade
+    FROM SubjectGrades sg
+    JOIN Subject s ON s.SubjectID = sg.SubjectID
+    WHERE sg.StudentID = @StudentID
+);
+GO
+\end{lstlisting}
+
+\subsection{Generowanie listy obecności dla danego kursu}
+\label{sec:course_attendance_list}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetCourseAttendanceList} tworzy tabelaryczną listę obecności studentów w kursie. Łączy tabele \texttt{CoursesAttendance}, \texttt{CourseModules} oraz \texttt{Students}, aby wyświetlić m.in. nazwy modułów i dane studentów.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetCourseAttendanceList
+(
+    @CourseID INT
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        ca.ModuleID,
+        cm.ModuleName,
+        ca.StudentID,
+        s.FirstName,
+        s.LastName,
+        ca.Attendance AS WasPresent
+    FROM CoursesAttendance ca
+    JOIN CourseModules cm ON cm.ModuleID = ca.ModuleID
+    JOIN Students s ON s.StudentID = ca.StudentID
+    WHERE cm.CourseID = @CourseID
+);
+GO
+\end{lstlisting}
+\newpage
+\subsection{Generowanie listy obecności dla danego studenta}
+\label{sec:student_all_attendances}
+
+\textbf{Opis:} Funkcja \texttt{dbo.ufnGetStudentAllAttendances} generuje tabelaryczny raport obecności studenta, łącząc dane dotyczące zajęć w kursach, studiach oraz webinarach. Dla każdej aktywności podawany jest typ, nazwa, data wydarzenia oraz status obecności.
+
+ 
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER FUNCTION dbo.ufnGetStudentAllAttendances
+(
+    @StudentID INT
+)
+RETURNS @Attendances TABLE
+(
+    ActivityType  VARCHAR(20),
+    ActivityName  VARCHAR(50),
+    DateOfEvent   DATETIME,
+    WasPresent    BIT
+)
+AS
+BEGIN
+    INSERT INTO @Attendances
+    SELECT 
+        'Course' AS ActivityType,
+        c.CourseName + ' - ' + cm.ModuleName,
+        cm.Date,
+        ca.Attendance
+    FROM CoursesAttendance ca
+    JOIN CourseModules cm ON cm.ModuleID = ca.ModuleID
+    JOIN Courses c ON c.CourseID = cm.CourseID
+    WHERE ca.StudentID = @StudentID;
+
+    INSERT INTO @Attendances
+    SELECT
+        'StudiesClass',
+        sc.ClassName,
+        sc.[Date],
+        sca.Attendance
+    FROM StudiesClassAttendance sca
+    JOIN StudiesClass sc ON sc.StudyClassID = sca.StudyClassID
+    WHERE sca.StudentID = @StudentID;
+
+    INSERT INTO @Attendances
+    SELECT
+        'Webinar',
+        w.WebinarName,
+        w.WebinarDate,
+        wd.Complete
+    FROM WebinarDetails wd
+    JOIN Webinars w ON w.WebinarID = wd.WebinarID
+    WHERE wd.StudentID = @StudentID;
+
+    RETURN;
+END;
+GO
+\end{lstlisting}
+
+%-----------------------------------------------------------------------------
+
+\newpage
+\section{Procedury (\texttt{stored procedures})}
+Poniżej przedstawiono zestawienie procedur składowanych wykorzystywanych w systemie wraz z ich kodem oraz omówieniem funkcjonalności.
+
+\subsection{Dodawanie nowego kursu (\texttt{spAddCourse})}
+\textbf{Cel:} Dodaje nowy kurs oraz odpowiadającą mu aktywność do bazy danych.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \texttt{@CourseName} – nazwa kursu,
+  \item \texttt{@CourseDescription} – opcjonalny opis kursu,
+  \item \texttt{@CoursePrice} – cena kursu,
+  \item \texttt{@CourseCoordinatorID} – identyfikator koordynatora kursu,
+  \item \texttt{@ActivityTitle} – tytuł aktywności przypisanej do kursu,
+  \item \texttt{@ActivityPrice} – cena aktywności,
+  \item \texttt{@ActivityActive} – status aktywności (domyślnie 1 – aktywna).
+\end{itemize}
+
+\textbf{Działanie:} Procedura generuje nowe identyfikatory dla aktywności i kursu przy użyciu wyrażenia \verb|ISNULL(MAX(...),0)+1|, wstawia rekordy do tabel \verb|Activities| i \verb|Courses|, a następnie zwraca nowe identyfikatory.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddCourse
+  @CourseName           VARCHAR(50),
+  @CourseDescription    TEXT       = NULL,
+  @CoursePrice          MONEY,
+  @CourseCoordinatorID  INT,
+  @ActivityTitle        VARCHAR(50),
+  @ActivityPrice        MONEY,
+  @ActivityActive       BIT = 1
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Wygenerowanie nowego ActivityID
+    DECLARE @NewActivityID INT = (
+        SELECT ISNULL(MAX(ActivityID), 0) + 1 
+        FROM Activities
+    );
+
+    INSERT INTO Activities (ActivityID, Price, Title, Active)
+    VALUES (@NewActivityID, @ActivityPrice, @ActivityTitle, @ActivityActive);
+
+    -- Wygenerowanie nowego CourseID
+    DECLARE @NewCourseID INT = (
+        SELECT ISNULL(MAX(CourseID), 0) + 1
+        FROM Courses
+    );
+
+    INSERT INTO Courses (CourseID, ActivityID, CourseName, CourseDescription, CoursePrice, CourseCoordinatorID)
+    VALUES (
+        @NewCourseID,
+        @NewActivityID,
+        @CourseName,
+        @CourseDescription,
+        @CoursePrice,
+        @CourseCoordinatorID
+    );
+
+    SELECT @NewCourseID AS CreatedCourseID, @NewActivityID AS CreatedActivityID;
+END;
+GO
+\end{lstlisting}
+
+\subsection{Usuwanie kursu (\texttt{spRemoveCourse})}
+\textbf{Cel:} Usuwa kurs oraz powiązaną z nim aktywność.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \texttt{@CourseID} – identyfikator kursu.
+\end{itemize}
+
+\textbf{Działanie:} Procedura wyszukuje \verb|ActivityID| powiązane z kursem. W przypadku nieznalezienia kursu generowany jest błąd. Następnie usuwa rekordy z tabel \verb|Courses| oraz \verb|Activities|.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spRemoveCourse
+  @CourseID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Znajdź powiązany ActivityID
+    DECLARE @ActivityID INT;
+
+    SELECT @ActivityID = ActivityID
+    FROM Courses
+    WHERE CourseID = @CourseID;
+
+    IF @ActivityID IS NULL
+    BEGIN
+        RAISERROR('Course not found.', 16, 1);
+        RETURN;
+    END;
+
+    -- Usunięcie z Courses
+    DELETE FROM Courses
+    WHERE CourseID = @CourseID;
+
+    -- Usunięcie z Activities (opcjonalne)
+    DELETE FROM Activities
+    WHERE ActivityID = @ActivityID;
+
+    PRINT 'Course and related Activity removed successfully.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Rejestracja studenta na kurs (\texttt{spRegisterStudentInCourse})}
+\textbf{Cel:} Dodaje studenta do listy uczestników wybranego kursu.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \texttt{@CourseID} – identyfikator kursu,
+  \item \texttt{@StudentID} – identyfikator studenta.
+\end{itemize}
+
+\textbf{Działanie:} Sprawdza, czy dany student nie jest już zapisany na kurs. W przypadku braku wpisu, wstawia nowy rekord do tabeli \verb|CourseParticipants|, a następnie wyświetla komunikat powodzenia.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spRegisterStudentInCourse
+  @CourseID  INT,
+  @StudentID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (
+        SELECT 1 FROM CourseParticipants
+        WHERE CourseID = @CourseID AND StudentID = @StudentID
+    )
+    BEGIN
+        RAISERROR('Student is already registered in this course.', 16, 1);
+        RETURN;
+    END;
+
+    INSERT INTO CourseParticipants (CourseID, StudentID)
+    VALUES (@CourseID, @StudentID);
+
+    PRINT 'Student registered successfully.';
+END;
+GO
+\end{lstlisting}
+\newpage
+\subsection{Wypisanie studenta z kursu (\texttt{spUnregisterStudentFromCourse})}
+\textbf{Cel:} Usuwa studenta z listy uczestników kursu.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \texttt{@CourseID} – identyfikator kursu,
+  \item \texttt{@StudentID} – identyfikator studenta.
+\end{itemize}
+
+\textbf{Działanie:} Procedura usuwa rekord z tabeli \verb|CourseParticipants| odpowiadający danemu studentowi i kursowi. Jeśli rekord nie został usunięty (co oznacza, że wpis nie istniał), generowany jest błąd.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spUnregisterStudentFromCourse
+  @CourseID  INT,
+  @StudentID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM CourseParticipants
+    WHERE CourseID = @CourseID
+      AND StudentID = @StudentID;
+
+    IF @@ROWCOUNT = 0
+    BEGIN
+        RAISERROR('Student not found in that course.', 16, 1);
+    END
+    ELSE
+    BEGIN
+        PRINT 'Student unregistered successfully.';
+    END
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Aktualizacja ceny aktywności (\texttt{spUpdateActivityPrice})}
+\textbf{Cel:} Umożliwia zmianę ceny aktywności.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \texttt{@ActivityID} – identyfikator aktywności,
+  \item \texttt{@NewPrice} – nowa cena.
+\end{itemize}
+
+\textbf{Działanie:} Procedura aktualizuje pole \verb|Price| w tabeli \verb|Activities| dla podanego \verb|ActivityID|. W przypadku braku rekordu wyświetlany jest błąd.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spUpdateActivityPrice
+  @ActivityID INT,
+  @NewPrice   MONEY
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE Activities
+    SET Price = @NewPrice
+    WHERE ActivityID = @ActivityID;
+
+    IF @@ROWCOUNT = 0
+        RAISERROR('Activity not found.', 16, 1);
+    ELSE
+        PRINT 'Activity price updated successfully.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Zarządzanie harmonogramem nauczyciela (\texttt{spAddTeacherSchedule})}
+\textbf{Cel:} Dodaje wpis do harmonogramu nauczyciela, sprawdzając, czy nie zachodzi konflikt terminowy.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \texttt{@TeacherID} – identyfikator nauczyciela,
+  \item \texttt{@ClassID} – identyfikator klasy,
+  \item \texttt{@CourseModuleID} – opcjonalny identyfikator modułu kursu,
+  \item \texttt{@StudiesSubjectID} – opcjonalny identyfikator przedmiotu studiów,
+  \item \texttt{@DayOfWeek} – dzień tygodnia,
+  \item \texttt{@StartTime} – godzina rozpoczęcia,
+  \item \texttt{@EndTime} – godzina zakończenia,
+  \item \texttt{@TranslatorID} – opcjonalny identyfikator tłumacza.
+\end{itemize}
+
+\textbf{Działanie:} Procedura najpierw sprawdza, czy dla tego samego nauczyciela i dnia tygodnia następuje kolizja godzinowa. Jeżeli nie, generuje nowy identyfikator dla wpisu w harmonogramie, wstawia rekord do tabeli \verb|Schedule| i zwraca \verb|NewScheduleID|.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddTeacherSchedule
+  @TeacherID        INT,
+  @ClassID          INT,
+  @CourseModuleID   INT = NULL,
+  @StudiesSubjectID INT = NULL,
+  @DayOfWeek        VARCHAR(10),
+  @StartTime        TIME,
+  @EndTime          TIME,
+  @TranslatorID     INT = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Sprawdzenie kolizji godzinowej
+    IF EXISTS (
+        SELECT 1
+        FROM Schedule
+        WHERE TeacherID = @TeacherID
+          AND DayOfWeek = @DayOfWeek
+          AND (@StartTime < EndTime AND @EndTime > StartTime)
+    )
+    BEGIN
+        RAISERROR('Collision in the teacher schedule!', 16, 1);
+        RETURN;
+    END;
+
+    DECLARE @NewScheduleID INT = (
+        SELECT ISNULL(MAX(ScheduleID), 0) + 1
+        FROM Schedule
+    );
+
+    INSERT INTO Schedule (
+        ScheduleID, ClassID, CourseModuleID, StudiesSubjectID,
+        DayOfWeek, StartTime, EndTime,
+        TeacherID, TranslatorID
+    )
+    VALUES (
+        @NewScheduleID, @ClassID, @CourseModuleID, @StudiesSubjectID,
+        @DayOfWeek, @StartTime, @EndTime,
+        @TeacherID, @TranslatorID
+    );
+
+    SELECT @NewScheduleID AS NewScheduleID;
+    PRINT 'Schedule added successfully.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Wyszukiwanie dostępnych aktywności (\texttt{spFindAvailableActivities})}
+\textbf{Cel:} Wyszukuje aktywności (webinary, kursy i zajęcia studiów) w określonym przedziale czasowym.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \texttt{@StartDate} – data początkowa,
+  \item \texttt{@EndDate} – data końcowa.
+\end{itemize}
+
+\textbf{Działanie:} Za pomocą operatora \verb|UNION| łączy wyniki zapytań wyszukujących webinary, kursy (na podstawie dat modułów) oraz zajęcia studiów, filtrując tylko aktywne rekordy.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spFindAvailableActivities
+  @StartDate DATETIME,
+  @EndDate   DATETIME
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Webinary w tym przedziale
+    SELECT
+        'Webinar' AS ActivityType,
+        w.WebinarID AS ActivityID,
+        w.WebinarName AS ActivityName,
+        w.WebinarDate AS [Date],
+        a.Price AS ActivityPrice
+    FROM Webinars w
+    JOIN Activities a ON a.ActivityID = w.ActivityID
+    WHERE w.WebinarDate >= @StartDate
+      AND w.WebinarDate < @EndDate
+      AND a.Active = 1
+
+    UNION
+
+    -- Kursy (daty modułów)
+    SELECT
+        'Course' AS ActivityType,
+        c.CourseID AS ActivityID,
+        c.CourseName AS ActivityName,
+        cm.Date AS [Date],
+        a.Price AS ActivityPrice
+    FROM Courses c
+    JOIN CourseModules cm ON cm.CourseID = c.CourseID
+    JOIN Activities a ON a.ActivityID = c.ActivityID
+    WHERE cm.Date >= @StartDate
+      AND cm.Date < @EndDate
+      AND a.Active = 1
+
+    UNION
+
+    -- Studia (zajęcia StudiesClass)
+    SELECT
+        'StudiesClass' AS ActivityType,
+        sc.StudyClassID AS ActivityID,
+        sc.ClassName AS ActivityName,
+        sc.[Date] AS [Date],
+        a.Price AS ActivityPrice
+    FROM StudiesClass sc
+    JOIN Activities a ON a.ActivityID = sc.ActivityID
+    WHERE sc.[Date] >= @StartDate
+      AND sc.[Date] < @EndDate
+      AND a.Active = 1;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Rejestracja nowego nauczyciela (\texttt{spAddTeacher})}
+\textbf{Cel:} Dodaje nowego nauczyciela do bazy oraz przypisuje mu języki nauczania (przekazane w formie CSV).
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@FirstName| – imię,
+  \item \verb|@LastName| – nazwisko,
+  \item \verb|@HireDate| – data zatrudnienia (opcjonalnie),
+  \item \verb|@Phone| – numer telefonu (opcjonalnie),
+  \item \verb|@Email| – adres e-mail,
+  \item \verb|@LanguagesCSV| – lista identyfikatorów języków w formacie CSV.
+\end{itemize}
+
+\textbf{Działanie:} Procedura generuje nowe ID nauczyciela, wstawia rekord do tabeli \verb|Teachers|, a następnie, jeśli przekazano listę języków, wykorzystuje funkcję \verb|STRING_SPLIT| do masowego przypisania języków w tabeli \verb|TeacherLanguages|.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddTeacher
+  @FirstName VARCHAR(30),
+  @LastName  VARCHAR(30),
+  @HireDate  DATE        = NULL,
+  @Phone     VARCHAR(15) = NULL,
+  @Email     VARCHAR(60),
+  @LanguagesCSV VARCHAR(MAX) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @NewTeacherID INT = (
+        SELECT ISNULL(MAX(TeacherID), 0) + 1
+        FROM Teachers
+    );
+
+    INSERT INTO Teachers (TeacherID, FirstName, LastName, HireDate, Phone, Email)
+    VALUES (@NewTeacherID, @FirstName, @LastName, @HireDate, @Phone, @Email);
+
+    PRINT 'Teacher created with ID = ' + CAST(@NewTeacherID AS VARCHAR(10));
+
+    IF @LanguagesCSV IS NOT NULL AND LEN(@LanguagesCSV) > 0
+    BEGIN
+        ;WITH CTE_Lang AS (
+            SELECT value AS LangID
+            FROM STRING_SPLIT(@LanguagesCSV, ',')
+        )
+        INSERT INTO TeacherLanguages (TeacherID, LanguageID)
+        SELECT @NewTeacherID, CAST(LangID AS INT)
+        FROM CTE_Lang;
+    END;
+
+    PRINT 'Teacher languages assigned.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Rejestracja nowego tłumacza (\texttt{spAddTranslator})}
+\textbf{Cel:} Dodaje nowego tłumacza do bazy oraz przypisuje mu obsługiwane języki (w formacie CSV).
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@FirstName| – imię,
+  \item \verb|@LastName| – nazwisko,
+  \item \verb|@HireDate| – data zatrudnienia (opcjonalnie),
+  \item \verb|@Phone| – numer telefonu (opcjonalnie),
+  \item \verb|@Email| – adres e-mail,
+  \item \verb|@LanguagesCSV| – lista ID języków w formacie CSV.
+\end{itemize}
+
+\textbf{Działanie:} Procedura generuje nowe ID tłumacza, wstawia rekord do tabeli \verb|Translators|, a następnie przypisuje tłumaczowi języki (przy użyciu \verb|STRING_SPLIT| i wstawiając rekordy do \verb|TranslatorsLanguages|).
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddTranslator
+  @FirstName   VARCHAR(30),
+  @LastName    VARCHAR(30),
+  @HireDate    DATE        = NULL,
+  @Phone       VARCHAR(15) = NULL,
+  @Email       VARCHAR(60),
+  @LanguagesCSV VARCHAR(MAX) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @NewTranslatorID INT = (
+        SELECT ISNULL(MAX(TranslatorID), 0) + 1
+        FROM Translators
+    );
+
+    INSERT INTO Translators (TranslatorID, FirstName, LastName, HireDate, Phone, Email)
+    VALUES (@NewTranslatorID, @FirstName, @LastName, @HireDate, @Phone, @Email);
+
+    PRINT 'Translator created with ID = ' + CAST(@NewTranslatorID AS VARCHAR(10));
+
+    IF @LanguagesCSV IS NOT NULL AND LEN(@LanguagesCSV) > 0
+    BEGIN
+        ;WITH CTE_Lang AS (
+            SELECT value AS LangID
+            FROM STRING_SPLIT(@LanguagesCSV, ',')
+        )
+        INSERT INTO TranslatorsLanguages (TranslatorID, LanguageID)
+        SELECT @NewTranslatorID, CAST(LangID AS INT)
+        FROM CTE_Lang;
+    END;
+
+    PRINT 'Translator languages assigned.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Tworzenie nowego webinaru (\texttt{spAddWebinar})}
+\textbf{Cel:} Dodaje nowy webinar do systemu oraz tworzy powiązaną z nim aktywność.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@WebinarName| – nazwa webinaru,
+  \item \verb|@WebinarDescription| – opis webinaru,
+  \item \verb|@WebinarPrice| – cena webinaru,
+  \item \verb|@TeacherID| – identyfikator nauczyciela,
+  \item \verb|@LanguageID| – identyfikator języka,
+  \item \verb|@VideoLink| – link do materiału wideo,
+  \item \verb|@WebinarDate| – data webinaru,
+  \item \verb|@DurationTime| – czas trwania,
+  \item \verb|@ActivityTitle| – tytuł powiązanej aktywności,
+  \item \verb|@ActivityPrice| – cena aktywności,
+  \item \verb|@ActivityActive| – status aktywności.
+\end{itemize}
+
+\textbf{Działanie:} Procedura generuje nowe ID aktywności oraz webinaru, wstawia rekordy do tabel \verb|Activities| i \verb|Webinars|, a następnie zwraca nowe identyfikatory.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddWebinar
+  @WebinarName        VARCHAR(50),
+  @WebinarDescription TEXT,
+  @WebinarPrice       MONEY,
+  @TeacherID          INT,
+  @LanguageID         INT,
+  @VideoLink          VARCHAR(50),
+  @WebinarDate        DATETIME,
+  @DurationTime       TIME(0),
+  @ActivityTitle      VARCHAR(50),
+  @ActivityPrice      MONEY,
+  @ActivityActive     BIT = 1
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @NewActivityID INT = (
+        SELECT ISNULL(MAX(ActivityID), 0) + 1
+        FROM Activities
+    );
+
+    INSERT INTO Activities (ActivityID, Price, Title, Active)
+    VALUES (@NewActivityID, @ActivityPrice, @ActivityTitle, @ActivityActive);
+
+    DECLARE @NewWebinarID INT = (
+        SELECT ISNULL(MAX(WebinarID), 0) + 1
+        FROM Webinars
+    );
+
+    INSERT INTO Webinars (
+        WebinarID, ActivityID, TeacherID, WebinarName,
+        WebinarPrice, VideoLink, WebinarDate, DurationTime,
+        WebinarDescription, LanguageID
+    )
+    VALUES (
+        @NewWebinarID, @NewActivityID, @TeacherID, @WebinarName,
+        @WebinarPrice, @VideoLink, @WebinarDate, @DurationTime,
+        @WebinarDescription, @LanguageID
+    );
+
+    SELECT @NewWebinarID AS NewWebinarID, @NewActivityID AS NewActivityID;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Usuwanie webinaru (\texttt{spRemoveWebinar})}
+\textbf{Cel:} Usuwa webinar i powiązaną z nim aktywność.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@WebinarID| – identyfikator webinaru.
+\end{itemize}
+
+\textbf{Działanie:} Procedura wyszukuje \verb|ActivityID| powiązane z danym webinarem, a następnie usuwa rekordy z tabel \verb|Webinars| i \verb|Activities|. W przypadku braku webinaru generuje błąd.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spRemoveWebinar
+  @WebinarID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @ActivityID INT;
+    SELECT @ActivityID = ActivityID
+    FROM Webinars
+    WHERE WebinarID = @WebinarID;
+
+    IF @ActivityID IS NULL
+    BEGIN
+        RAISERROR('Webinar not found.', 16, 1);
+        RETURN;
+    END;
+
+    DELETE FROM Webinars
+    WHERE WebinarID = @WebinarID;
+
+    DELETE FROM Activities
+    WHERE ActivityID = @ActivityID;
+
+    PRINT 'Webinar and related Activity removed.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Dodawanie przedmiotu do planu studiów (\texttt{spAddSubjectToStudies})}
+\textbf{Cel:} Dodaje nowy przedmiot do planu studiów.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@StudiesID| – identyfikator studiów,
+  \item \verb|@CoordinatorID| – identyfikator koordynatora,
+  \item \verb|@SubjectName| – nazwa przedmiotu,
+  \item \verb|@SubjectDescription| – opcjonalny opis przedmiotu.
+\end{itemize}
+
+\textbf{Działanie:} Procedura generuje nowe \verb|SubjectID|, wstawia rekord do tabeli \verb|Subject|, a następnie zwraca nowe ID przedmiotu.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddSubjectToStudies
+  @StudiesID          INT,
+  @CoordinatorID      INT,
+  @SubjectName        VARCHAR(50),
+  @SubjectDescription TEXT = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @NewSubjectID INT = (
+        SELECT ISNULL(MAX(SubjectID), 0) + 1
+        FROM Subject
+    );
+
+    INSERT INTO Subject (
+        SubjectID, StudiesID, CoordinatorID,
+        SubjectName, SubjectDescription
+    )
+    VALUES (
+        @NewSubjectID, 
+        @StudiesID,
+        @CoordinatorID,
+        @SubjectName,
+        @SubjectDescription
+    );
+
+    SELECT @NewSubjectID AS NewSubjectID;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Automatyczne rozdzielanie studentów do grup (\texttt{spAutoAssignStudentsToGroups})}
+\textbf{Cel:} Automatycznie przypisuje studentów, którzy nie mają przydzielonej grupy, do jednej z dwóch grup (przykładowo przy użyciu prostej logiki modulo).
+
+\textbf{Działanie:} Procedura aktualizuje kolumnę \verb|GroupID| w tabeli \verb|Students| (przy założeniu, że taka kolumna istnieje) używając operatora warunkowego.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAutoAssignStudentsToGroups
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Przypisanie grupy: parzyste -> grupa 1, nieparzyste -> grupa 2
+    UPDATE Students
+    SET GroupID = CASE WHEN (StudentID % 2) = 0 THEN 1 ELSE 2 END
+    WHERE GroupID IS NULL;
+
+    PRINT 'Auto assignment done.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Aktualizacja danych nauczyciela (\texttt{spUpdateTeacherData})}
+\textbf{Cel:} Aktualizuje dane osobowe nauczyciela.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@TeacherID| – identyfikator nauczyciela,
+  \item \verb|@FirstName|, \verb|@LastName|, \verb|@Phone|, \verb|@Email|, \verb|@HireDate| – nowe dane (opcjonalnie).
+\end{itemize}
+
+\textbf{Działanie:} Procedura aktualizuje rekord w tabeli \verb|Teachers|, wykorzystując funkcję \verb|COALESCE|, aby zachować istniejące dane, gdy nowe nie zostaną przekazane.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spUpdateTeacherData
+  @TeacherID INT,
+  @FirstName VARCHAR(30)  = NULL,
+  @LastName  VARCHAR(30)  = NULL,
+  @Phone     VARCHAR(15)  = NULL,
+  @Email     VARCHAR(60)  = NULL,
+  @HireDate  DATE         = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE Teachers
+    SET
+        FirstName = COALESCE(@FirstName, FirstName),
+        LastName  = COALESCE(@LastName, LastName),
+        Phone     = COALESCE(@Phone, Phone),
+        Email     = COALESCE(@Email, Email),
+        HireDate  = COALESCE(@HireDate, HireDate)
+    WHERE TeacherID = @TeacherID;
+
+    IF @@ROWCOUNT = 0
+        RAISERROR('Teacher not found.', 16, 1);
+    ELSE
+        PRINT 'Teacher data updated successfully.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Aktualizacja danych studenta (\texttt{spUpdateStudentData})}
+\textbf{Cel:} Aktualizuje dane osobowe studenta.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@StudentID| – identyfikator studenta,
+  \item \verb|@FirstName|, \verb|@LastName|, \verb|@Address|, \verb|@CityID|, \verb|@PostalCode|, \verb|@Phone|, \verb|@Email| – nowe dane (opcjonalnie).
+\end{itemize}
+
+\textbf{Działanie:} Podobnie jak dla nauczyciela, procedura aktualizuje rekord w tabeli \verb|Students|, używając \verb|COALESCE|.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spUpdateStudentData
+  @StudentID INT,
+  @FirstName VARCHAR(30)  = NULL,
+  @LastName  VARCHAR(30)  = NULL,
+  @Address   VARCHAR(30)  = NULL,
+  @CityID    INT          = NULL,
+  @PostalCode VARCHAR(10) = NULL,
+  @Phone     VARCHAR(15)  = NULL,
+  @Email     VARCHAR(60)  = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE Students
+    SET
+        FirstName  = COALESCE(@FirstName, FirstName),
+        LastName   = COALESCE(@LastName, LastName),
+        [Address]  = COALESCE(@Address, [Address]),
+        CityID     = COALESCE(@CityID, CityID),
+        PostalCode = COALESCE(@PostalCode, PostalCode),
+        Phone      = COALESCE(@Phone, Phone),
+        Email      = COALESCE(@Email, Email)
+    WHERE StudentID = @StudentID;
+
+    IF @@ROWCOUNT = 0
+        RAISERROR('Student not found.', 16, 1);
+    ELSE
+        PRINT 'Student data updated successfully.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Aktualizacja danych osobowych (RODO) (\texttt{spUpdateRODO})}
+\textbf{Cel:} Aktualizuje lub wstawia dane dotyczące zgód RODO dla studenta.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@StudentID| – identyfikator studenta,
+  \item \verb|@Withdraw| – flaga informująca o wycofaniu zgody (1 – wycofana, 0 – zgoda aktywna).
+\end{itemize}
+
+\textbf{Działanie:} Procedura sprawdza, czy dla danego studenta istnieje wpis w tabeli \verb|RODO_Table|. Jeśli tak, aktualizuje dane; w przeciwnym razie wstawia nowy rekord. Data zapisywana jest jako bieżąca.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spUpdateRODO
+  @StudentID INT,
+  @Withdraw  BIT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @Today DATE = CONVERT(DATE, GETDATE());
+
+    IF EXISTS (SELECT 1 FROM RODO_Table WHERE StudentID = @StudentID)
+    BEGIN
+        UPDATE RODO_Table
+        SET [Date] = @Today,
+            Withdraw = @Withdraw
+        WHERE StudentID = @StudentID;
+        PRINT 'RODO data updated.';
+    END
+    ELSE
+    BEGIN
+        INSERT INTO RODO_Table (StudentID, [Date], Withdraw)
+        VALUES (@StudentID, @Today, @Withdraw);
+        PRINT 'RODO data inserted.';
+    END
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Dodanie stażu (Internship) (\texttt{spAddInternship})}
+\textbf{Cel:} Dodaje rekord stażu powiązanego z danymi studiów.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@StudiesID| – identyfikator studiów,
+  \item \verb|@StartDate| – data rozpoczęcia stażu.
+\end{itemize}
+
+\textbf{Działanie:} Procedura generuje nowe \verb|InternshipID|, wstawia rekord do tabeli \verb|Internship|, a następnie zwraca nowe ID.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddInternship
+  @StudiesID INT,
+  @StartDate DATETIME
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @NewInternshipID INT = (
+        SELECT ISNULL(MAX(InternshipID), 0) + 1
+        FROM Internship
+    );
+
+    INSERT INTO Internship (InternshipID, StudiesID, StartDate)
+    VALUES (@NewInternshipID, @StudiesID, @StartDate);
+
+    SELECT @NewInternshipID AS InternshipID;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Dodanie studenta do bazy (\texttt{spAddStudent})}
+\textbf{Cel:} Wstawia nowego studenta do tabeli \verb|Students|.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@FirstName| – imię,
+  \item \verb|@LastName| – nazwisko,
+  \item \verb|@Address| – adres,
+  \item \verb|@CityID| – identyfikator miasta,
+  \item \verb|@PostalCode| – kod pocztowy,
+  \item \verb|@Phone| – numer telefonu (opcjonalnie),
+  \item \verb|@Email| – adres e-mail.
+\end{itemize}
+
+\textbf{Działanie:} Generuje nowe \verb|StudentID|, wstawia rekord do tabeli i zwraca ID nowego studenta.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddStudent
+  @FirstName  VARCHAR(30),
+  @LastName   VARCHAR(30),
+  @Address    VARCHAR(30),
+  @CityID     INT,
+  @PostalCode VARCHAR(10),
+  @Phone      VARCHAR(15) = NULL,
+  @Email      VARCHAR(60)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @NewStudentID INT = (
+        SELECT ISNULL(MAX(StudentID), 0) + 1
+        FROM Students
+    );
+
+    INSERT INTO Students (
+        StudentID, FirstName, LastName, [Address],
+        CityID, PostalCode, Phone, Email
+    )
+    VALUES (
+        @NewStudentID, @FirstName, @LastName, @Address,
+        @CityID, @PostalCode, @Phone, @Email
+    );
+
+    SELECT @NewStudentID AS StudentID;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Usunięcie studenta z bazy (\texttt{spRemoveStudent})}
+\textbf{Cel:} Usuwa studenta z bazy danych.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@StudentID| – identyfikator studenta.
+\end{itemize}
+
+\textbf{Działanie:} Procedura usuwa rekord z tabeli \verb|Students|. Jeśli nie znajdzie studenta, zgłasza błąd.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spRemoveStudent
+  @StudentID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM Students
+    WHERE StudentID = @StudentID;
+
+    IF @@ROWCOUNT = 0
+        RAISERROR('Student not found.', 16, 1);
+    ELSE
+        PRINT 'Student removed successfully.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Dodanie pracownika (Employee) do bazy (\texttt{spAddEmployee})}
+\textbf{Cel:} Dodaje nowego pracownika do tabeli \verb|Employees|.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@FirstName| – imię,
+  \item \verb|@LastName| – nazwisko,
+  \item \verb|@HireDate| – data zatrudnienia (opcjonalnie),
+  \item \verb|@EmployeeTypeID| – identyfikator typu pracownika,
+  \item \verb|@Phone| – numer telefonu (opcjonalnie),
+  \item \verb|@Email| – adres e-mail.
+\end{itemize}
+
+\textbf{Działanie:} Procedura generuje nowe \verb|EmployeeID|, wstawia rekord do tabeli \verb|Employees| oraz zwraca ID nowo dodanego pracownika.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddEmployee
+  @FirstName       VARCHAR(30),
+  @LastName        VARCHAR(30),
+  @HireDate        DATE         = NULL,
+  @EmployeeTypeID  INT,
+  @Phone           VARCHAR(15)  = NULL,
+  @Email           VARCHAR(60)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @NewEmployeeID INT = (
+        SELECT ISNULL(MAX(EmployeeID), 0) + 1
+        FROM Employees
+    );
+
+    INSERT INTO Employees (
+        EmployeeID, FirstName, LastName, HireDate,
+        EmployeeTypeID, Phone, Email
+    )
+    VALUES (
+        @NewEmployeeID, @FirstName, @LastName, @HireDate,
+        @EmployeeTypeID, @Phone, @Email
+    );
+
+    SELECT @NewEmployeeID AS EmployeeID;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Usunięcie pracownika z bazy (\texttt{spRemoveEmployee})}
+\textbf{Cel:} Usuwa pracownika z tabeli \verb|Employees|.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@EmployeeID| – identyfikator pracownika.
+\end{itemize}
+
+\textbf{Działanie:} Procedura usuwa rekord z tabeli \verb|Employees|, a w przypadku braku rekordu generuje błąd.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spRemoveEmployee
+  @EmployeeID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM Employees
+    WHERE EmployeeID = @EmployeeID;
+
+    IF @@ROWCOUNT = 0
+        RAISERROR('Employee not found.', 16, 1);
+    ELSE
+        PRINT 'Employee removed successfully.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Tworzenie modułu kursu (\texttt{spAddCourseModule})}
+\textbf{Cel:} Tworzy nowy moduł kursu. W zależności od typu modułu (stacjonarny, online synchroniczny, online asynchroniczny) dodaje dodatkowy rekord do odpowiedniej tabeli.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@CourseID| – identyfikator kursu,
+  \item \verb|@ModuleName| – nazwa modułu,
+  \item \verb|@ModuleDate| – data modułu,
+  \item \verb|@DurationTime| – czas trwania,
+  \item \verb|@TeacherID| – identyfikator nauczyciela,
+  \item \verb|@LanguageID| – identyfikator języka,
+  \item \verb|@TranslatorID| – opcjonalny identyfikator tłumacza,
+  \item \verb|@ModuleType| – typ modułu,
+  \item \verb|@ClassID| – dla modułów stacjonarnych,
+  \item \verb|@LinkOrVideo| – link lub materiał video dla modułów online,
+  \item \verb|@Limit| – limit miejsc (dla modułów stacjonarnych).
+\end{itemize}
+
+\textbf{Działanie:} Procedura wstawia rekord do tabeli \verb|CourseModules|, a następnie w zależności od typu modułu, wstawia rekord do jednej z dodatkowych tabel: \verb|StationaryModule|, \verb|OnlineSyncModule| lub \verb|OnlineAsyncModule|.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddCourseModule
+  @CourseID     INT,
+  @ModuleName   VARCHAR(50),
+  @ModuleDate   DATETIME,
+  @DurationTime TIME(0),
+  @TeacherID    INT,
+  @LanguageID   INT,
+  @TranslatorID INT = NULL,
+  @ModuleType   VARCHAR(20),  -- 'stationary'/'online_sync'/'online_async'
+  @ClassID      INT = NULL,   -- dla stacjonarnego
+  @LinkOrVideo  VARCHAR(60) = NULL, -- link lub video
+  @Limit        INT = 0       -- limit miejsc
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @NewModuleID INT = (
+        SELECT ISNULL(MAX(ModuleID), 0) + 1
+        FROM CourseModules
+    );
+
+    INSERT INTO CourseModules (
+        ModuleID, CourseID, ModuleName, [Date], DurationTime,
+        TeacherID, TranslatorID, LanguageID
+    )
+    VALUES (
+        @NewModuleID, @CourseID, @ModuleName, @ModuleDate, @DurationTime,
+        @TeacherID, @TranslatorID, @LanguageID
+    );
+
+    IF @ModuleType = 'stationary'
+    BEGIN
+        INSERT INTO StationaryModule (StationaryModuleID, ClassID, [Limit])
+        VALUES (@NewModuleID, @ClassID, @Limit);
+    END
+    ELSE IF @ModuleType = 'online_sync'
+    BEGIN
+        INSERT INTO OnlineSyncModule (OnlineSyncModuleID, Link)
+        VALUES (@NewModuleID, @LinkOrVideo);
+    END
+    ELSE IF @ModuleType = 'online_async'
+    BEGIN
+        INSERT INTO OnlineAsyncModule (OnlineAsyncModuleID, Video)
+        VALUES (@NewModuleID, @LinkOrVideo);
+    END
+    ELSE
+    BEGIN
+        RAISERROR('Unknown module type.', 16, 1);
+        ROLLBACK TRANSACTION;
+        RETURN;
+    END;
+
+    PRINT 'Course module created with ID = ' + CAST(@NewModuleID AS VARCHAR(10));
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Pobieranie kursu euro (\texttt{spAddEuroRate})}
+\textbf{Cel:} Upsert (aktualizacja lub wstawienie) rekordu kursu euro dla określonej daty.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@Rate| – kurs euro,
+  \item \verb|@RateDate| – opcjonalna data (jeśli nie podana, używany jest bieżący dzień).
+\end{itemize}
+
+\textbf{Działanie:} Procedura wykorzystuje instrukcję \verb|MERGE| do wstawienia nowego rekordu lub aktualizacji istniejącego w tabeli \verb|EuroExchangeRate|. Po wykonaniu wyświetla komunikat potwierdzający operację.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spAddEuroRate
+  @Rate DECIMAL(10,2),
+  @RateDate DATETIME = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @RateDate IS NULL
+        SET @RateDate = CONVERT(DATETIME, CONVERT(DATE, GETDATE()));
+
+    MERGE EuroExchangeRate AS tgt
+    USING (SELECT @RateDate AS [Date], @Rate AS Rate) AS src
+      ON (tgt.[Date] = src.[Date])
+    WHEN MATCHED THEN
+        UPDATE SET Rate = src.Rate
+    WHEN NOT MATCHED THEN
+        INSERT ([Date], Rate)
+        VALUES (src.[Date], src.Rate)
+    OUTPUT $action AS MergeAction;
+
+    PRINT 'Euro rate upsert completed.';
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Lista „dłużników” (\texttt{spGetDebtors})}
+\textbf{Cel:} Zwraca listę studentów, którzy mają zamówienia nieopłacone (status różny od „Paid”).
+
+\textbf{Działanie:} Łączy tabele: \verb|Orders|, \verb|OrderDetails|, \verb|OrderPaymentStatus|, \verb|Activities| oraz \verb|Students|, filtrując wyniki według statusu płatności.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spGetDebtors
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT DISTINCT
+        S.StudentID,
+        S.FirstName,
+        S.LastName,
+        O.OrderID,
+        OPS.OrderPaymentStatus,
+        OD.ActivityID,
+        A.Title AS ActivityTitle
+    FROM dbo.Orders O
+    INNER JOIN dbo.OrderDetails OD ON O.OrderID = OD.OrderID
+    INNER JOIN dbo.OrderPaymentStatus OPS ON O.PaymentURL = OPS.PaymentURL
+    INNER JOIN dbo.Activities A ON A.ActivityID = OD.ActivityID
+    INNER JOIN dbo.Students S ON O.StudentID = S.StudentID
+    WHERE OPS.OrderPaymentStatus <> 'Paid'
+    ORDER BY S.StudentID;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Raport frekwencji (\texttt{spGenerateCourseAttendanceReport})}
+\textbf{Cel:} Generuje raport frekwencji dla kursu, studiów lub webinaru.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@CourseID| – identyfikator kursu.
+\end{itemize}
+
+\textbf{Działanie:} Procedura łączy tabele \verb|CoursesAttendance|, \verb|CourseModules| oraz \verb|Students|, sortując wyniki według daty modułu i identyfikatora studenta.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spGenerateCourseAttendanceReport
+  @CourseID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        ca.ModuleID,
+        cm.ModuleName,
+        ca.StudentID,
+        s.FirstName,
+        s.LastName,
+        ca.Attendance AS WasPresent
+    FROM CoursesAttendance ca
+    JOIN CourseModules cm ON cm.ModuleID = ca.ModuleID
+    JOIN Students s ON s.StudentID = ca.StudentID
+    WHERE cm.CourseID = @CourseID
+    ORDER BY cm.Date, ca.StudentID;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Procedura oznaczania obecności studenta (\texttt{spMarkCourseModuleAttendance})}
+\textbf{Cel:} Rejestruje obecność studenta na module kursu.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@ModuleID| – identyfikator modułu,
+  \item \verb|@StudentID| – identyfikator studenta,
+  \item \verb|@WasPresent| – status obecności (1 – obecny, 0 – nieobecny).
+\end{itemize}
+
+\textbf{Działanie:} Procedura próbuje zaktualizować rekord w tabeli \verb|CoursesAttendance|. Jeśli rekord nie istnieje, wstawia nowy.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spMarkCourseModuleAttendance
+  @ModuleID  INT,
+  @StudentID INT,
+  @WasPresent BIT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE CoursesAttendance
+    SET Attendance = @WasPresent
+    WHERE ModuleID = @ModuleID
+      AND StudentID = @StudentID;
+
+    IF @@ROWCOUNT = 0
+    BEGIN
+        INSERT INTO CoursesAttendance (ModuleID, StudentID, Attendance)
+        VALUES (@ModuleID, @StudentID, @WasPresent);
+    END;
+END;
+GO
+\end{lstlisting}
+
+\newpage
+\subsection{Procedura oznaczania obecności studenta (\texttt{spMarkStudiesClassAttendance})}
+\textbf{Cel:} Rejestruje obecność studenta na zajęciach studiów.
+
+\textbf{Parametry wejściowe:}
+\begin{itemize}
+  \item \verb|@StudyClassID| – identyfikator zajęć,
+  \item \verb|@StudentID| – identyfikator studenta,
+  \item \verb|@WasPresent| – status obecności (1 – obecny, 0 – nieobecny).
+\end{itemize}
+
+\textbf{Działanie:} Procedura aktualizuje rekord w tabeli \verb|StudiesClassAttendance|. Jeśli rekord nie istnieje, wstawia nowy.
+
+\begin{lstlisting}[language=SQL]
+CREATE OR ALTER PROCEDURE dbo.spMarkStudiesClassAttendance
+  @StudyClassID INT,
+  @StudentID    INT,
+  @WasPresent   BIT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE StudiesClassAttendance
+    SET Attendance = @WasPresent
+    WHERE StudyClassID = @StudyClassID
+      AND StudentID = @StudentID;
+
+    IF @@ROWCOUNT = 0
+    BEGIN
+        INSERT INTO StudiesClassAttendance (StudyClassID, StudentID, Attendance)
+        VALUES (@StudyClassID, @StudentID, @WasPresent);
+    END;
+END;
+GO
+\end{lstlisting}
+\subsection{Podsumowanie zastosowania procedur w projekcie}
+
+Zastosowano zestaw procedur składowanych, które odpowiadają za kluczowe operacje na bazie danych. Główne funkcjonalności procedur obejmują:
+\begin{itemize}
+    \item Dodawanie, aktualizację i usuwanie rekordów dotyczących kursów, webinarów, studentów, nauczycieli oraz pracowników.
+    \item Zarządzanie rejestracją na kursy oraz automatyczne przypisywanie studentów do grup.
+    \item Obsługę harmonogramów zajęć i modułów kursów z kontrolą konfliktów czasowych.
+    \item Przetwarzanie danych dotyczących płatności, frekwencji, staży oraz zgód RODO.
+\end{itemize}
+
+Dzięki zastosowaniu procedur składowanych, logika biznesowa została scentralizowana po stronie bazy danych, co zapewnia:
+\begin{itemize}
+    \item Wysoką spójność operacji na danych,
+    \item Zwiększenie bezpieczeństwa i integralności danych,
+    \item Ułatwienie modyfikacji oraz rozwoju systemu poprzez centralizację logiki operacyjnej.
+\end{itemize}
+
+\subsection{Uprawnienia dla użytkowników}
+
+W ramach systemu przyznano uprawnienia do wykonywania funkcji skalar­nych oraz odczytu wyników z funkcji tabelarycznych. Poniżej przedstawiono przykłady poleceń GRANT, które umożliwiają dostęp do odpowiednich obiektów bazy danych dla wybranych ról użytkowników.
+
+\subsubsection*{Uprawnienia dla funkcji skalar­nych (EXECUTE)}
+\begin{lstlisting}[language=SQL]
+GRANT EXECUTE ON OBJECT::dbo.ufnGetOrderTotal
+    TO Role_Student, Role_Admin, Role_Employee;
+GO
+
+GRANT EXECUTE ON OBJECT::dbo.ufnGetStationaryModuleFreeSlots
+    TO Role_Student, Role_Admin, Role_Employee;
+GO
+
+GRANT EXECUTE ON OBJECT::dbo.ufnCountActiveCoursesInPeriod
+    TO Role_Admin, Role_Employee;
+GO
+
+GRANT EXECUTE ON OBJECT::dbo.ufnGetSubjectAverageGrade
+    TO Role_Student, Role_Teacher, Role_Admin;
+GO
+
+GRANT EXECUTE ON OBJECT::dbo.ufnGetFreeSeatsInBuilding
+    TO Role_Admin, Role_Employee;
+GO
+
+GRANT EXECUTE ON OBJECT::dbo.ufnConvertActivityPriceToEUR
+    TO Role_Admin, Role_Employee;
+GO
+
+GRANT EXECUTE ON OBJECT::dbo.ufnGetCourseTotalHours
+    TO Role_Admin, Role_Employee, Role_Teacher;
+GO
+
+GRANT EXECUTE ON OBJECT::dbo.ufnGetWebinarTotalHours
+    TO Role_Admin, Role_Employee;
+GO
+
+GRANT EXECUTE ON OBJECT::dbo.ufnGetCourseTotalParticipants
+    TO Role_Admin, Role_Employee, Role_Teacher;
+GO
+\end{lstlisting}
+\newpage
+\subsubsection*{Uprawnienia dla funkcji tabelarycznych (SELECT)}
+\begin{lstlisting}[language=SQL]
+GRANT SELECT ON OBJECT::dbo.ufnGetTeachersByLanguage
+    TO Role_Admin, Role_Employee, Role_Student;
+GO
+
+GRANT SELECT ON OBJECT::dbo.ufnListActivitiesByLanguage
+    TO Role_Student, Role_Admin, Role_Employee;
+GO
+
+GRANT SELECT ON OBJECT::dbo.ufnGetStudentSchedule
+    TO Role_Student, Role_Teacher, Role_Admin;
+GO
+
+GRANT SELECT ON OBJECT::dbo.ufnGetStudentGrades
+    TO Role_Student, Role_Teacher, Role_Admin;
+GO
+
+GRANT SELECT ON OBJECT::dbo.ufnGetCourseAttendanceList
+    TO Role_Teacher, Role_Admin;
+GO
+
+GRANT SELECT ON OBJECT::dbo.ufnGetStudentAllAttendances
+    TO Role_Student, Role_Teacher, Role_Admin;
+GO
+\end{lstlisting}
+
+Dzięki tym uprawnieniom role użytkowników (takie jak Role\_Student, Role\_Teacher, Role\_Admin oraz Role\_Employee) mają zapewniony dostęp do funkcji, które są im niezbędne do realizacji operacji na danych. Uprawnienia do funkcji skalarnych przyznawane są poprzez polecenie \texttt{EXECUTE}, natomiast do funkcji tabelarycznych – poprzez polecenie \texttt{SELECT}.
+
+
+
+
+%-----------------------------------------------------------------------------
+\newpage
+\section{Opis generowania danych przy pomocy skryptu w języku \texttt{Python} i biblioteki {Faker}}
+\label{sec:generowanieDanych}
+
+W celu zapewnienia wystarczającej ilości przykładowych rekordów w~bazie danych, przygotowano dedykowany
+skrypt w~języku Python, korzystający z~biblioteki \texttt{Faker} oraz modułów \texttt{random} i \texttt{datetime}.
+Skrypt ten umożliwia \textbf{automatyczne wytworzenie oraz wyświetlenie} instrukcji \texttt{INSERT} dla
+wszystkich tabel w~bazie. 
+
+\subsection{Główne etapy działania skryptu}
+
+\begin{enumerate}
+    \item \textbf{Konfiguracja liczby rekordów} -- Na początku pliku zdefiniowane są zmienne 
+          (np.~\texttt{NUM\_STUDENTS}, \texttt{NUM\_ORDERS}, \texttt{NUM\_COURSES}), 
+          pozwalające określić liczbę wierszy, jaka ma zostać wygenerowana w~każdej tabeli. 
+          Dzięki temu możemy w~łatwy sposób \emph{skalować} ilość danych w~bazie w~zależności od potrzeb testowych.
+
+    \item \textbf{Wykorzystanie biblioteki \texttt{Faker}} -- Skrypt używa biblioteki \texttt{Faker}, 
+          która umożliwia generowanie danych wyglądających realistycznie (m.in. imion, nazwisk, adresów e-mail, 
+          nazw firm, numerów telefonów). Dzięki temu testowana baza danych może bardziej przypominać system z danymi rzeczywistymi, 
+          co ułatwia wykrywanie ewentualnych problemów z~wydajnością czy walidacją rekordów.
+
+    \item \textbf{Tworzenie poszczególnych zbiorów danych} -- 
+          Skrypt generuje kolekcje słowników (np.~\texttt{employees\_data}, \texttt{students\_data}) 
+          dla każdej tabeli, na podstawie ustalonych reguł:
+          \begin{itemize}
+            \item \emph{Klucze główne (PK)} -- najczęściej rosnące identyfikatory \texttt{ID}.
+            \item \emph{Klucze obce (FK)} -- losowy wybór z już utworzonych zbiorów danych (np. \texttt{CityID} jest wybierany spośród istniejących miast).
+            \item \emph{Losowe wartości} -- np. daty zatrudnienia, stawki walut, ceny w \texttt{MONEY}, pola tekstowe z \texttt{Faker}.
+          \end{itemize}
+
+    \item \textbf{Formatowanie dla SQL} -- Przy pomocy funkcji pomocniczych, takich jak:
+          \begin{itemize}
+              \item \texttt{quote\_str(s)} -- zamienia pojedyncze apostrofy na podwójne, 
+                    aby uniknąć błędów składni w~instrukcjach \texttt{INSERT},
+              \item \texttt{format\_date(d)} -- zamienia obiekt \texttt{date} na ciąg znaków \texttt{'YYYY-MM-DD'},
+              \item \texttt{format\_datetime(dt)} -- formatuje daty i~czasy do \texttt{'YYYY-MM-DD HH:MM:SS'},
+              \item \texttt{format\_money(val)} -- wyświetla kwotę z dwoma miejscami po przecinku,
+          \end{itemize}
+          skrypt generuje poprawne polecenia \texttt{INSERT INTO ... VALUES (...)} we właściwej kolejności (najpierw rekordy w~tabelach niezależnych, następnie rekordy zawierające klucze obce).
+
+    \item \textbf{Wyjście skryptu} -- Po zakończeniu pracy, skrypt drukuje wszystkie instrukcje \texttt{INSERT} na standardowe wyjście (\texttt{stdout}) w kolejności, która odpowiada zależnościom między tabelami. Można je przekierować do pliku (np. \texttt{> data\_test\_insert.sql}) i następnie uruchomić w~środowisku bazy danych.
+\end{enumerate}
+Powyższe podejście pozwala wypełnić bazę przykładowymi danymi bez konieczności ręcznego tworzenia dziesiątek instrukcji \texttt{INSERT}. 
+Dzięki temu znacznie przyspiesza się proces rozwoju i testowania aplikacji, a także umożliwia weryfikację poprawności implementacji \emph{relacji} i \emph{zależności} (klucze obce, ograniczenia, itp.) w bazie danych.
+\newpage
+%-----------------------------------------------------------------------------
+\section{Schemat bazy danych}
+
+W~bazie danych wyróżniono \textbf{7 obszarów} tematycznych:
+\begin{enumerate}
+  \item \textbf{Timetable} -- zawiera m.in. \emph{Schedule} (harmonogram zajęć) i \emph{Buildings} (sale).
+  \item \textbf{University People} -- tabele dotyczące nauczycieli (\emph{Teachers}), tłumaczy (\emph{Translators}), 
+        pracowników (\emph{Employees}), typów stanowisk (\emph{EmployeeTypes}) oraz języków (\emph{Languages, TeacherLanguages, TranslatorsLanguages}).
+  \item \textbf{Studies} -- opis kierunków (\emph{Studies}), przedmiotów (\emph{Subject}), ocen (\emph{SubjectGrades}) 
+        oraz poszczególnych zajęć (\emph{StudiesClass}) z rejestrem obecności (\emph{StudiesClassAttendance}).
+  \item \textbf{Students} -- dane osobowe studentów, w~tym adresy i informacje o mieście/kraju (\emph{Cities, Countries}), 
+        a także zgody RODO (\emph{RODO\_Table}).
+  \item \textbf{Courses} -- obejmują główne tabele (\emph{Courses, CourseModules}) z~uczestnikami (\emph{CourseParticipants}) 
+        i~obecnościami (\emph{CoursesAttendance}); \emph{Activities} stanowi wspólną bazę aktywności (kursy, webinary, itp.).
+  \item \textbf{Webinars} -- przechowują informacje o webinariach (\emph{Webinars}) wraz z postępem studenta (\emph{WebinarDetails}).
+  \item \textbf{Orders} -- realizuje proces składania i przetwarzania zamówień (\emph{Orders, OrderDetails, ShoppingCart, OrderPaymentStatus}), 
+        z uwzględnieniem \emph{EuroExchangeRate} w przypadku wielowalutowości.
+\end{enumerate}
+
+\noindent
+\textbf{Na następnej stronie przedstawiono \textbf{wizualny diagram} z~kluczami obcymi i~nazwami tabel.  
+Poszczególne grupy (np.~Timetable, Courses, Webinars) oznaczono kolorami, aby ułatwić identyfikację relacji \emph{jeden-do-wielu} 
+oraz kluczy głównych i obcych.}
+
+\newpage
+\setcounter{page}{84}
+%-----------------------------------------------------------------------------
+\section{Podsumowanie}
+
+Przedstawiona baza danych została zaprojektowana w celu kompleksowej obsługi procesów edukacyjnych. Główne cechy struktury bazy to:
+
+\begin{itemize}
+    \item \textbf{Modułowa organizacja danych:} Zbiór tabel został podzielony na tematyczne obszary, m.in. zarządzanie kursami (tabele \texttt{Courses}, \texttt{CourseModules}, \texttt{CourseParticipants}), obsługa studenckich danych osobowych oraz zamówień (\texttt{Students}, \texttt{Orders}, \texttt{ShoppingCart}), jak również zarządzanie personelem dydaktycznym (\texttt{Teachers}, \texttt{Translators}, \texttt{Employees}).
+    
+    \item \textbf{Integralność i spójność danych:} Rozbudowana struktura kluczy głównych i obcych pozwala na utrzymanie spójności pomiędzy tabelami, co jest dodatkowo wspierane przez mechanizmy takie jak triggery, procedury przechowywane oraz funkcje. Dzięki temu operacje w bazie zachowują wysoki poziom integralności, eliminując nieprawidłowe lub sprzeczne wpisy.
+
+    \item \textbf{Elastyczność i rozszerzalność:} System ról (np. \texttt{Role\_Admin}, \texttt{Role\_Teacher}, \texttt{Role\_Student}, \texttt{Role\_Translator}, \texttt{Role\_Employee}) umożliwia precyzyjne zarządzanie uprawnieniami, co pozwala na łatwą adaptację bazy do zmieniających się potrzeb użytkowników. Modułowe podejście umożliwia też dalszą rozbudowę bazy o nowe tabele czy mechanizmy operacyjne, jeśli zajdzie taka potrzeba.
+
+    \item \textbf{Wsparcie dla wieloaspektowych procesów edukacyjnych:} Baza uwzględnia różne formy prowadzenia zajęć – od kursów i webinarów po zajęcia stacjonarne i studia – dzięki czemu umożliwia kompleksowe zarządzanie informacjami dotyczącymi terminów, obecności uczestników, stawek, a także relacji między zajęciami a osobami odpowiedzialnymi za ich realizację.
+\end{itemize}
+
+\section*{Podział Pracy podczas Projektu}
+
+\begin{itemize}
+    \item \textbf{Maciej Kmąk} (T = 40)
+    \begin{itemize}
+        \item Redakcja dokumentacji (T = 5)
+        \item Implementacja tabel bazy danych (T = 10)
+        \item Generowanie danych do bazy (T = 5)
+        \item Drobne końcowe poprawki implementacyjne (T = 5)
+        \item Role i przykładowi użytkownicy (T = 5)
+        \item Projekt i schemat bazy danych (Współudział) (T = 10)
+    \end{itemize}
+    \item \textbf{Jakub Stachecki} (T = 30)
+    \begin{itemize}
+        \item Projekt i schemat bazy danych (Współudział) (T = 10)
+        \item Triggery (T = 10)
+        \item Widoki (T = 10)
+    \end{itemize}
+    \item \textbf{Kacper Wdowiak} (T = 30)
+    \begin{itemize}
+        \item Projekt i schemat bazy danych (Współudział) (T = 10)
+        \item Procedury (T = 10)
+        \item Funkcje (T = 10)
+    \end{itemize}
+\end{itemize}
+
+
+
+\end{document}
