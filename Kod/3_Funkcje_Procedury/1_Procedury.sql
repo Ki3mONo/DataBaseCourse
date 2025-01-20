@@ -458,33 +458,10 @@ BEGIN
     -- Ten przykład jest więc hipotetyczny.
 
     UPDATE Students
-    SET CityID = CityID  -- cokolwiek, by to było poprawne ;)
-    -- docelowo np. "SET GroupID = CASE WHEN (StudentID % 2) = 0 THEN 1 ELSE 2 END"
-    -- WHERE GroupID IS NULL;
+    SET GroupID = CASE WHEN (StudentID % 2) = 0 THEN 1 ELSE 2 END
+    WHERE GroupID IS NULL;
 
     PRINT 'Auto assignment done.';
-END;
-GO
-
--- 14 Tworzenie raportu finansowego z zamówień
-
-CREATE OR ALTER PROCEDURE dbo.spGenerateFinancialReport
-AS
-BEGIN
-    SET NOCOUNT ON;
-
-    SELECT
-        A.ActivityID,
-        A.Title AS ActivityTitle,
-        COUNT(*) AS NumberOfPurchases,
-        SUM(A.Price) AS TotalAmount
-    FROM Orders O
-    JOIN OrderDetails OD ON OD.OrderID = O.OrderID
-    JOIN Activities A   ON A.ActivityID = OD.ActivityID
-    -- ewentualnie można filtrować daty:
-    -- WHERE O.OrderDate BETWEEN @StartDate AND @EndDate
-    GROUP BY A.ActivityID, A.Title
-    ORDER BY A.ActivityID;
 END;
 GO
 
@@ -788,65 +765,14 @@ BEGIN
 END;
 GO
 
--- 25 Generowanie dyplomu / wysyłanie dyplomu
-
-CREATE OR ALTER PROCEDURE dbo.spGenerateCourseDiploma
-  @CourseID  INT,
-  @StudentID INT
-AS
-BEGIN
-    SET NOCOUNT ON;
-
-    -- Sprawdź liczbę modułów
-    DECLARE @TotalModules INT = (
-        SELECT COUNT(*)
-        FROM CourseModules
-        WHERE CourseID = @CourseID
-    );
-
-    IF @TotalModules = 0
-    BEGIN
-        RAISERROR('No modules found for this course.', 16, 1);
-        RETURN;
-    END;
-
-    -- Sprawdź liczbę obecności
-    DECLARE @PresentCount INT = (
-        SELECT COUNT(*)
-        FROM CourseModules cm
-        JOIN CoursesAttendance ca ON cm.ModuleID = ca.ModuleID
-        WHERE cm.CourseID = @CourseID
-          AND ca.StudentID = @StudentID
-          AND ca.Attendance = 1
-    );
-
-    DECLARE @PercentPresence FLOAT = (CAST(@PresentCount AS FLOAT) / @TotalModules) * 100.0;
-
-    IF @PercentPresence < 80.0
-    BEGIN
-        RAISERROR('Student does not meet attendance requirement (%.2f%% < 80%%).', 16, 1, @PercentPresence);
-        RETURN;
-    END;
-
-    -- Jeżeli zaliczone, wygeneruj "dyplom" (np. INSERT do osobnej tabeli Diplomas lub SELECT do wydruku)
-    PRINT 'Diploma generated. Student presence was ' + CAST(@PercentPresence AS VARCHAR(10)) + '%';
-END;
-GO
-
 
 -- 26 Lista „dłużników” (osób, które nie uiściły opłat)
 CREATE OR ALTER PROCEDURE dbo.spGetDebtors
 AS
 BEGIN
     SET NOCOUNT ON;
-    
-    -- Założenie: 
-    -- 1) w tabeli OrderPaymentStatus kolumna OrderPaymentStatus zawiera np. "udana" / "nieudana" / "w trakcie".
-    -- 2) "nieudana" lub "w trakcie" może wskazywać na brak całkowitej płatności.
-    -- 3) aby sprawdzić, czy student „skorzystał z usług”, można sprawdzić np. CourseParticipants / StudiesClassAttendance / WebinarDetails / ...
-    --    Poniżej prosty przykład: po prostu sprawdzamy, czy student jest zarejestrowany w CourseParticipants do kursu z OrderDetails.
-    
-    SELECT 
+
+    SELECT DISTINCT
         S.StudentID,
         S.FirstName,
         S.LastName,
@@ -854,16 +780,17 @@ BEGIN
         OPS.OrderPaymentStatus,
         OD.ActivityID,
         A.Title AS ActivityTitle
-    FROM Orders O
-    JOIN OrderDetails OD ON O.OrderID = OD.OrderID
-    JOIN OrderPaymentStatus OPS ON O.PaymentURL = OPS.PaymentURL
-    JOIN Activities A ON A.ActivityID = OD.ActivityID
-    JOIN Students S ON O.StudentID = S.StudentID
-    WHERE OPS.OrderPaymentStatus NOT IN ('udana')
-      -- ewentualnie warunek, że minął już termin płatności, np. DATEDIFF(DAY,O.OrderDate,GETDATE()) > X
+    FROM dbo.Orders O
+    INNER JOIN dbo.OrderDetails OD ON O.OrderID = OD.OrderID
+    INNER JOIN dbo.OrderPaymentStatus OPS ON O.PaymentURL = OPS.PaymentURL
+    INNER JOIN dbo.Activities A ON A.ActivityID = OD.ActivityID
+    INNER JOIN dbo.Students S ON O.StudentID = S.StudentID
+    WHERE OPS.OrderPaymentStatus <> 'Paid'
     ORDER BY S.StudentID;
 END;
 GO
+
+
 
 -- 27 Raport frekwencji kursu / studiów / webinaru
 
@@ -935,34 +862,3 @@ BEGIN
     END;
 END;
 GO
-
--- 30 Pobieranie kursu euro do bazy z API NBP
-CREATE PROCEDURE uspGetEuroRateFromNBP
-AS
-BEGIN
-    DECLARE @Object INT;
-    DECLARE @ResponseText NVARCHAR(MAX);
-    DECLARE @URL NVARCHAR(500) = 'https://api.nbp.pl/api/exchangerates/rates/A/EUR?format=json';
-    
-    -- Tworzenie obiektu HTTP
-    EXEC sp_OACreate 'MSXML2.XMLHTTP', @Object OUT;
-    
-    -- Wysłanie żądania GET
-    EXEC sp_OAMethod @Object, 'open', NULL, 'GET', @URL, 'FALSE';
-    EXEC sp_OAMethod @Object, 'send', NULL;
-
-    -- Pobranie odpowiedzi jako JSON
-    EXEC sp_OAGetProperty @Object, 'responseText', @ResponseText OUT;
-
-    -- Zniszczenie obiektu HTTP
-    EXEC sp_OADestroy @Object;
-
-    -- Pobranie kursu z JSON (SQL Server 2016+)
-    DECLARE @Rate DECIMAL(10,4);
-    SELECT @Rate = value
-    FROM OPENJSON(@ResponseText, '$.rates') 
-    WITH (value DECIMAL(10,4) '$[0].mid');
-
-    -- Aktualizacja tabeli kursów walut
-    EXEC dbo.spAddEuroRate @Rate;
-END;

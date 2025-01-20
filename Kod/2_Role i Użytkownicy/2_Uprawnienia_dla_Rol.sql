@@ -14,7 +14,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Studies TO Role_Employee;
 GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Students TO Role_Employee;
 GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Courses TO Role_Employee;
 GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Teachers TO Role_Employee;
-GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Translator TO Role_Employee;
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.Translators TO Role_Employee;
 GRANT SELECT,UPDATE ON dbo.OrderPaymentStatus TO Role_Employee;
 GRANT SELECT,UPDATE ON dbo.RODO_Table TO Role_Employee;
 GO

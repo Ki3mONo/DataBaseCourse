@@ -1,4 +1,4 @@
-USE dbo;
+USE u_kmak;
 GO
 
 -- Tworzymy role

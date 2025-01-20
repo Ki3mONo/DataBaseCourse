@@ -131,7 +131,7 @@ BEGIN
     Occupancy AS
     (
         -- Zliczamy wszystkich uczestników z danej StationaryClass (jeśli istnieje odwzorowanie)
-        SELECT 
+        SELECT
             br.StationaryClassID,
             COUNT(*) AS Occupied
         FROM BuildingRooms br
@@ -322,7 +322,7 @@ BEGIN
 
     SELECT @TotalParticipants = COUNT(*)
     FROM CoursesAttendance
-    WHERE CourseID = @CourseID
+    WHERE ModuleID = @CourseID
       AND Attendance = 1;  -- tylko obecni
 
     RETURN @TotalParticipants;
