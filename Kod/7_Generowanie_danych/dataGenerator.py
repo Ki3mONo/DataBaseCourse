@@ -5,64 +5,62 @@ from datetime import datetime, timedelta
 faker = Faker()
 Faker.seed(2137)
 faker.language = 'pl_PL'
-
 # ============================================================================
 #                USTAWIENIA ILOŚCI REKORDÓW DO WYGENEROWANIA
 # ============================================================================
-
 # 1) TYPY PRACOWNIKÓW, KRAJE, MIASTA, WALUTA
-NUM_EMPLOYEETYPES      = 5
-NUM_EURO_EXCHANGE      = 30
-NUM_COUNTRIES          = 10
-NUM_CITIES             = 23
-NUM_LANGUAGES          = 5
+NUM_EMPLOYEETYPES      = 10      # Rozszerzone role w dużej szkole językowej
+NUM_EURO_EXCHANGE      = 365     # Rok kursów walut
+NUM_COUNTRIES          = 20      # Więcej krajów pochodzenia studentów
+NUM_CITIES             = 100     # ~5 miast na kraj
+NUM_LANGUAGES          = 15      # Więcej języków obcych
 
 # 2) ACTIVITIES + STUDIES/SUBJECTS
-NUM_ACTIVITIES         = 50
-NUM_STUDIES            = 5
-NUM_SUBJECTS           = 20
-NUM_SUBJECTGRADES      = 60  # lub więcej, w zależności od liczby studentów/subjectów
+NUM_ACTIVITIES         = 200     # Szeroka oferta edukacyjna
+NUM_STUDIES           = 30      # Więcej programów nauczania
+NUM_SUBJECTS          = 150     # ~5 przedmiotów na studia
+NUM_SUBJECTGRADES     = 3000    # ~20 ocen na przedmiot
 
 # 3) PRACOWNICY, STUDENCI, NAUCZYCIELE, TŁUMACZE
-NUM_EMPLOYEES          = 20
-NUM_STUDENTS           = 80
-NUM_TEACHERS           = 15
-NUM_TRANSLATORS        = 5
-NUM_TEACHER_LANGS      = 40
-NUM_TRANSLATOR_LANGS   = 15
+NUM_EMPLOYEES         = 100     # Rozbudowana administracja
+NUM_STUDENTS         = 1500    # Duża szkoła językowa
+NUM_TEACHERS         = 80      # Duża kadra nauczycielska
+NUM_TRANSLATORS      = 25      # Więcej tłumaczy
+NUM_TEACHER_LANGS    = 160     # ~2 języki na nauczyciela
+NUM_TRANSLATOR_LANGS = 75      # ~3 języki na tłumacza
 
 # 4) BUDYNKI, ZAJĘCIA, HARMONOGRAM
-NUM_BUILDINGS          = 10
-NUM_SCHEDULE           = 30
-NUM_STATIONARY_CLASS   = 20
-NUM_STATIONARY_MODULE  = 25
-NUM_ONLINEASYNC_CLASS  = 10
-NUM_ONLINESYNC_CLASS   = 10
-NUM_ONLINEASYNC_MODULE = 15
-NUM_ONLINESYNC_MODULE  = 15
+NUM_BUILDINGS         = 8       # Kilka lokalizacji
+NUM_SCHEDULE         = 400     # 50 zajęć na budynek
+NUM_STATIONARY_CLASS = 100     # Więcej zajęć stacjonarnych
+NUM_STATIONARY_MODULE = 120    # Więcej modułów stacjonarnych
+NUM_ONLINEASYNC_CLASS = 80     # Rozbudowana oferta online
+NUM_ONLINESYNC_CLASS  = 80     # Rozbudowana oferta online
+NUM_ONLINEASYNC_MODULE = 100   # Więcej modułów online
+NUM_ONLINESYNC_MODULE = 100    # Więcej modułów online
 
 # 5) KURSY (COURSES), MODUŁY, UCZESTNICY
-NUM_COURSES            = 12
-NUM_COURSE_MODULES     = 40
-NUM_COURSE_PARTICIP    = 120
-NUM_COURSES_ATTEND     = 200
+NUM_COURSES          = 90      # Szeroki wybór kursów
+NUM_COURSE_MODULES   = 270     # ~3 moduły na kurs
+NUM_COURSE_PARTICIP  = 1800    # ~20 uczestników na kurs
+NUM_COURSES_ATTEND   = 5400    # ~3 obecności na uczestnika
 
 # 6) ZAMÓWIENIA, KOSZYK, PŁATNOŚCI
-NUM_ORDERS             = 150
-NUM_ORDER_DETAILS      = 300
-NUM_ORDERPAYMENTSTAT   = 160
-NUM_SHOPPINGCART       = 100
+NUM_ORDERS           = 3000    # ~2 zamówienia na studenta
+NUM_ORDER_DETAILS    = 4500    # ~1.5 pozycji na zamówienie
+NUM_ORDERPAYMENTSTAT = 3000    # Status dla każdego zamówienia
+NUM_SHOPPINGCART     = 300     # Aktywne koszyki
 
 # 7) RODO, PRAKTYKI (INTERNSHIP), WEBINARY
-NUM_RODO               = 40
-NUM_INTERNSHIP         = 8
-NUM_INTERNSHIP_ATT     = 40
-NUM_WEBINARS           = 10
-NUM_WEBINAR_DETAILS    = 60
+NUM_RODO            = 1350    # 90% studentów z zgodami RODO
+NUM_INTERNSHIP      = 40      # Więcej grup praktyk
+NUM_INTERNSHIP_ATT  = 400     # ~10 uczestników na praktykę
+NUM_WEBINARS        = 50      # ~4 webinary miesięcznie
+NUM_WEBINAR_DETAILS = 1000    # ~20 uczestników na webinar
 
 # 8) DODATKOWE
-NUM_STUDIES_CLASS      = 12
-NUM_STUDIES_CLASS_ATT  = 60
+NUM_STUDIES_CLASS    = 200     # Więcej zajęć w ramach studiów
+NUM_STUDIES_CLASS_ATT = 3000   # ~15 uczestników na zajęcia
 
 # ============================================================================
 #                FUNKCJE POMOCNICZE DO FORMATOWANIA
@@ -957,4 +955,4 @@ print('EXEC sp_msforeachtable "ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL";')
 print("\n-- Gotowe! :)\n")
 
 # Aby wygenerować plik SQL, uruchom:
-# python generate_inserts.py > insert_data.sql
+# python dataGenerator.py > insert_data.sql
