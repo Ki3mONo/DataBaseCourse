@@ -1,0 +1,13 @@
+# Domyslnie - ustaw jezyk SQL dla wszystkich plików
+* linguist-language=TSQL
+
+# W katalogu Dokumentacja:
+# - oznacz jako dokumentacja
+# -usun wymuszenie jezyka (unset linguist-language)
+Dokumentacja/** linguist-documentation=true linguist-language=
+
+# W katalogu Kod/7_Generowanie_danych:
+# - oznacz pliki jako generated
+# - usun wymuszenie jezyka
+Kod/7_Generowanie_danych/*.py linguist-generated=true linguist-language=
+
