@@ -221,7 +221,7 @@ EXEC dbo.spGetDebtors;
 GO
 
 -------------------------------------------------------------------------------
--- 11) Sprawdzamy, czy triggery działają
+-- 10) Sprawdzamy, czy triggery działają
 -------------------------------------------------------------------------------
 -- a) Usunięcie kursu powinno wywołać TR_Courses_AfterDelete (o ile jest w DB).
 --    Najpierw sprawdzimy co mamy:

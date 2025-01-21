@@ -25,7 +25,7 @@ BEGIN
 END;
 GO
 
---2. Automatyczne dodawanie studenta do webinaru/kursu/studiów po udanym opłaceniu zamówienia
+-- 2. Automatyczne dodawanie studenta do webinaru/kursu/studiów po udanym opłaceniu zamówienia
 CREATE OR ALTER TRIGGER TR_OrderPaymentStatus_AfterUpdate_PaymentSuccess
 ON dbo.OrderPaymentStatus
 AFTER UPDATE
@@ -94,7 +94,7 @@ GO
 
 
 
---4. Automatyczne usuwanie powiązanych uczestników kursu po usunięciu kursu
+-- 3. Automatyczne usuwanie powiązanych uczestników kursu po usunięciu kursu
 CREATE OR ALTER TRIGGER TR_Courses_AfterDelete
 ON dbo.Courses
 AFTER DELETE
@@ -123,7 +123,7 @@ END;
 GO
 
 
---5. Zapobieganie dodaniu dwóch takich samych webinarów dla jednego nauczyciela
+-- 4. Zapobieganie dodaniu dwóch takich samych webinarów dla jednego nauczyciela
 CREATE OR ALTER TRIGGER TR_Webinars_AfterInsert_UniqueTeacherWebinar
 ON dbo.Webinars
 AFTER INSERT
@@ -149,7 +149,7 @@ GO
 
 
 
---6. Automatyczne zablokowanie usunięcia nauczyciela, jeśli jest przypisany do aktywnych zajęć
+-- 5. Automatyczne zablokowanie usunięcia nauczyciela, jeśli jest przypisany do aktywnych zajęć
 CREATE OR ALTER TRIGGER TR_Teachers_InsteadOfDelete_BlockIfActive
 ON dbo.Teachers
 INSTEAD OF DELETE
@@ -187,7 +187,7 @@ END;
 GO
 
 
---7. Automatyczne dodawanie nowego miasta do tabeli Cities, jeśli zostało wprowadzone przez nowego studenta
+-- 6. Automatyczne dodawanie nowego miasta do tabeli Cities, jeśli zostało wprowadzone przez nowego studenta
 CREATE OR ALTER TRIGGER TR_Students_AfterInsert_AddCity
 ON dbo.Students
 AFTER INSERT

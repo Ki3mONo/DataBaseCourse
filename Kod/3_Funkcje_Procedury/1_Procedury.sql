@@ -465,7 +465,7 @@ BEGIN
 END;
 GO
 
--- 15  Aktualizacja danych nauczyciela
+-- 14  Aktualizacja danych nauczyciela
 
 CREATE OR ALTER PROCEDURE dbo.spUpdateTeacherData
   @TeacherID INT,
@@ -494,7 +494,7 @@ BEGIN
 END;
 GO
 
--- 16 Aktualizacja danych nauczyciela
+-- 15 Aktualizacja danych nauczyciela
 
 CREATE OR ALTER PROCEDURE dbo.spUpdateStudentData
   @StudentID INT,
@@ -527,7 +527,7 @@ BEGIN
 END;
 GO
 
--- 17 Aktualizacja zarządzania danymi osobowymi (RODO)
+-- 16 Aktualizacja zarządzania danymi osobowymi (RODO)
 
 CREATE OR ALTER PROCEDURE dbo.spUpdateRODO
   @StudentID INT,
@@ -556,7 +556,7 @@ BEGIN
 END;
 GO
 
--- 18 Dodanie stażu (Internship) do systemu
+-- 17 Dodanie stażu (Internship) do systemu
 
 CREATE OR ALTER PROCEDURE dbo.spAddInternship
   @StudiesID INT,
@@ -578,7 +578,7 @@ END;
 GO
 
 
--- 19 Dodanie studenta do bazy
+-- 18 Dodanie studenta do bazy
 
 CREATE OR ALTER PROCEDURE dbo.spAddStudent
   @FirstName  VARCHAR(30),
@@ -610,7 +610,7 @@ BEGIN
 END;
 GO
 
--- 20 Usunięcie studenta z bazy
+-- 19 Usunięcie studenta z bazy
 
 CREATE OR ALTER PROCEDURE dbo.spRemoveStudent
   @StudentID INT
@@ -628,7 +628,7 @@ BEGIN
 END;
 GO
 
--- 21 Dodanie pracownika (Employee) do bazy
+-- 20 Dodanie pracownika (Employee) do bazy
 
 CREATE OR ALTER PROCEDURE dbo.spAddEmployee
   @FirstName       VARCHAR(30),
@@ -660,7 +660,7 @@ END;
 GO
 
 
--- 22 Usunięcie pracownika z bazy
+-- 21 Usunięcie pracownika z bazy
 
 CREATE OR ALTER PROCEDURE dbo.spRemoveEmployee
   @EmployeeID INT
@@ -678,7 +678,7 @@ BEGIN
 END;
 GO
 
--- 23 Tworzenie modułu kursu (wraz z jego typem)
+-- 22 Tworzenie modułu kursu (wraz z jego typem)
 
 CREATE OR ALTER PROCEDURE dbo.spAddCourseModule
   @CourseID     INT,
@@ -738,7 +738,7 @@ BEGIN
 END;
 GO
 
--- 24 Pobieranie kursu euro do bazy (tabela EuroExchangeRate)
+-- 23 Pobieranie kursu euro do bazy (tabela EuroExchangeRate)
 
 CREATE OR ALTER PROCEDURE dbo.spAddEuroRate
   @Rate DECIMAL(10,2),
@@ -766,7 +766,7 @@ END;
 GO
 
 
--- 26 Lista „dłużników” (osób, które nie uiściły opłat)
+-- 24 Lista „dłużników” (osób, które nie uiściły opłat)
 CREATE OR ALTER PROCEDURE dbo.spGetDebtors
 AS
 BEGIN
@@ -792,7 +792,7 @@ GO
 
 
 
--- 27 Raport frekwencji kursu / studiów / webinaru
+-- 25 Raport frekwencji kursu / studiów / webinaru
 
 CREATE OR ALTER PROCEDURE dbo.spGenerateCourseAttendanceReport
   @CourseID INT
@@ -816,7 +816,7 @@ END;
 GO
 
 
--- 28 Procedura oznaczania obecności studenta na kursie
+-- 26 Procedura oznaczania obecności studenta na kursie
 
 CREATE OR ALTER PROCEDURE dbo.spMarkCourseModuleAttendance
   @ModuleID  INT,
@@ -840,7 +840,7 @@ BEGIN
 END;
 GO
 
--- 29 Procedura oznaczania obecności studenta na studiach
+-- 27 Procedura oznaczania obecności studenta na studiach
 
 CREATE OR ALTER PROCEDURE dbo.spMarkStudiesClassAttendance
   @StudyClassID INT,

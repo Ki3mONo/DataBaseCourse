@@ -225,7 +225,7 @@ END;
 GO
 
 
---9 Wyświetlanie listy aktywności dostępnych dla danego języka
+-- 9 Wyświetlanie listy aktywności dostępnych dla danego języka
 CREATE OR ALTER FUNCTION dbo.ufnListActivitiesByLanguage
 (
     @LanguageID INT
@@ -329,7 +329,7 @@ BEGIN
 END;
 GO
 
--- 11 Harmonogram zajęć dla studenta
+-- 12 Harmonogram zajęć dla studenta
 CREATE OR ALTER FUNCTION dbo.ufnGetStudentSchedule
 (
     @StudentID INT
@@ -381,7 +381,7 @@ BEGIN
 END;
 GO
 
--- 12 Generowanie raportu ocen dla danego studenta
+-- 13 Generowanie raportu ocen dla danego studenta
 CREATE OR ALTER FUNCTION dbo.ufnGetStudentGrades
 (
     @StudentID INT
@@ -400,7 +400,7 @@ RETURN
 );
 GO
 
--- 13 Generowanie listy obecności dla danego kursu
+-- 14 Generowanie listy obecności dla danego kursu
 CREATE OR ALTER FUNCTION dbo.ufnGetCourseAttendanceList
 (
     @CourseID INT
@@ -423,7 +423,7 @@ RETURN
 );
 GO
 
--- 14 Generowanie listy obecności dla danego studenta
+-- 15 Generowanie listy obecności dla danego studenta
 CREATE OR ALTER FUNCTION dbo.ufnGetStudentAllAttendances
 (
     @StudentID INT
