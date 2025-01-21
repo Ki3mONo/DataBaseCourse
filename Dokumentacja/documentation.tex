@@ -1034,6 +1034,7 @@ CREATE TABLE Activities (
 - \texttt{ActivityID}, \texttt{Price}, \texttt{Title} oraz \texttt{Active} są definiowane jako \texttt{NOT NULL} – każda aktywność musi mieć unikalny identyfikator, ustaloną cenę, tytuł oraz określony status (aktywna/nieaktywna).  
 - Brak możliwości pozostawienia tych pól pustych zapobiega dodawaniu niekompletnych rekordów.
 
+\newpage
 \paragraph{Przykład 2: Tabela \texttt{Courses}}  
 \textbf{Kod:}
 \begin{lstlisting}[language=SQL]
@@ -1139,6 +1140,8 @@ Dzięki takiej strukturze oraz przemyślanej definicji kolumn, baza danych zapew
     \item Wsparcie mechanizmów zapewniających spójność (np. triggerów, procedur), które jeszcze bardziej wzmacniają model danych.
 \end{itemize}
 
+\newpage
+
 \subsection{Triggery wspomagające integralność danych}
 Mechanizmy te dodatkowo zabezpieczają bazę przed niepożądanymi operacjami i utrzymują spójność danych:
 \begin{itemize}
@@ -1165,12 +1168,6 @@ Podczas tworzenia struktury bazy danych, w definicjach tabel zostały uwzględni
 \end{itemize}
 
 \subsection{Podsumowanie}
-Warunki integralnościowe w bazie są realizowane poprzez wielopoziomowy mechanizm:
-\begin{enumerate}
-    \item Definicje tabel z precyzyjnym określeniem kluczy głównych i obcych.
-    \item Wdrożenie triggerów, które automatyzują operacje utrzymujące spójność (np. przy aktualizacjach statusów, kasowaniu rekordów czy zapobieganiu duplikatom).
-    \item Procedury i funkcje, które implementują logikę biznesową oraz weryfikację danych podczas operacji wstawiania, aktualizacji i usuwania.
-\end{enumerate}
 Dzięki tak zorganizowanej strukturze baza danych jest chroniona przed błędami użytkowników, niespójnymi danymi oraz nieautoryzowanymi zmianami, co stanowi fundament dla bezpiecznego i efektywnego działania systemu.
 
 
@@ -3798,7 +3795,7 @@ Poszczególne grupy (np.~Timetable, Courses, Webinars) oznaczono kolorami, aby u
 oraz kluczy głównych i obcych.}
 
 \newpage
-\setcounter{page}{89}
+\setcounter{page}{88}
 %-----------------------------------------------------------------------------
 \section{Podsumowanie}
 
