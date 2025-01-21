@@ -184,7 +184,7 @@ Informatyka WI AGH, II rok \\ }
 
 \newpage
 \pagestyle{spis}
-\tableofcontents
+\small\tableofcontents
 
 \newpage
 \pagestyle{dokumentacja}
@@ -992,6 +992,188 @@ W~tej sekcji przedstawiono \textbf{kompletną listę kluczy obcych (FOREIGN KEY)
             \item \texttt{WebinarDetails (WebinarID)}
         \end{itemize}
 \end{itemize}
+
+\newpage
+\section{Warunki Integralnościowe}
+\label{sec:integralnosc}
+
+Baza danych została zaprojektowana z myślą o zapewnieniu wysokiej spójności oraz integralności danych. Poniżej przedstawiono główne mechanizmy, które wspierają te warunki:
+
+\subsection{Klucze główne i obce}
+\begin{itemize}
+    \item \textbf{Klucze główne (PRIMARY KEY)} – Każda tabela posiada wyznaczony klucz główny, który zapewnia unikalność rekordów. Przykładowo:
+        \begin{itemize}
+            \item Tabela \texttt{Students} ma klucz \texttt{StudentID}.
+            \item Tabela \texttt{Courses} ma klucz \texttt{CourseID}.
+            \item Tabela \texttt{Teachers} ma klucz \texttt{TeacherID}.
+        \end{itemize}
+    \item \textbf{Klucze obce (FOREIGN KEY)} – Relacje pomiędzy tabelami są definiowane poprzez klucze obce, co gwarantuje, że odwołania do rekordów w tabelach powiązanych są zawsze poprawne. Przykłady:
+        \begin{itemize}
+            \item \texttt{Students.CityID} odnosi się do \texttt{Cities.CityID}, co pozwala na poprawne powiązanie adresu studenta z istniejącym miastem.
+            \item \texttt{Courses.ActivityID} jest kluczem obcym odnoszącym się do \texttt{Activities.ActivityID}, zapewniając powiązanie kursu z jego ogólnymi danymi (cena, tytuł, status).
+            \item W tabelach realizujących obecność (\texttt{CoursesAttendance}, \texttt{StudiesClassAttendance}) wykorzystuje się klucze obce odnoszące się do tabel \texttt{CourseModules}, \texttt{StudiesClass} oraz \texttt{Students}.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Wartości NULL i NOT NULL – logika warunków w tabelach}
+
+Podczas definiowania tabel kluczowe kolumny, które pełnią rolę identyfikatorów, opisów czy stanów operacyjnych, zostały oznaczone jako \texttt{NOT NULL} w celu zapewnienia, że rekordy zawierają wszystkie niezbędne informacje. Natomiast kolumny zawierające dane dodatkowe lub zależne od kontekstu (np. opis, tłumacz, data opłacenia) zostały zdefiniowane jako \texttt{NULL}, co pozwala na elastyczność modelu. Poniżej przedstawiono szczegółowe przykłady z kodu:
+
+\paragraph{Przykład 1: Tabela \texttt{Activities}}  
+\textbf{Kod:}
+\begin{lstlisting}[language=SQL]
+CREATE TABLE Activities (
+    ActivityID     INT           NOT NULL,
+    Price          MONEY         NOT NULL,
+    Title          VARCHAR(50)   NOT NULL,
+    Active         BIT           NOT NULL,
+    CONSTRAINT PK_Activities PRIMARY KEY (ActivityID)
+);
+\end{lstlisting}
+\textbf{Opis:}  
+- \texttt{ActivityID}, \texttt{Price}, \texttt{Title} oraz \texttt{Active} są definiowane jako \texttt{NOT NULL} – każda aktywność musi mieć unikalny identyfikator, ustaloną cenę, tytuł oraz określony status (aktywna/nieaktywna).  
+- Brak możliwości pozostawienia tych pól pustych zapobiega dodawaniu niekompletnych rekordów.
+
+\paragraph{Przykład 2: Tabela \texttt{Courses}}  
+\textbf{Kod:}
+\begin{lstlisting}[language=SQL]
+CREATE TABLE Courses (
+    CourseID             INT           NOT NULL,
+    ActivityID           INT           NOT NULL,  -- FK do Activities
+    CourseName           VARCHAR(50)   NOT NULL,
+    CourseDescription    TEXT          NULL,
+    CoursePrice          MONEY         NOT NULL,
+    CourseCoordinatorID  INT           NOT NULL,  -- FK do Teachers
+    CONSTRAINT PK_Courses PRIMARY KEY (CourseID)
+);
+\end{lstlisting}
+\textbf{Opis:}  
+- Kluczowe pola (\texttt{CourseID}, \texttt{ActivityID}, \texttt{CourseName}, \texttt{CoursePrice} oraz \texttt{CourseCoordinatorID}) są oznaczone jako \texttt{NOT NULL}, ponieważ bez nich kurs nie miałby poprawnego opisu ani nie byłby poprawnie powiązany z innymi encjami (np. z aktywnością i nauczycielem).  
+- \texttt{CourseDescription} jest polem dodatkowym – nie zawsze musi zawierać treść, dlatego jest zdefiniowane jako \texttt{NULL}.
+
+\paragraph{Przykład 3: Tabela \texttt{CourseModules}}  
+\textbf{Kod:}
+\begin{lstlisting}[language=SQL]
+CREATE TABLE CourseModules (
+    ModuleID       INT          NOT NULL,
+    CourseID       INT          NOT NULL,  -- FK do Courses
+    ModuleName     VARCHAR(50)  NOT NULL,
+    Date           DATETIME     NOT NULL,
+    DurationTime   TIME(0)      NOT NULL,
+    TeacherID      INT          NOT NULL,  -- FK do Teachers
+    TranslatorID   INT          NULL,      -- FK do Translators
+    LanguageID     INT          NOT NULL,  -- FK do Languages
+    CONSTRAINT PK_CourseModules PRIMARY KEY (ModuleID)
+);
+\end{lstlisting}
+\textbf{Opis:}  
+- Wszystkie kolumny, które definiują podstawowe informacje o module (np. identyfikator modułu, kurs, nazwa, data, czas trwania, nauczyciel, język) są ustawione jako \texttt{NOT NULL}, aby zapewnić pełną informację o danym module.
+- Kolumna \texttt{TranslatorID} jest ustawiona jako \texttt{NULL}, ponieważ nie każdy moduł wymaga tłumacza – w niektórych przypadkach tłumaczenie może nie być potrzebne.
+
+\paragraph{Przykład 4: Tabela \texttt{Employees}}  
+\textbf{Kod:}
+\begin{lstlisting}[language=SQL]
+CREATE TABLE Employees (
+    EmployeeID      INT          NOT NULL,
+    FirstName       VARCHAR(30)  NOT NULL,
+    LastName        VARCHAR(30)  NOT NULL,
+    HireDate        DATE         NULL,
+    EmployeeTypeID  INT          NOT NULL,   -- FK do EmployeeTypes
+    Phone           VARCHAR(15)  NULL,
+    Email           VARCHAR(60)  NOT NULL,
+    CONSTRAINT PK_Employees PRIMARY KEY (EmployeeID)
+);
+\end{lstlisting}
+\textbf{Opis:}  
+- Pola \texttt{EmployeeID}, \texttt{FirstName}, \texttt{LastName}, \texttt{EmployeeTypeID} oraz \texttt{Email} są krytyczne dla identyfikacji i komunikacji z pracownikiem, dlatego są oznaczone jako \texttt{NOT NULL}.
+- Kolumna \texttt{HireDate} jest opcjonalna – data zatrudnienia może nie być jeszcze dostępna w momencie rejestracji.
+- \texttt{Phone} również jest opcjonalny, ponieważ nie każdy pracownik musi od razu podać numer telefonu.
+
+\newpage
+\paragraph{Przykład 5: Tabela \texttt{OrderPaymentStatus}}  
+\textbf{Kod:}
+\begin{lstlisting}[language=SQL]
+CREATE TABLE OrderPaymentStatus (
+    PaymentURL          INT           NOT NULL,
+    OrderPaymentStatus  VARCHAR(20)   NOT NULL,
+    PaidDate            DATETIME      NULL,
+    CONSTRAINT PK_OrderPaymentStatus PRIMARY KEY (PaymentURL)
+);
+\end{lstlisting}
+\textbf{Opis:}  
+- \texttt{PaymentURL} oraz \texttt{OrderPaymentStatus} są definiowane jako \texttt{NOT NULL} – informacje te są niezbędne do identyfikacji statusu płatności.
+- \texttt{PaidDate} jest ustawione jako \texttt{NULL} ponieważ data opłacenia zamówienia zostanie określona dopiero, gdy płatność zostanie zrealizowana. Do momentu potwierdzenia płatności pole to pozostaje puste.
+
+\paragraph{Przykład 6: Tabela \texttt{Schedule}}  
+\textbf{Kod:}
+\begin{lstlisting}[language=SQL]
+CREATE TABLE Schedule (
+    ScheduleID        INT         NOT NULL,
+    ClassID           INT         NOT NULL,  -- FK do Buildings
+    CourseModuleID    INT         NULL,      -- FK do CourseModules
+    StudiesSubjectID  INT         NULL,      -- FK do Subject
+    DayOfWeek         VARCHAR(10) NOT NULL,
+    StartTime         TIME        NOT NULL,
+    EndTime           TIME        NOT NULL,
+    TeacherID         INT         NOT NULL,  -- FK do Teachers
+    TranslatorID      INT         NULL,      -- FK do Translators
+    CONSTRAINT PK_Schedule PRIMARY KEY (ScheduleID)
+);
+\end{lstlisting}
+\textbf{Opis:}  
+- Pola \texttt{ScheduleID}, \texttt{ClassID}, \texttt{DayOfWeek}, \texttt{StartTime}, \texttt{EndTime} oraz \texttt{TeacherID} są obowiązkowe, ponieważ są niezbędne do określenia harmonogramu zajęć.
+- Kolumny \texttt{CourseModuleID} i \texttt{StudiesSubjectID} są opcjonalne – harmonogram może dotyczyć zarówno zajęć powiązanych z modułami kursów, jak i z przedmiotami w ramach studiów.  
+- \texttt{TranslatorID} również jest opcjonalny, gdyż nie wszystkie zajęcia wymagają tłumacza.
+
+\paragraph{Ogólne zasady:}
+\begin{enumerate}
+    \item Wartości niezbędne dla identyfikacji encji lub dla utrzymania zależności między tabelami (np. klucze główne oraz pola kluczy obcych) zawsze są oznaczane jako \texttt{NOT NULL}.
+    \item Informacje opisowe lub dodatkowe, które nie są niezbędne do wykonania podstawowych operacji na danych, mogą przyjmować wartość \texttt{NULL} – pozwala to na elastyczność w modelu danych.
+    \item Pola, których wartość jest ustalana dynamicznie, np. data potwierdzenia płatności (\texttt{PaidDate}) lub identyfikator tłumacza (\texttt{TranslatorID}) w module, są definiowane jako opcjonalne.
+\end{enumerate}
+
+Dzięki takiej strukturze oraz przemyślanej definicji kolumn, baza danych zapewnia:
+\begin{itemize}
+    \item Pełną integralność danych – kluczowe informacje nie mogą zostać pominięte.
+    \item Elastyczność – dodatkowe lub zależne dane mogą być pomijane w przypadku, gdy nie są dostępne, co jest szczególnie przydatne w dynamicznie zmieniającym się środowisku operacyjnym.
+    \item Wsparcie mechanizmów zapewniających spójność (np. triggerów, procedur), które jeszcze bardziej wzmacniają model danych.
+\end{itemize}
+
+\subsection{Triggery wspomagające integralność danych}
+Mechanizmy te dodatkowo zabezpieczają bazę przed niepożądanymi operacjami i utrzymują spójność danych:
+\begin{itemize}
+    \item \textbf{Automatyczne ustawianie statusu płatności} – Trigger \texttt{TR\_OrderPaymentStatus\_AfterInsert} ustawia domyślny status zamówienia (np. \texttt{"Pending"}) oraz aktualizuje datę opłacenia, gdy status zmieni się na \texttt{"Paid"}.
+    \item \textbf{Rejestracja uczestników po opłaceniu zamówienia} – Trigger \texttt{TR\_OrderPaymentStatus\_AfterUpdate\_PaymentSuccess} automatycznie dodaje studenta do odpowiednich tabel (takich jak \texttt{CourseParticipants}, \texttt{WebinarDetails}, \texttt{StudiesClassAttendance}) po potwierdzeniu płatności.
+    \item \textbf{Usuwanie powiązanych rekordów} – Trigger \texttt{TR\_Courses\_AfterDelete} dba o to, aby usunięcie kursu skutkowało automatycznym usunięciem powiązanych rekordów (modułów, uczestników oraz frekwencji), co zapobiega występowaniu pozostałości danych.
+    \item \textbf{Blokowanie operacji niedozwolonych} – Trigger \texttt{TR\_Teachers\_InsteadOfDelete\_BlockIfActive} uniemożliwia usunięcie nauczyciela, jeśli jest on przypisany do aktywnych kursów lub webinarów, chroniąc w ten sposób dane operacyjne.
+    \item \textbf{Zapobieganie duplikacji rekordów} – Trigger \texttt{TR\_Webinars\_AfterInsert\_UniqueTeacherWebinar} chroni przed dodaniem webinaru o tej samej nazwie przez tego samego nauczyciela.
+\end{itemize}
+
+\subsection{Procedury i funkcje wspomagające integralność}
+Wiele procedur oraz funkcji składowanych zawiera wbudowaną logikę, która zabezpiecza przed nieprawidłowym dodawaniem lub modyfikacją danych. Przykładowo:
+\begin{itemize}
+    \item Procedury takie jak \texttt{spRegisterStudentInCourse} czy \texttt{spUnregisterStudentFromCourse} sprawdzają, czy student nie jest już (lub nie jest nadal) zapisany na dany kurs, co zapobiega duplikacji lub przypadkowemu usunięciu rekordów.
+    \item Funkcje obsługujące obliczenia (np. \texttt{ufnGetOrderTotal}, \texttt{ufnGetStationaryModuleFreeSlots}) są zaprojektowane tak, aby przy braku rekordów zwracały wartość domyślną (np. 0), co umożliwia poprawne agregowanie danych i uniknięcie błędów wynikających z wartości \texttt{NULL}.
+\end{itemize}
+
+\subsection{Inicjalizacja tabel i zależności}
+Podczas tworzenia struktury bazy danych, w definicjach tabel zostały uwzględnione następujące aspekty:
+\begin{itemize}
+    \item Każda tabela posiada dobrze zdefiniowane kolumny wraz z wymaganymi typami danych i ograniczeniami typu \texttt{NOT NULL} tam, gdzie jest to konieczne.
+    \item W definicjach tabel określono klucze główne, a także klucze obce, które wiążą tabele ze sobą (np. \texttt{Courses} z \texttt{Activities}, \texttt{Students} z \texttt{Cities} i \texttt{Countries}).
+    \item W trakcie inicjalizacji danych (poprzez skrypty INSERT generowane automatycznie) zachowana jest kolejność, która respektuje relacje między tabelami – najpierw wstawiane są rekordy w tabelach niezależnych, a następnie te, które odwołują się do kluczy obcych.
+\end{itemize}
+
+\subsection{Podsumowanie}
+Warunki integralnościowe w bazie są realizowane poprzez wielopoziomowy mechanizm:
+\begin{enumerate}
+    \item Definicje tabel z precyzyjnym określeniem kluczy głównych i obcych.
+    \item Wdrożenie triggerów, które automatyzują operacje utrzymujące spójność (np. przy aktualizacjach statusów, kasowaniu rekordów czy zapobieganiu duplikatom).
+    \item Procedury i funkcje, które implementują logikę biznesową oraz weryfikację danych podczas operacji wstawiania, aktualizacji i usuwania.
+\end{enumerate}
+Dzięki tak zorganizowanej strukturze baza danych jest chroniona przed błędami użytkowników, niespójnymi danymi oraz nieautoryzowanymi zmianami, co stanowi fundament dla bezpiecznego i efektywnego działania systemu.
+
+
 
 \newpage
 \section{Triggery}
@@ -3616,7 +3798,7 @@ Poszczególne grupy (np.~Timetable, Courses, Webinars) oznaczono kolorami, aby u
 oraz kluczy głównych i obcych.}
 
 \newpage
-\setcounter{page}{84}
+\setcounter{page}{89}
 %-----------------------------------------------------------------------------
 \section{Podsumowanie}
 
