@@ -10,6 +10,11 @@ Implementacja została przeprowadzona w środowisku MS SQL Server, a system opar
 
 ---
 
+## Schemat Bazy Danych
+![Schemat bazy danych](https://github.com/Ki3mONo/DataBaseCourse/blob/main/Dokumentacja/Schemat/SchematBazy.png)
+
+---
+
 ## Funkcjonalności systemu
 
 Projekt oferuje następujące funkcjonalności:
